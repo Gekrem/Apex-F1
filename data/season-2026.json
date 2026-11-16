@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "updatedAt": "2026-11-16T14:00:00Z",
+  "updatedAt": "2026-11-16",
   "nextRace": {
     "round": 21,
     "name": "Las Vegas Grand Prix",
@@ -46,7 +46,10 @@
       "circuit": "Albert Park Grand Prix Circuit",
       "start": "2026-03-06",
       "end": "2026-03-08",
-      "sprint": false
+      "sprint": false,
+      "circuitLengthKm": 5.278,
+      "laps": 58,
+      "distanceKm": 306.124
     },
     {
       "round": 2,
@@ -56,7 +59,10 @@
       "circuit": "Shanghai International Circuit",
       "start": "2026-03-13",
       "end": "2026-03-15",
-      "sprint": true
+      "sprint": true,
+      "circuitLengthKm": 5.451,
+      "laps": 56,
+      "distanceKm": 305.066
     },
     {
       "round": 3,
@@ -66,7 +72,10 @@
       "circuit": "Suzuka International Racing Course",
       "start": "2026-03-27",
       "end": "2026-03-29",
-      "sprint": false
+      "sprint": false,
+      "circuitLengthKm": 5.807,
+      "laps": 53,
+      "distanceKm": 307.471
     },
     {
       "round": 4,
@@ -76,7 +85,10 @@
       "circuit": "Miami International Autodrome",
       "start": "2026-05-01",
       "end": "2026-05-03",
-      "sprint": true
+      "sprint": true,
+      "circuitLengthKm": 5.412,
+      "laps": 57,
+      "distanceKm": 308.326
     },
     {
       "round": 5,
@@ -86,7 +98,10 @@
       "circuit": "Circuit Gilles-Villeneuve",
       "start": "2026-05-22",
       "end": "2026-05-24",
-      "sprint": true
+      "sprint": true,
+      "circuitLengthKm": 4.361,
+      "laps": 70,
+      "distanceKm": 305.27
     },
     {
       "round": 6,
@@ -96,7 +111,10 @@
       "circuit": "Circuit de Monaco",
       "start": "2026-06-05",
       "end": "2026-06-07",
-      "sprint": false
+      "sprint": false,
+      "circuitLengthKm": 3.337,
+      "laps": 78,
+      "distanceKm": 260.286
     },
     {
       "round": 7,
@@ -106,7 +124,10 @@
       "circuit": "Circuit de Barcelona-Catalunya",
       "start": "2026-06-12",
       "end": "2026-06-14",
-      "sprint": false
+      "sprint": false,
+      "circuitLengthKm": 4.657,
+      "laps": 66,
+      "distanceKm": 307.236
     },
     {
       "round": 8,
@@ -116,7 +137,10 @@
       "circuit": "Red Bull Ring",
       "start": "2026-06-26",
       "end": "2026-06-28",
-      "sprint": false
+      "sprint": false,
+      "circuitLengthKm": 4.318,
+      "laps": 71,
+      "distanceKm": 306.452
     },
     {
       "round": 9,
@@ -126,7 +150,10 @@
       "circuit": "Silverstone Circuit",
       "start": "2026-07-03",
       "end": "2026-07-05",
-      "sprint": true
+      "sprint": true,
+      "circuitLengthKm": 5.891,
+      "laps": 52,
+      "distanceKm": 306.198
     },
     {
       "round": 10,
@@ -136,7 +163,10 @@
       "circuit": "Circuit de Spa-Francorchamps",
       "start": "2026-07-17",
       "end": "2026-07-19",
-      "sprint": false
+      "sprint": false,
+      "circuitLengthKm": 7.004,
+      "laps": 44,
+      "distanceKm": 308.052
     },
     {
       "round": 11,
@@ -146,7 +176,10 @@
       "circuit": "Hungaroring",
       "start": "2026-07-24",
       "end": "2026-07-26",
-      "sprint": false
+      "sprint": false,
+      "circuitLengthKm": 4.381,
+      "laps": 70,
+      "distanceKm": 306.63
     },
     {
       "round": 12,
@@ -156,7 +189,10 @@
       "circuit": "Circuit Zandvoort",
       "start": "2026-08-21",
       "end": "2026-08-23",
-      "sprint": true
+      "sprint": true,
+      "circuitLengthKm": 4.259,
+      "laps": 72,
+      "distanceKm": 306.587
     },
     {
       "round": 13,
@@ -166,7 +202,10 @@
       "circuit": "Autodromo Nazionale Monza",
       "start": "2026-09-04",
       "end": "2026-09-06",
-      "sprint": false
+      "sprint": false,
+      "circuitLengthKm": 5.793,
+      "laps": 53,
+      "distanceKm": 306.72
     },
     {
       "round": 14,
@@ -176,7 +215,10 @@
       "circuit": "Madrid Street Circuit",
       "start": "2026-09-11",
       "end": "2026-09-13",
-      "sprint": false
+      "sprint": false,
+      "circuitLengthKm": 5.416,
+      "laps": 57,
+      "distanceKm": 308.524
     },
     {
       "round": 15,
@@ -186,7 +228,10 @@
       "circuit": "Baku City Circuit",
       "start": "2026-09-24",
       "end": "2026-09-26",
-      "sprint": false
+      "sprint": false,
+      "circuitLengthKm": 6.003,
+      "laps": 51,
+      "distanceKm": 306.049
     },
     {
       "round": 16,
@@ -199,7 +244,7 @@
       "sprint": false,
       "circuitLengthKm": 5.543,
       "laps": 56,
-      "distanceKm": 310.398
+      "distanceKm": 310.408
     },
     {
       "round": 17,
@@ -209,7 +254,10 @@
       "circuit": "Marina Bay Street Circuit",
       "start": "2026-10-09",
       "end": "2026-10-11",
-      "sprint": true
+      "sprint": true,
+      "circuitLengthKm": 4.927,
+      "laps": 62,
+      "distanceKm": 305.337
     },
     {
       "round": 18,
@@ -219,7 +267,10 @@
       "circuit": "Circuit of The Americas",
       "start": "2026-10-23",
       "end": "2026-10-25",
-      "sprint": false
+      "sprint": false,
+      "circuitLengthKm": 5.513,
+      "laps": 56,
+      "distanceKm": 308.405
     },
     {
       "round": 19,
@@ -229,7 +280,10 @@
       "circuit": "Autódromo Hermanos Rodríguez",
       "start": "2026-10-30",
       "end": "2026-11-01",
-      "sprint": false
+      "sprint": false,
+      "circuitLengthKm": 4.304,
+      "laps": 71,
+      "distanceKm": 305.354
     },
     {
       "round": 20,
@@ -239,7 +293,10 @@
       "circuit": "Autódromo José Carlos Pace",
       "start": "2026-11-06",
       "end": "2026-11-08",
-      "sprint": false
+      "sprint": false,
+      "circuitLengthKm": 4.309,
+      "laps": 71,
+      "distanceKm": 305.879
     },
     {
       "round": 21,
@@ -262,7 +319,10 @@
       "circuit": "Lusail International Circuit",
       "start": "2026-11-27",
       "end": "2026-11-29",
-      "sprint": false
+      "sprint": false,
+      "circuitLengthKm": 5.419,
+      "laps": 57,
+      "distanceKm": 308.611
     },
     {
       "round": 23,
@@ -272,7 +332,10 @@
       "circuit": "Yas Marina Circuit",
       "start": "2026-12-04",
       "end": "2026-12-06",
-      "sprint": false
+      "sprint": false,
+      "circuitLengthKm": 5.281,
+      "laps": 58,
+      "distanceKm": 306.183
     }
   ],
   "drivers": [
