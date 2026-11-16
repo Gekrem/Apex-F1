@@ -53,21 +53,12 @@ A bilingual Turkish/English Formula 1 fan publication prototype hosted on GitHub
 - Use **New stories** to open the GitHub Actions workflow, **Review queue** to inspect pull requests, and **Edit JSON** to update translations/status in GitHub.
 - GitHub Pages is static and cannot safely write to the repository by itself. The dashboard deliberately sends edits through GitHub's authenticated interface; never put a GitHub token or password in client-side code.
 
-## AI-assisted bilingual editorial drafts
+## Free editorial workflow
 
-- The workflow at **Actions → APEX F1 AI editorial drafts** creates original Turkish and English headline/summary drafts from the English headline and short RSS excerpt already stored in `data/news.json`.
-- It does not scrape or reproduce full publisher articles. It does not invent missing facts by design; thin excerpts are skipped or flagged for human verification.
-- Every AI-assisted item remains `status: "draft"`. The workflow opens/updates a pull request; a human editor must verify the original source and approve publication.
-- The workflow can run automatically after a human or editor-token commit changes `data/news.json` on `main`, or manually from the GitHub Actions page.
-- Each run processes at most 15 eligible drafts to limit API usage.
-
-### One-time OpenAI API setup
-
-1. Create an API key in the OpenAI API platform. ChatGPT subscriptions and API billing are separate; API usage may incur charges.
-2. In the GitHub repository, open **Settings → Secrets and variables → Actions → New repository secret**.
-3. Set the secret name to exactly `OPENAI_API_KEY` and paste the API key as its value. Never put the key in website files, commits, issues, or chat messages.
-4. Open **Actions → APEX F1 AI editorial drafts → Run workflow** to run a first test.
-5. Review the pull request named **APEX F1: AI bilingual editorial drafts for review**. Do not publish without checking the original sources.
-
-The workflow uses the OpenAI Responses API through the official Python SDK and structured JSON output. See the [OpenAI API quickstart](https://developers.openai.com/api/docs/quickstart) and [Structured Outputs guide](https://developers.openai.com/api/docs/guides/structured-outputs).
+- **Collect F1 news** uses RSS feeds and stores source headlines/excerpts as unpublished drafts in `data/news.json`.
+- The editor panel is the place to write and review original Turkish and English headlines and summaries, verify the linked source, and complete the editorial checklist.
+- The publication gate requires the bilingual fields, a valid HTTPS source, and all three human editorial confirmations.
+- GitHub Actions can collect RSS drafts on its configured schedule; no paid AI API or `OPENAI_API_KEY` is required.
+- AI translation and AI-written summaries are intentionally disabled in this free setup. Do not present machine-generated translations as verified editorial copy.
+- Review each publisher's source and link to it; do not copy full articles or republish copyrighted text.
 
