@@ -15,7 +15,7 @@ NEWS_FILE = ROOT / "data" / "news.json"
 FEEDS = [
     ("Formula 1", "https://www.formula1.com/content/fom-website/en/latest/all.xml", False),
     ("Formula1.com Latest", "https://www.formula1.com/rss/news/latest.rss", False),
-    ("BBC Sport F1", "https://feeds.bbci.co.uk/sport/formula1/rss.xml", False),
+    ("BBC Sport F1", "https://feeds.bbci.co.uk/sport/formula1/rss.xml", True),
     ("Autosport", "https://www.autosport.com/rss/f1/news/", False),
     ("Autosport F1", "https://www.autosport.com/rss/feed/f1", False),
     ("FIA", "https://www.fia.com/rss/news", True),
