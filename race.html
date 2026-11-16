@@ -118,25 +118,60 @@ $('circuitSource').innerHTML=(lang==='tr'?'Teknik veriler: ':'Technical data: ')
 }
 async function loadCircuitGallery(){
 const title=race.circuit+' '+race.city+' Formula 1 circuit';
-const categoryUrl=race.round===5?'https://commons.wikimedia.org/w/api.php?action=query&generator=categorymembers&gcmtitle='+encodeURIComponent('Category:Circuit Gilles Villeneuve')+'&gcmtype=file&gcmlimit=30&prop=imageinfo&iiprop=url|extmetadata&iiurlwidth=1400&format=json&origin=*':null;
-const searchUrl='https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch='+encodeURIComponent('filetype:bitmap "'+race.circuit+'" '+race.city+' circuit track')+'&gsrnamespace=6&gsrlimit=18&prop=imageinfo&iiprop=url|extmetadata&iiurlwidth=1400&format=json&origin=*';
-$('allCircuitPhotos').href='https://commons.wikimedia.org/w/index.php?search='+encodeURIComponent(title)+'&title=Special:MediaSearch&type=image';
+const commonsSearch='https://commons.wikimedia.org/w/index.php?search='+encodeURIComponent(title)+'&title=Special:MediaSearch&type=image';
+$('allCircuitPhotos').href=commonsSearch;
 $('allCircuitPhotos').textContent=lang==='tr'?'Tüm pist fotoğrafları ↗':'All circuit photos ↗';
 const grid=$('trackGallery');
+const endpoint='https://commons.wikimedia.org/w/api.php';
+const queries=[
+  '"'+race.circuit+'" '+race.city,
+  race.circuit+' Formula 1 Grand Prix',
+  race.city+' Grand Prix race track',
+  race.circuit+' motorsport'
+];
+const seen=new Set();
+let collected=[];
+const timeout=(ms)=>new Promise((_,reject)=>setTimeout(()=>reject(new Error('timeout')),ms));
+async function request(url){
+ const response=await Promise.race([fetch(url,{mode:'cors',credentials:'omit',cache:'no-store'}),timeout(11000)]);
+ if(!response.ok)throw new Error('HTTP '+response.status);
+ return response.json();
+}
+function apiUrl(query){
+ return endpoint+'?action=query&generator=search&gsrsearch='+encodeURIComponent('filetype:bitmap '+query)+'&gsrnamespace=6&gsrlimit=20&prop=imageinfo&iiprop=url|extmetadata&iiurlwidth=1400&format=json&origin=*';
+}
 try{
-let payload=null;
-if(categoryUrl){const categoryResponse=await fetch(categoryUrl);if(categoryResponse.ok)payload=await categoryResponse.json();}
-let pages=Object.values(payload?.query?.pages||{}).filter(x=>x.imageinfo?.[0]?.thumburl);
-if(pages.length<3){const response=await fetch(searchUrl);if(!response.ok)throw Error('Commons API unavailable');const fallback=await response.json();const merged=[...pages,...Object.values(fallback.query?.pages||{})];pages=merged.filter((x,i,a)=>x.imageinfo?.[0]?.thumburl&&a.findIndex(y=>y.title===x.title)===i);}
-if(!pages.length)throw Error('No circuit images found');
-grid.innerHTML=pages.slice(0,9).map((p,i)=>{
-const info=p.imageinfo[0],meta=info.extmetadata||{},author=(meta.Artist?.value||'Wikimedia Commons contributor').replace(/<[^>]*>/g,'').slice(0,90),license=meta.LicenseShortName?.value||'License details';
-const fileUrl='https://commons.wikimedia.org/wiki/'+encodeURIComponent(p.title.replace(/ /g,'_'));
-return '<a class="track-photo" href="'+esc(fileUrl)+'" target="_blank" rel="noopener" aria-label="'+esc(p.title)+' — Wikimedia Commons"><img loading="lazy" src="'+esc(info.thumburl)+'" alt="'+esc(p.title.replace('File:',''))+'"><span class="photo-open">VIEW ↗</span><span class="photo-meta"><strong>'+esc(p.title.replace('File:','').replace(/\.[^.]+$/,''))+'</strong><small>'+esc(author)+' · '+esc(license)+'</small></span></a>';
-}).join('');
-grid.querySelectorAll('img').forEach(img=>{if(img.complete&&img.naturalWidth)img.classList.add('loaded');img.addEventListener('load',()=>img.classList.add('loaded'));img.addEventListener('error',()=>img.closest('.track-photo')?.remove());});
+ grid.innerHTML='<div class="gallery-loading"><span class="gallery-pulse"></span><span>'+(lang==='tr'?'Pist fotoğrafları aranıyor…':'Finding circuit photographs…')+'</span></div>';
+ for(const query of queries){
+   if(collected.length>=6)break;
+   try{
+     const data=await request(apiUrl(query));
+     const found=Object.values(data.query?.pages||{});
+     for(const item of found){
+       const info=item.imageinfo?.[0];
+       if(!info?.thumburl||!info?.url||seen.has(item.title))continue;
+       if(info.mime&&!/^image\/(jpeg|png|webp|gif)$/i.test(info.mime))continue;
+       seen.add(item.title);collected.push(item);
+     }
+   }catch(e){/* Try a broader Commons search phrase. */}
+ }
+ if(!collected.length)throw new Error('No images returned by Commons');
+ grid.innerHTML=collected.slice(0,9).map(p=>{
+   const info=p.imageinfo[0],meta=info.extmetadata||{};
+   const clean=v=>String(v||'').replace(/<[^>]*>/g,' ').replace(/&nbsp;/g,' ').replace(/\s+/g,' ').trim().slice(0,90);
+   const author=clean(meta.Artist?.value)||'Wikimedia Commons contributor';
+   const license=clean(meta.LicenseShortName?.value)||'License details';
+   const fileUrl='https://commons.wikimedia.org/wiki/'+encodeURIComponent(p.title.replace(/ /g,'_'));
+   return '<a class="track-photo" href="'+esc(fileUrl)+'" target="_blank" rel="noopener noreferrer" aria-label="'+esc(p.title)+' — Wikimedia Commons"><img loading="lazy" src="'+esc(info.thumburl)+'" alt="'+esc(p.title.replace('File:',''))+'"><span class="photo-open">VIEW ↗</span><span class="photo-meta"><strong>'+esc(p.title.replace('File:','').replace(/\.[^.]+$/,''))+'</strong><small>'+esc(author)+' · '+esc(license)+'</small></span></a>';
+ }).join('');
+ grid.querySelectorAll('img').forEach(img=>{
+   const mark=()=>img.classList.add('loaded');
+   if(img.complete&&img.naturalWidth)mark();
+   img.addEventListener('load',mark,{once:true});
+   img.addEventListener('error',()=>{img.closest('.track-photo')?.remove();if(!grid.querySelector('.track-photo'))grid.innerHTML='<div class="gallery-empty">'+(lang==='tr'?'Bu pist için görseller yüklenemedi. Wikimedia Commons arşivini açabilirsin.':'Images could not be loaded. Browse Wikimedia Commons.')+'</div>';},{once:true});
+ });
 }catch(error){
-grid.innerHTML='<div class="gallery-empty">'+(lang==='tr'?'Bu pist için fotoğraf servisine şu anda ulaşılamıyor. Tüm fotoğrafları Wikimedia Commons arşivinde açabilirsin.':'Circuit photos are temporarily unavailable. Browse the full Wikimedia Commons archive.')+'</div>';
+ grid.innerHTML='<div class="gallery-empty">'+(lang==='tr'?'Fotoğraflar şu anda otomatik getirilemedi. Pist fotoğraflarını Wikimedia Commons arşivinde görüntüleyebilirsin.':'Photos could not be loaded automatically. Browse the circuit photo archive on Wikimedia Commons.')+' <a class="text-link" href="'+esc(commonsSearch)+'" target="_blank" rel="noopener noreferrer">'+(lang==='tr'?'Fotoğraf arşivini aç ↗':'Open photo archive ↗')+'</a></div>';
 }
 }
 function renderSessions(){const isVegas=race.round===21;const upcoming=new Date(race.end+'T23:59:59Z')>new Date();let sessions=isVegas?[
