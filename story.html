@@ -100,7 +100,7 @@ Object.assign(articleSections,{
 });
 async function renderNews(id){
  try{
-  const response=await fetch('data/news.json?v=20261117a',{cache:'no-store'});
+  const response=await fetch('data/news.json?v=20261117c',{cache:'no-store'});
   if(!response.ok)throw new Error('Haber arşivi yüklenemedi ('+response.status+')');
   const all=await response.json();
   publishedNews=Array.isArray(all)?all.filter(x=>x&&x.status==='published'&&x.id):[];
@@ -109,11 +109,11 @@ async function renderNews(id){
   const title=n.title_tr||n.title_en||'Formula 1 haberi';
   const summary=n.summary_tr||n.summary_en||'';
   const sections=articleSections[id]||[
-   ['Haberin ayrıntıları',summary||'Bu haberin ayrıntıları kaynak yayında paylaşılan bilgiler doğrultusunda takip ediliyor.'],
-   ['Formula 1 açısından önemi', 'Bu gelişme, ilgili takımın/pilotun sezon içindeki hedefleri ve rekabet dengesi açısından değerlendirilmelidir. APEX F1, doğrulanmamış ayrıntıları kesin bilgi gibi sunmaz.'],
-   ['Bundan sonra ne takip edilmeli?', 'Kaynak yayının güncellemeleri, takımın resmî açıklamaları ve hafta sonu seanslarında ortaya çıkacak veriler bu haberin etkisini netleştirecek.']
+   ['Haberin özeti',summary||'Bu haberin kısa özeti henüz sağlanmadı. Orijinal kaynak bağlantısından yayıncının haberini okuyabilirsin.'],
+   ['Gelişmenin arka planı', 'Bu başlık, '+(n.category||'Formula 1')+' gündemindeki bir gelişmeyi aktarıyor. APEX F1 bu bölümde yalnızca haber kaydında bulunan başlık, özet ve yayıncı bilgisini esas alır; kaynakta yer almayan ayrıntıları gerçekmiş gibi eklemez.'],
+   ['Neden takip edilmeli?', 'Haberdeki gelişmenin takımların, pilotların veya şampiyona mücadelesinin geleceğine etkisi; ilgili tarafların resmî açıklamaları ve sonraki yarış hafta sonlarında ortaya çıkacak sonuçlarla netleşecektir. Bu nedenle haberin kaynağındaki güncellemeler önem taşır.']
   ];
-  const visual=articleVisuals[id]||articleVisuals['f55f72ce2cc4b6cc'];
+  const visual=articleVisuals[id]||{url:'https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/F1_logo.svg/1280px-F1_logo.svg.png',alt:'Formula 1 haber görseli',credit:'Formula 1',creditUrl:n.source_url||'#'};
   document.title=title+' | APEX F1';
   $('content').innerHTML='<div class="eyebrow">'+esc(n.category||'FORMULA 1')+' / APEX F1 NEWSROOM</div><h1>'+esc(title)+'</h1><p class="dek story-lead">'+esc(summary)+'</p><div class="story-facts"><div><small>YAYINCI</small><strong>'+esc(n.source_name||'APEX F1')+'</strong></div><div><small>YAYIN TARİHİ</small><strong>'+esc((n.published_at||n.collected_at||'').slice(0,10)||'Güncel')+'</strong></div><div><small>İÇERİK TÜRÜ</small><strong>Haber ve editoryal analiz</strong></div></div><figure class="news-visual"><img class="hero-image" src="'+esc(visual.url)+'" alt="'+esc(visual.alt)+'" loading="eager"><figcaption class="caption">Görsel: '+esc(visual.credit)+' · <a href="'+esc(visual.creditUrl)+'" target="_blank" rel="noopener noreferrer">Görsel kaynağı ↗</a></figcaption></figure><div class="body-copy story-content">'+sections.map((v,i)=>'<section class="story-section"><h2 class="subhead">'+(i+1)+'. '+esc(v[0])+'</h2><p>'+esc(v[1])+'</p></section>').join('')+'</div><p class="editorial-note">Editoryal not: Bu sayfa, haberin başlığı ve özeti temel alınarak APEX F1 tarafından hazırlanmış Türkçe haber/analiz içeriğidir. Kaynak yayının tam metni değildir; doğrulanmamış ayrıntılar eklenmez.</p>'+sourceBox(n.source_name||'Orijinal yayın',n.source_url||'#','Orijinal kaynağı görüntüle ↗');
   const img=$('.hero-image');img.addEventListener('error',()=>{const figure=img.closest('.news-visual');figure.classList.add('image-unavailable');img.remove();figure.insertAdjacentHTML('afterbegin','<div class="fallback-title">'+esc(title)+'</div>');},{once:true});
@@ -125,5 +125,14 @@ async function renderNews(id){
 function renderSource(id){const x=sources[id];if(!x)return notFound();document.title=x[0]+' | APEX F1';$('content').innerHTML='<div class="eyebrow">APEX F1 / SOURCE DESK</div><h1>'+esc(x[0])+'</h1><p class="dek">'+esc(x[1])+'</p><p class="body-copy">Aradığın bilgi önce APEX F1 içinde ilgili bölümde sunulur. Bu kart, verinin dayandığı resmî kaynağı ve doğrulama bağlantısını gösterir.</p>'+sourceBox(x[0],x[2])+'<p><a class="text-link" href="index.html#standings">APEX F1 verilerine dön ↗</a></p>'}
 async function renderProfile(type,id){try{const r=await fetch('data/season-2026.json',{cache:'no-store'});if(!r.ok)throw Error();const d=await r.json();if(type==='driver'){const x=d.drivers.find(v=>slug(v.name)===id);if(!x)return notFound();document.title=x.name+' | APEX F1';const team=d.teams.find(t=>t.name===x.team);$('content').innerHTML='<div class="eyebrow">THE GRID / DRIVER PROFILE</div><h1>'+esc(x.name)+'</h1><p class="dek">2026 Formula 1 pilot profili ve şampiyona kaydı.</p><div class="stats"><div class="stat"><b>#'+x.position+'</b><span>Pilotlar sıralaması</span></div><div class="stat"><b>'+x.points+'</b><span>Şampiyona puanı</span></div><div class="stat"><b>'+esc(x.nationality)+'</b><span>Milliyet kodu</span></div></div><h2 class="subhead">Takım bilgisi</h2><div class="data-card"><strong>'+esc(x.team)+'</strong><p class="notice">'+(team?'2026 takımlar şampiyonasında '+team.position+'. sıra · '+team.points+' puan':'2026 takım kaydı')+'</p><a class="text-link" href="story.html?type=team&id='+slug(x.team)+'">Takım profilini aç ↗</a></div>'+sourceBox('Formula 1 — Drivers’ Standings',sources.drivers[2]);}else{const x=d.teams.find(v=>slug(v.name)===id);if(!x)return notFound();const members=d.drivers.filter(v=>v.team===x.name);document.title=x.name+' | APEX F1';$('content').innerHTML='<div class="eyebrow">THE GRID / TEAM PROFILE</div><h1>'+esc(x.name)+'</h1><p class="dek">2026 Formula 1 takımı ve takımlar şampiyonası kaydı.</p><div class="stats"><div class="stat"><b>#'+x.position+'</b><span>Takımlar sıralaması</span></div><div class="stat"><b>'+x.points+'</b><span>Şampiyona puanı</span></div><div class="stat"><b>'+members.length+'</b><span>Sezon kaydındaki pilot</span></div></div><h2 class="subhead">Pilot kadrosu</h2><div class="list">'+members.map(v=>'<a href="story.html?type=driver&id='+slug(v.name)+'"><span>'+esc(v.name)+'</span><small>'+v.points+' PTS · #'+v.position+'</small></a>').join('')+'</div>'+sourceBox('Formula 1 — Teams’ Standings',sources.teams[2]);}}catch(e){notFound()}}
 function notFound(){document.title='İçerik bulunamadı | APEX F1';$('content').innerHTML='<div class="eyebrow">APEX F1 / CONTENT DESK</div><h1>İçerik bulunamadı</h1><p class="dek">Bu içerik kaldırılmış, yayımdan alınmış veya bağlantı hatalı olabilir. İçerik merkezinden devam edebilirsin.</p><a class="back" href="index.html">← Ana sayfaya dön</a>'}
-const hashMatch=location.hash.match(/^#news=([a-z0-9-]+)$/i);const p=new URLSearchParams(location.search);const type=p.get('type')||(hashMatch?'news':null),id=p.get('id')||(hashMatch?hashMatch[1]:null);if(type==='photo'&&photos[id])renderPhoto(photos[id]);else if(type==='news'&&id)renderNews(id);else if(type==='source'&&id)renderSource(id);else if((type==='driver'||type==='team')&&id)renderProfile(type,id);else if(!type&&!id){renderNews('f55f72ce2cc4b6cc');}else notFound();
+// Canonical query-string routing, with legacy hash support for previously shared links.
+const query=new URLSearchParams(location.search);
+const legacyHash=location.hash.startsWith('#')?new URLSearchParams(location.hash.slice(1)):new URLSearchParams();
+const routeType=query.get('type')||legacyHash.get('type')||(legacyHash.has('news')?'news':null);
+const routeId=query.get('id')||legacyHash.get('id')||legacyHash.get('news');
+if(routeType==='photo'&&photos[routeId])renderPhoto(photos[routeId]);
+else if(routeType==='news'&&routeId)renderNews(routeId);
+else if(routeType==='source'&&routeId)renderSource(routeId);
+else if((routeType==='driver'||routeType==='team')&&routeId)renderProfile(routeType,routeId);
+else notFound();
 </script></body></html>
