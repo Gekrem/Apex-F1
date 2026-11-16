@@ -168,6 +168,16 @@
     },
     {
       "round": 16,
+      "country": "Malaysia",
+      "name": "Bahrain Grand Prix",
+      "city": "Sepang",
+      "circuit": "Sepang International Circuit",
+      "start": "2026-10-02",
+      "end": "2026-10-04",
+      "sprint": false
+    },
+    {
+      "round": 17,
       "country": "Singapore",
       "name": "Singapore Grand Prix",
       "city": "Singapore",
@@ -177,7 +187,7 @@
       "sprint": true
     },
     {
-      "round": 17,
+      "round": 18,
       "country": "United States",
       "name": "United States Grand Prix",
       "city": "Austin",
@@ -187,7 +197,7 @@
       "sprint": false
     },
     {
-      "round": 18,
+      "round": 19,
       "country": "Mexico",
       "name": "Mexico City Grand Prix",
       "city": "Mexico City",
@@ -197,7 +207,7 @@
       "sprint": false
     },
     {
-      "round": 19,
+      "round": 20,
       "country": "Brazil",
       "name": "São Paulo Grand Prix",
       "city": "São Paulo",
@@ -218,16 +228,6 @@
     },
     {
       "round": 22,
-      "country": "Las Vegas",
-      "name": "Las Vegas Grand Prix",
-      "city": "Las Vegas",
-      "circuit": "Las Vegas Strip Circuit",
-      "start": "2026-11-19",
-      "end": "2026-11-21",
-      "sprint": false
-    },
-    {
-      "round": 23,
       "country": "Qatar",
       "name": "Qatar Grand Prix",
       "city": "Lusail",
@@ -237,7 +237,7 @@
       "sprint": false
     },
     {
-      "round": 22,
+      "round": 23,
       "country": "United Arab Emirates",
       "name": "Abu Dhabi Grand Prix",
       "city": "Abu Dhabi",
