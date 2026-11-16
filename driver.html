@@ -26,8 +26,9 @@ async function load(){
   const [seasonResponse]=await Promise.all([fetch('data/season-2026.json',{cache:'no-store'})]);
   if(!seasonResponse.ok)throw Error('season data');
   const season=await seasonResponse.json();
-  const driver=season.drivers.find(d=>slug(d.name)===id);
-  const profile=profiles[id];
+  const driver=season.drivers.find(d=>slug(d.name)===id || slug(d.name)===slug(rawId));
+  const profileKey=driver ? slug(driver.name) : id;
+  const profile=profiles[profileKey] || Object.entries(profiles).find(([key,value])=>key===id || slug(value.wiki.replaceAll('_',' '))===id)?.[1];
   if(!driver||!profile){showError();return}
   const team=season.teams.find(t=>t.name===driver.team);
   document.title=driver.name+' — Pilot Profili | F1ROOM';
