@@ -53,7 +53,7 @@
   },
   {
     "id": "1365a6b2c6ba99f8",
-    "status": "published",
+    "status": "draft",
     "category": "F1 NEWS",
     "title_en": "Behind the lens with Mark Sutton for Antonelli's F1 title triumph",
     "summary_en": "F1 photographer Mark Sutton reflects on capturing Kimi Antonelli's 2026 championship, from the emotional celebrations at Monza to his title triumph in Mexico.",
@@ -61,12 +61,12 @@
     "summary_tr": "Formula 1 fotoğrafçısı Mark Sutton, Kimi Antonelli'nin 2026 şampiyonluğunu ölümsüzleştirdiği anları anlatıyor. Monza'daki unutulmaz kutlamalardan Meksika'daki şampiyonluk coşkusuna uzanan süreç, Sutton'ın kariyerindeki en özel deneyimlerden biri oldu.",
     "source_name": "Formula 1",
     "source_url": "https://www.formula1.com/en/latest/article/one-of-the-best-experiences-of-my-life-mark-sutton-on-photographing-antonellis-f1-title.2oqpziZe3WQ5B2xFvPWsnU",
-    "published_at": "2026-11-16T21:15:02.551Z",
+    "published_at": "",
     "collected_at": "2026-11-16T13:24:22Z"
   },
   {
     "id": "420c8a9968787b7d",
-    "status": "draft",
+    "status": "published",
     "category": "F1 NEWS",
     "title_en": "TREMAYNE: It’s 10 years since Ron Dennis left F1 – I miss him",
     "summary_en": "F1 Hall of Fame journalist David Tremayne remembers one of the titans of the paddock, a decade after he walked away from the sport in which he'd been so successful.",
@@ -74,7 +74,7 @@
     "summary_tr": "Formula 1'in deneyimli gazetecilerinden David Tremayne, McLaren'in efsanevi eski patronu Ron Dennis'in spordan ayrılışının 10. yılında onu yeniden hatırlıyor. Tremayne, Dennis'in padoktaki etkisini ve kendisinde bıraktığı izleri kaleme alıyor.",
     "source_name": "Formula 1",
     "source_url": "https://www.formula1.com/en/latest/article/its-10-years-since-ron-dennis-left-f1-i-miss-him.1HKS8KLe46myFMW6qOzsdY",
-    "published_at": "",
+    "published_at": "2026-11-16T21:15:23.921Z",
     "collected_at": "2026-11-16T13:24:22Z"
   },
   {
