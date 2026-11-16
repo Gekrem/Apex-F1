@@ -36,6 +36,36 @@
     .news-empty{grid-column:1/-1;border:1px dashed var(--line);border-radius:11px;padding:28px;color:var(--muted);font-size:13px}.news h3 a:hover{color:#79edbd}
     @media(max-width:850px){.links{display:none;position:absolute;top:76px;left:0;right:0;background:#101014;padding:20px;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}.links.open{display:flex}.menu{display:block}.hero-grid{grid-template-columns:1fr}.hero-main{min-height:410px}.hero-side{display:grid;grid-template-columns:repeat(3,1fr)}.side-card{min-height:145px;padding:15px}.side-card h3{font-size:15px}.driver-grid{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:600px){.wrap{width:min(100% - 28px,var(--max))}.nav{height:66px}.links{top:66px}.hero{padding-top:36px}.hero-main{min-height:390px}.hero-content{left:22px;right:22px;bottom:25px}h1{font-size:43px;letter-spacing:-2px}.hero-side{grid-template-columns:1fr}.side-card{min-height:110px}.news-grid,.split{grid-template-columns:1fr}.news-art{height:150px}.section{padding:32px 0}.section-head h2{font-size:22px}.foot{align-items:flex-start;flex-direction:column}}
+
+    /* APEX F1 editorial redesign */
+    :root{--bg:#0b100e;--panel:#111a15;--panel2:#17231b;--line:#29382f;--text:#edf3ee;--muted:#9ba99f;--red:#19b978;--max:1240px}
+    body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);letter-spacing:0}
+    .topline{height:2px;background:var(--red)}
+    header{background:rgba(11,16,14,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+    .nav{height:72px}.brand{font-size:24px;letter-spacing:-1.7px}.brand small{font-size:8px;letter-spacing:2.8px}
+    .links{gap:26px}.links a{font-size:11px;letter-spacing:.7px;font-weight:700;color:#c1ccc4}.links a:hover{color:#65dca7}
+    .lang,.menu{border-radius:3px;border-color:#35483b;padding:9px 13px}
+    .hero{padding:64px 0 50px}.eyebrow{color:#73d8a6;font-size:10px;letter-spacing:1.8px}.dot{width:6px;height:6px;box-shadow:none}
+    .hero-grid{grid-template-columns:minmax(0,1.55fr) minmax(260px,.65fr);gap:34px;margin-top:18px}
+    .hero-main{min-height:470px;border:0;border-radius:2px;background:linear-gradient(115deg,#14251b 0%,#101713 58%,#0d120f 100%)}
+    .hero-main:before{width:42%;height:74%;right:0;top:13%;border:1px solid rgba(130,205,158,.12);border-left:0;border-radius:0;transform:skewX(-15deg)}
+    .hero-main:after{right:12%;top:20%;width:28%;height:55%;background:linear-gradient(160deg,transparent 47%,rgba(25,185,120,.18) 48% 49%,transparent 50%);filter:none;transform:skewX(-15deg)}
+    .hero-content{left:46px;right:42px;bottom:42px;max-width:680px}.kicker{color:#8bd9ae;font-size:10px;letter-spacing:1.7px}
+    h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(48px,6vw,76px);font-weight:500;line-height:.98;letter-spacing:-2.8px;margin:16px 0 20px}
+    .hero-content p{font-size:15px;line-height:1.7;color:#c0cbc3;max-width:470px}
+    .btn{background:#16885a;border-radius:2px;padding:13px 17px;font-size:10px;letter-spacing:.8px}.btn:hover{background:#20a970}
+    .hero-side{gap:0;border-top:1px solid var(--line)}.side-card{border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;padding:20px 2px;min-height:0;gap:22px}
+    .side-card .num{font-size:9px;color:#71c99b;letter-spacing:1.4px}.side-card h3{font-family:Georgia,'Times New Roman',serif;font-weight:500;font-size:21px;line-height:1.2;letter-spacing:-.2px;margin:0 0 5px}.side-card p{font-size:11px}
+    .section{padding:54px 0}.section-head{border-bottom:1px solid var(--line);padding-bottom:15px;margin-bottom:24px}.section-head h2{font-family:Georgia,'Times New Roman',serif;font-size:32px;font-weight:500;letter-spacing:-.7px}.section-head p{font-size:11px}.section-label{color:#71c99b;font-size:9px;letter-spacing:1.7px}
+    .news-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:0 26px}.news{background:transparent;border:0;border-top:2px solid #314238;border-radius:0;transition:border-color .18s;overflow:visible}.news:hover{transform:none;border-color:#59c58d}.news-art{display:none}.news-body{padding:17px 0 22px}.tag{color:#71c99b;font-size:9px;letter-spacing:1px}.news h3{font-family:Georgia,'Times New Roman',serif;font-size:22px;line-height:1.2;font-weight:500;letter-spacing:-.35px;margin:11px 0}.news p{font-size:13px;line-height:1.65;color:#aebbb2}.meta{border-top:1px solid #253229;padding-top:12px;margin-top:18px;color:#849288;font-size:10px}
+    .news-status{font-size:10px;color:#87958b;margin-top:18px;max-width:700px;line-height:1.6}
+    .split{gap:28px}.feature-panel{background:#101813;border:1px solid var(--line);border-radius:2px;padding:28px}.feature-panel h3{font-family:Georgia,'Times New Roman',serif;font-weight:500;font-size:25px}.feature-panel>p{font-size:13px;line-height:1.6}.rowline{font-size:12px;padding:15px 0}.pill{border-radius:2px;color:#81d7a8;border-color:#345b43}
+    .driver-grid{gap:0 14px}.driver{background:transparent;border:0;border-top:1px solid #35463a;border-radius:0;padding:17px 2px;min-height:118px}.driver:after{display:none}.driver small{color:#6fc999;font-size:9px}.driver h3{font-family:Georgia,'Times New Roman',serif;font-weight:500;font-size:21px}.driver p{font-size:11px}
+    #about .feature-panel{background:#142119;border:0;padding:38px}#about .feature-panel h3{font-size:30px}
+    footer{border-color:var(--line);padding:30px 0 42px}.foot strong{letter-spacing:-1px}
+    .news-empty{border:1px dashed #35483b;border-radius:2px}
+    @media(max-width:850px){.hero-grid{grid-template-columns:1fr}.hero-main{min-height:420px}.hero-side{display:flex}.side-card{min-height:0}.news-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:600px){.hero{padding-top:38px}.hero-main{min-height:390px}.hero-content{left:24px;right:22px;bottom:26px}h1{font-size:48px;letter-spacing:-1.8px}.hero-side{display:flex}.news-grid{grid-template-columns:1fr}.section{padding:38px 0}.section-head h2{font-size:27px}.feature-panel{padding:20px}}
   </style>
 </head>
 <body>
@@ -55,16 +85,16 @@
     <div class="hero-grid">
       <article class="hero-main">
         <div class="hero-content">
-          <div class="kicker" data-i="heroKicker">HIZ. STRATEJİ. TUTKU.</div>
-          <h1 data-i="heroTitle">Yarışın<br>ötesine geç.</h1>
-          <p data-i="heroText">Formula 1 dünyasından haberler, analizler, istatistikler ve unutulmaz hikâyeler. Grid'in her anını keşfet.</p>
+          <div class="kicker" data-i="heroKicker">APEX F1  /  PADDOCK NOTLARI</div>
+          <h1 data-i="heroTitle">Formula 1,<br>yakından.</h1>
+          <p data-i="heroText">Pistte olan biteni, arkasındaki insanları ve yarışın hikâyesini takip et. Haber, yorum ve veriler; gereksiz gürültü olmadan.</p>
           <a class="btn" href="#news"><span data-i="heroButton">Hikâyeleri keşfet</span><span>↗</span></a>
         </div>
       </article>
       <div class="hero-side">
-        <article class="side-card"><div class="num">01 / NEWSROOM</div><div><h3 data-i="side1Title">Paddock'tan son gelişmeler</h3><p data-i="side1Text">Haberler ve yorumlar</p></div></article>
-        <article class="side-card"><div class="num">02 / THE GRID</div><div><h3 data-i="side2Title">Pilotları ve takımları tanı</h3><p data-i="side2Text">Grid'in tamamı tek yerde</p></div></article>
-        <article class="side-card"><div class="num">03 / DATA</div><div><h3 data-i="side3Title">Rakamların anlattığı yarış</h3><p data-i="side3Text">Takvim ve şampiyona verileri</p></div></article>
+        <article class="side-card"><div class="num">01 / NEWSROOM</div><div><h3 data-i="side1Title">Paddock'tan notlar</h3><p data-i="side1Text">Haberler ve yorumlar</p></div></article>
+        <article class="side-card"><div class="num">02 / THE GRID</div><div><h3 data-i="side2Title">Grid'i yakından tanı</h3><p data-i="side2Text">Grid'in tamamı tek yerde</p></div></article>
+        <article class="side-card"><div class="num">03 / DATA</div><div><h3 data-i="side3Title">Yarışın sayılarla hikâyesi</h3><p data-i="side3Text">Takvim ve şampiyona verileri</p></div></article>
       </div>
     </div>
   </section>
@@ -93,7 +123,7 @@
     </div>
   </section>
   <section class="section wrap" id="about">
-    <div class="feature-panel"><div class="section-label">APEX F1 / ABOUT</div><h3 data-i="aboutTitle">Sadece sonucu değil, hikâyeyi de takip et.</h3><p data-i="aboutText">APEX F1; Formula 1'i haber, veri, teknoloji ve tarih perspektiflerinden ele alan bağımsız bir yayın platformu olarak tasarlanıyor.</p></div>
+    <div class="feature-panel"><div class="section-label">APEX F1 / ABOUT</div><h3 data-i="aboutTitle">Formula 1'e başka bir açıdan bak.</h3><p data-i="aboutText">Bağımsız bir Formula 1 yayını. Yarışları, takımları, pilotları ve sporun arkasındaki ayrıntıları merak edenler için hazırlandı.</p></div>
   </section>
 </main>
 <footer><div class="wrap"><div class="foot"><div><strong>APEX<span style="color:var(--red)">F1</span></strong><div data-i="footerTag">BEYOND THE GRID</div></div><div>© 2026 APEX F1 · <span data-i="footerDisclaimer">Bağımsız taraftar projesi. Formula 1 ve ilgili markalar hak sahiplerine aittir.</span></div></div></div></footer>
