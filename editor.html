@@ -11,7 +11,7 @@
 <header><div class="wrap nav"><a class="brand" href="index.html">APEX<span>F1</span><small>BEYOND THE GRID</small></a><nav class="navlinks"><a href="index.html">Siteyi görüntüle</a><a href="https://github.com/Gekrem/Apex-F1/actions/workflows/collect-news.yml" target="_blank" rel="noopener">Haber topla</a><a href="https://github.com/Gekrem/Apex-F1/pulls" target="_blank" rel="noopener">Onay kuyruğu</a></nav></div></header>
 <main class="wrap">
 <section class="hero"><div class="eyebrow">APEX F1 / YAYIN YÖNETİMİ</div><h1>Editör Paneli</h1><p>Haberleri panelden düzenle, kaynaklarını kontrol et ve yayın durumlarını belirle.</p><div class="actions"><a class="btn primary" href="https://github.com/Gekrem/Apex-F1/actions/workflows/collect-news.yml" target="_blank" rel="noopener">＋ Yeni haberleri topla</a><a class="btn" href="https://github.com/Gekrem/Apex-F1/pulls" target="_blank" rel="noopener">Onay kuyruğunu aç ↗</a><button class="btn" id="connectGitHub" type="button">GitHub bağlantısı kur</button><button class="btn" id="refresh" type="button">↻ Yenile</button></div></section>
-<div class="notice"><strong>GitHub’a güvenli kayıt:</strong> Yalnızca bu depo için Contents izni olan bir Fine-grained Personal Access Token bağla. Anahtar bu sayfanın koduna yazılmaz; yalnızca açık sekmenin oturum belleğinde tutulur ve sekme kapanınca silinir. Token’ı kimseyle paylaşma.</div>
+<div class="notice"><strong>GitHub’a güvenli kayıt:</strong> Yalnızca bu depo için Contents izni olan Fine-grained token kullanılır. Token bu sayfanın kaynak koduna eklenmez; yalnızca açık sekmenin oturum belleğinde tutulur. Kimseyle paylaşma.</div><div id="tokenBox" class="savebar" style="display:none"><p>GitHub token’ını aşağıya yapıştır. Alan parola gibi gizlenir.</p><input id="githubTokenInput" type="password" autocomplete="off" placeholder="github_pat_…" style="flex:1;min-width:240px;background:#0d0d10;border:1px solid #383840;border-radius:7px;color:#fff;padding:11px"><button class="btn primary" id="tokenSave" type="button">Bağlan</button><button class="btn" id="tokenCancel" type="button">İptal</button></div>
 <section class="stats"><div class="stat"><strong id="total">—</strong><span>Toplam haber</span></div><div class="stat"><strong id="drafts">—</strong><span>İnceleme bekleyen</span></div><div class="stat"><strong id="published">—</strong><span>Yayımlanmış</span></div></section>
 <div class="toolbar"><input id="search" type="search" placeholder="Başlık, kaynak veya kategori ara…"><select id="filter"><option value="all">Tüm haberler</option><option value="draft">Taslaklar</option><option value="published">Yayımlananlar</option></select><span class="muted" id="updated">Veriler yükleniyor…</span><span class="dirty" id="dirty"></span></div>
 <div class="savebar"><p id="saveInfo">Henüz düzenleme yapılmadı. Düzenlemelerin tarayıcıda geçici olarak tutulur.</p><button class="btn" id="discard" type="button">Değişiklikleri sıfırla</button><button class="btn" id="download" type="button">↓ JSON dosyasını indir</button><button class="btn primary" id="saveGitHub" type="button" disabled>GitHub’a kaydet</button></div>
@@ -43,12 +43,14 @@ const GH_API='https://api.github.com/repos/Gekrem/Apex-F1/contents/data/news.jso
 function updateGitHubButton(){$('connectGitHub').textContent=sessionStorage.getItem('apex_github_token')?'✓ GitHub bağlı · Bağlantıyı kes':'GitHub bağlantısı kur';$('saveGitHub').disabled=!dirty||!sessionStorage.getItem('apex_github_token');}
 $('connectGitHub').addEventListener('click',()=>{
  if(sessionStorage.getItem('apex_github_token')){sessionStorage.removeItem('apex_github_token');updateGitHubButton();$('saveInfo').textContent='GitHub bağlantısı bu sekme için kapatıldı.';return;}
- const help='GitHub’da Fine-grained token oluştur: sadece Gekrem/Apex-F1 reposunu seç, Repository permissions > Contents için Read and write ver. Token’ı oluşturup kopyala; şifreni değil token’ı buraya yapıştır.';
- alert(help);
- window.open('https://github.com/settings/personal-access-tokens/new','_blank','noopener');
- const token=prompt('Oluşturduğun Fine-grained token’ı buraya yapıştır. Token yalnızca bu sekme açıkken saklanır:');
- if(token&&token.trim()){sessionStorage.setItem('apex_github_token',token.trim());updateGitHubButton();$('saveInfo').textContent='GitHub bağlantısı kuruldu. Düzenlemelerini artık doğrudan kaydedebilirsin.';}
+ $('tokenBox').style.display='flex';$('githubTokenInput').focus();
 });
+$('tokenSave').addEventListener('click',()=>{
+ const token=$('githubTokenInput').value.trim();
+ if(!token){alert('Önce GitHub token’ını yapıştır.');return;}
+ sessionStorage.setItem('apex_github_token',token);$('githubTokenInput').value='';$('tokenBox').style.display='none';updateGitHubButton();$('saveInfo').textContent='GitHub bağlantısı bu sekme için kuruldu.';
+});
+$('tokenCancel').addEventListener('click',()=>{$('githubTokenInput').value='';$('tokenBox').style.display='none';});
 function utf8ToBase64(value){const bytes=new TextEncoder().encode(value);let binary='';bytes.forEach(b=>binary+=String.fromCharCode(b));return btoa(binary);}
 $('saveGitHub').addEventListener('click',async()=>{
  const token=sessionStorage.getItem('apex_github_token');if(!token){alert('Önce GitHub bağlantısı kur.');return;}
