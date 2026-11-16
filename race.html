@@ -38,6 +38,26 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--green);outline-offs
 .track-gallery{padding:8px 0 34px}.track-gallery .head{align-items:flex-end;margin-bottom:15px}.track-gallery .head h2{margin:4px 0 3px}.track-gallery .head p{margin:0;color:var(--muted);font-size:12px}.track-gallery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;min-height:210px}.track-photo{position:relative;display:block;min-height:220px;overflow:hidden;background:#0c1710;border:1px solid var(--line);border-radius:5px;color:var(--text);text-decoration:none}.track-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .35s,opacity .25s;opacity:0}.track-photo img.loaded{opacity:1}.track-photo:hover img{transform:scale(1.035)}.track-photo:after{content:"";position:absolute;inset:40% 0 0;background:linear-gradient(transparent,rgba(3,9,5,.94));pointer-events:none}.track-photo .photo-meta{position:absolute;z-index:1;bottom:0;left:0;right:0;padding:34px 14px 12px;display:grid;gap:3px}.track-photo .photo-meta strong{font-size:13px}.track-photo .photo-meta small{font-size:9px;color:#b8cabe}.track-photo .photo-open{position:absolute;z-index:2;right:12px;top:12px;background:rgba(5,12,8,.8);border:1px solid rgba(170,235,195,.3);padding:5px 8px;font-size:9px;color:var(--bright);border-radius:3px}.gallery-loading,.gallery-empty{grid-column:1/-1;display:flex;align-items:center;justify-content:center;gap:12px;min-height:145px;background:linear-gradient(135deg,rgba(19,40,27,.75),rgba(8,17,11,.9));border:1px solid var(--line);color:var(--muted);font-size:12px}.gallery-pulse{width:9px;height:9px;border-radius:50%;background:var(--green);box-shadow:0 0 0 6px rgba(33,209,138,.12),0 0 20px var(--green)}.gallery-credit{font-size:9px;color:var(--muted);margin:10px 0 0}.circuit-section{padding:4px 0 44px}.circuit-panel{padding:25px}.circuit-panel .head{align-items:flex-start}.circuit-panel .head h2{font-size:29px;margin:5px 0}.circuit-panel .head p{font-size:12px;color:var(--muted);margin:0}.circuit-round{border:1px solid var(--line);padding:7px 10px;color:var(--bright);font-size:9px;letter-spacing:1px;white-space:nowrap}.circuit-layout-card{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(260px,.85fr);gap:14px;margin-top:18px}.circuit-layout-visual{position:relative;min-height:260px;background:radial-gradient(ellipse,rgba(32,95,57,.16),transparent 70%),#09120c;border:1px solid var(--line);border-radius:4px;padding:18px;display:flex;align-items:center;justify-content:center}.circuit-layout-visual img{width:100%;height:100%;max-height:300px;object-fit:contain}.layout-caption{position:absolute;left:14px;bottom:10px;color:var(--muted);font-size:9px}.circuit-spec-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.circuit-spec{padding:15px;background:rgba(33,209,138,.045);border:1px solid rgba(80,142,100,.22);border-radius:4px;display:flex;flex-direction:column;justify-content:center}.circuit-spec strong{font-size:25px;line-height:1.15;color:var(--bright);letter-spacing:-.5px}.circuit-spec span{font-size:9px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-top:7px}.circuit-facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:13px}.circuit-fact{padding:8px 11px;border:1px solid var(--line);border-radius:3px;color:#c7d8cc;font-size:11px}.circuit-source{font-size:9px;color:var(--muted);margin-top:15px;padding-top:12px;border-top:1px solid var(--line)}.circuit-source a{color:var(--bright)}
 @media(max-width:760px){.track-gallery-grid{grid-template-columns:1fr 1fr}.track-photo{min-height:180px}.circuit-layout-card{grid-template-columns:1fr}.circuit-layout-visual{min-height:220px}.circuit-panel{padding:17px}}
 @media(max-width:480px){.track-gallery-grid{grid-template-columns:1fr}.track-photo{min-height:205px}.track-gallery .head{align-items:flex-start;flex-direction:column}.circuit-spec strong{font-size:22px}}
+
+/* Circuit-first photo archive */
+.race-photo{display:none!important}
+.track-gallery{padding:22px 0 34px;margin:0 auto 10px}
+.track-gallery .head{align-items:flex-end;margin-bottom:16px}
+.track-gallery .head h2{font-size:clamp(26px,3vw,36px);letter-spacing:-.8px;margin:5px 0}
+.track-gallery .head p{margin:0;color:var(--muted);font-size:12px}
+.track-gallery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;min-height:210px}
+.track-photo{min-height:230px;border-radius:5px;isolation:isolate}
+.track-photo:first-child{grid-column:span 2;min-height:300px}
+.track-photo img{object-fit:cover}
+.track-photo .photo-meta strong{font-size:14px}
+.circuit-facts:empty{display:none}
+.circuit-fact{background:rgba(33,209,138,.055);border-color:rgba(80,142,100,.22);padding:12px 14px}
+.sector-card{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:14px}
+.sector-card>div{padding:13px;background:rgba(33,209,138,.055);border:1px solid rgba(80,142,100,.22);border-radius:3px}
+.sector-card small{display:block;color:var(--muted);font-size:9px;letter-spacing:1px;text-transform:uppercase}
+.sector-card strong{display:block;margin-top:4px;color:var(--bright);font-size:22px}
+@media(max-width:760px){.track-gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.track-photo:first-child{grid-column:span 2;min-height:240px}.track-photo{min-height:190px}.sector-card{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.track-gallery-grid{grid-template-columns:1fr}.track-photo:first-child{grid-column:auto;min-height:220px}.track-gallery .head{align-items:flex-start;flex-direction:column}}
 </style>
 </head>
 <body><div class="top"></div><header><div class="wrap nav"><a class="brand" href="index.html">APEX<span>F1</span><small>BEYOND THE GRID</small></a><div class="navright"><a class="link" href="index.html#calendar" data-tr="← Yarış takvimi" data-en="← Race calendar">← Yarış takvimi</a><button class="link" id="lang">EN</button></div></div></header>
@@ -49,6 +69,8 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--green);outline-offs
 <div class="track-gallery-grid" id="trackGallery"><div class="gallery-loading"><span class="gallery-pulse"></span><span data-tr="Pist fotoğrafları aranıyor…" data-en="Finding circuit photographs…">Pist fotoğrafları aranıyor…</span></div></div>
 <p class="gallery-credit" id="galleryCredit">Fotoğraflar Wikimedia Commons üzerinden; her görselin kaynak ve lisans bilgisi kendi bağlantısında yer alır.</p>
 </section>
+
+
 <section class="section"><div class="head"><div><div class="label" data-tr="PROGRAM" data-en="TIMETABLE">PROGRAM</div><h2 data-tr="Yarış hafta sonu" data-en="Race weekend">Yarış hafta sonu</h2></div><p data-tr="Saatler yerel saat diliminde" data-en="Times in your local time zone">Saatler yerel saat diliminde</p></div><div class="session-grid" id="sessions"></div><p class="note" data-tr="Geçmiş yarışlarda kesin seans saatleri için resmî yarış programına bak. Henüz gerçekleşmemiş seanslar sonuç tablosunda boş görünür." data-en="For past events, use the official timetable for exact session times. Sessions not yet held will have no results.">Geçmiş yarışlarda kesin seans saatleri için resmî yarış programına bak. Henüz gerçekleşmemiş seanslar sonuç tablosunda boş görünür.</p></section>
 <section class="section"><div class="head"><div><div class="label" data-tr="KLASMAN" data-en="CLASSIFICATION">KLASMAN</div><h2 data-tr="Seans sonuçları" data-en="Session results">Seans sonuçları</h2></div><p id="resultSource">Jolpica-F1 data service</p></div><div class="tabs" id="resultTabs"><button class="tab active" data-kind="race" data-tr="Yarış" data-en="Race">Yarış</button><button class="tab" data-kind="qualifying" data-tr="Sıralama" data-en="Qualifying">Sıralama</button><button class="tab" data-kind="sprint" data-tr="Sprint" data-en="Sprint">Sprint</button></div><div id="results" class="table-wrap"><div class="empty">Sonuçlar yükleniyor…</div></div><p class="note" data-tr="Sıralama ve yarış tabloları Jolpica-F1 açık veri servisi üzerinden alınır. Resmî FIA sınıflandırması esas alınmalıdır. Antrenman seansları için resmî Formula 1 sonuç sayfasını kullan." data-en="Qualifying and race classifications are retrieved from the Jolpica-F1 open data service. Official FIA classifications take precedence. Use the official Formula 1 results page for practice sessions.">Sıralama ve yarış tabloları Jolpica-F1 açık veri servisi üzerinden alınır. Resmî FIA sınıflandırması esas alınmalıdır. Antrenman seansları için resmî Formula 1 sonuç sayfasını kullan.</p></section>
 <section class="section"><div class="head"><div><div class="label" data-tr="PODYUM" data-en="PODIUM">PODYUM</div><h2 data-tr="İlk üç" data-en="Top three">İlk üç</h2></div></div><div id="podium" class="podium"><div class="empty">Yarış sonucu bekleniyor.</div></div></section>
@@ -86,24 +108,28 @@ const specs=[
 if(race.round===5)specs.push(['1:13.078','LAP RECORD · VALTTERI BOTTAS · 2019']);
 $('layoutStats').innerHTML=specs.map(x=>'<div class="circuit-spec"><strong>'+esc(x[0])+'</strong><span>'+esc(x[1])+'</span></div>').join('');
 const facts=race.round===5
-?['Montreal · Québec · Canada','İlk Formula 1 yarışı: 1978','Saat yönünde','Notre-Dame Adası','14 viraj · 5 şikan']
-: [race.city+' · '+race.country];
+?['Saat yönünde','14 viraj','3 sektör','Stop-start karakter']
+:[];
 $('circuitFacts').innerHTML=facts.map(x=>'<span class="circuit-fact">'+esc(x)+'</span>').join('');
+if(race.round===5){
+$('circuitFacts').insertAdjacentHTML('beforebegin','<div class="sector-card" aria-label="Sektör uzunlukları"><div><small>SEKTÖR 1</small><strong>1.092 km</strong></div><div><small>SEKTÖR 2</small><strong>1.396 km</strong></div><div><small>SEKTÖR 3</small><strong>1.873 km</strong></div></div>');
+}
 $('circuitSource').innerHTML=(lang==='tr'?'Teknik veriler: ':'Technical data: ')+'<a href="https://www.formula1.com/en/information/canada-circuit-de-gilles-villeneuve-montreal.3ootdKogPeMEGqcNpleNrN" target="_blank" rel="noopener">Formula 1</a>'+(race.round===5?' · <a href="https://www.acind.ca/track" target="_blank" rel="noopener">Circuit Gilles-Villeneuve / ACIND</a>':'');
 }
 async function loadCircuitGallery(){
 const title=race.circuit+' '+race.city+' Formula 1 circuit';
-const searchUrl='https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch='+encodeURIComponent('filetype:bitmap "'+race.circuit+'" '+race.city)+'&gsrnamespace=6&gsrlimit=9&prop=imageinfo&iiprop=url|extmetadata&iiurlwidth=1200&format=json&origin=*';
+const categoryUrl=race.round===5?'https://commons.wikimedia.org/w/api.php?action=query&generator=categorymembers&gcmtitle='+encodeURIComponent('Category:Circuit Gilles Villeneuve')+'&gcmtype=file&gcmlimit=30&prop=imageinfo&iiprop=url|extmetadata&iiurlwidth=1400&format=json&origin=*':null;
+const searchUrl='https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch='+encodeURIComponent('filetype:bitmap "'+race.circuit+'" '+race.city+' circuit track')+'&gsrnamespace=6&gsrlimit=18&prop=imageinfo&iiprop=url|extmetadata&iiurlwidth=1400&format=json&origin=*';
 $('allCircuitPhotos').href='https://commons.wikimedia.org/w/index.php?search='+encodeURIComponent(title)+'&title=Special:MediaSearch&type=image';
 $('allCircuitPhotos').textContent=lang==='tr'?'Tüm pist fotoğrafları ↗':'All circuit photos ↗';
 const grid=$('trackGallery');
 try{
-const response=await fetch(searchUrl);
-if(!response.ok)throw Error('Commons API unavailable');
-const payload=await response.json();
-const pages=Object.values(payload.query?.pages||{}).filter(x=>x.imageinfo?.[0]?.thumburl);
+let payload=null;
+if(categoryUrl){const categoryResponse=await fetch(categoryUrl);if(categoryResponse.ok)payload=await categoryResponse.json();}
+let pages=Object.values(payload?.query?.pages||{}).filter(x=>x.imageinfo?.[0]?.thumburl);
+if(pages.length<3){const response=await fetch(searchUrl);if(!response.ok)throw Error('Commons API unavailable');const fallback=await response.json();const merged=[...pages,...Object.values(fallback.query?.pages||{})];pages=merged.filter((x,i,a)=>x.imageinfo?.[0]?.thumburl&&a.findIndex(y=>y.title===x.title)===i);}
 if(!pages.length)throw Error('No circuit images found');
-grid.innerHTML=pages.slice(0,6).map((p,i)=>{
+grid.innerHTML=pages.slice(0,9).map((p,i)=>{
 const info=p.imageinfo[0],meta=info.extmetadata||{},author=(meta.Artist?.value||'Wikimedia Commons contributor').replace(/<[^>]*>/g,'').slice(0,90),license=meta.LicenseShortName?.value||'License details';
 const fileUrl='https://commons.wikimedia.org/wiki/'+encodeURIComponent(p.title.replace(/ /g,'_'));
 return '<a class="track-photo" href="'+esc(fileUrl)+'" target="_blank" rel="noopener" aria-label="'+esc(p.title)+' — Wikimedia Commons"><img loading="lazy" src="'+esc(info.thumburl)+'" alt="'+esc(p.title.replace('File:',''))+'"><span class="photo-open">VIEW ↗</span><span class="photo-meta"><strong>'+esc(p.title.replace('File:','').replace(/\.[^.]+$/,''))+'</strong><small>'+esc(author)+' · '+esc(license)+'</small></span></a>';
