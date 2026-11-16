@@ -45,3 +45,10 @@ A bilingual Turkish/English Formula 1 fan publication prototype hosted on GitHub
 - Automatic collection is not automatic publication. Human review is required to prevent inaccurate, irrelevant, or duplicated stories.
 - The collector does not use a paid AI translation service. Turkish translation and final editorial approval are intentionally left to the editor.
 - RSS feeds and third-party GitHub Actions may change or become unavailable. Check workflow logs if a scheduled run fails.
+
+## Editorial dashboard
+
+- Open `editor.html` on the published GitHub Pages site to view the editorial dashboard.
+- The dashboard reads `data/news.json`, shows draft/published counts, filters stories, and links to each original source.
+- Use **New stories** to open the GitHub Actions workflow, **Review queue** to inspect pull requests, and **Edit JSON** to update translations/status in GitHub.
+- GitHub Pages is static and cannot safely write to the repository by itself. The dashboard deliberately sends edits through GitHub's authenticated interface; never put a GitHub token or password in client-side code.
