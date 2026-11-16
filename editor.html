@@ -61,32 +61,7 @@ function updateStats(){$('total').textContent=allNews.length;$('drafts').textCon
 $('newsList').addEventListener('click',e=>{const b=e.target.closest('.edit-btn');if(b)openEditor(b.dataset.id);});
 $('editForm').addEventListener('submit',e=>{e.preventDefault();const id=$('editId').value;const n=allNews.find(x=>String(x.id)===String(id));if(!n)return;const audit=runQualityAudit();if($('status').value==='published'&&(!audit.ok||!$('checkSource').checked||!$('checkFacts').checked||!$('checkOriginal').checked)){alert('Haber henüz yayın koşullarını karşılamıyor. Eksik otomatik kontrolleri ve üç editör onayını tamamla.');return;}['title_tr','title_en','summary_tr','summary_en','category','status','source_name','source_url'].forEach(k=>n[k]=$(k).value.trim());if(n.status==='published'&&!n.published_at)n.published_at=new Date().toISOString();if(n.status==='draft')n.published_at='';setDirty(true);updateStats();render();closeEditor();});
 $('cancelEdit').addEventListener('click',closeEditor);$('editModal').addEventListener('click',e=>{if(e.target===$('editModal'))closeEditor();});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeEditor();});
-$('download').addEventListener('click',()=>{const blob=new Blob([JSON.stringify(allNews,null,2)+'\n'],{type:'application/json;charset=utf-8'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='news.json';document.body.append(a);a.click();a.remove();URL.revokeObjectURL(url);$('saveInfo').textContent='news.json indirildi. Şimdi GitHub’daki data/news.json dosyasını bu dosyayla değiştirip commit et.';});
-$('discard').addEventListener('click',()=>{if(!dirty||confirm('Yaptığın tüm değişiklikler silinsin mi?')){allNews=JSON.parse(JSON.stringify(originalNews));setDirty(false);updateStats();render();}});
-$('refresh').addEventListener('click',()=>{if(!dirty||confirm('Yenilemek geçici değişiklikleri siler. Devam edilsin mi?'))load();});$('search').addEventListener('input',render);$('filter').addEventListener('change',render);
-const GH_API='https://api.github.com/repos/Gekrem/Apex-F1/contents/data/news.json';
-function updateGitHubButton(){$('connectGitHub').textContent=sessionStorage.getItem('apex_github_token')?'✓ GitHub bağlı · Bağlantıyı kes':'GitHub bağlantısı kur';$('saveGitHub').disabled=!dirty||!sessionStorage.getItem('apex_github_token');}
-$('connectGitHub').addEventListener('click',()=>{
- if(sessionStorage.getItem('apex_github_token')){sessionStorage.removeItem('apex_github_token');updateGitHubButton();$('saveInfo').textContent='GitHub bağlantısı bu sekme için kapatıldı.';return;}
- $('tokenBox').style.display='flex';$('githubTokenInput').focus();
-});
-$('tokenSave').addEventListener('click',()=>{
- const token=$('githubTokenInput').value.trim();
- if(!token){alert('Önce GitHub token’ını yapıştır.');return;}
- sessionStorage.setItem('apex_github_token',token);$('githubTokenInput').value='';$('tokenBox').style.display='none';updateGitHubButton();$('saveInfo').textContent='GitHub bağlantısı bu sekme için kuruldu.';
-});
-$('tokenCancel').addEventListener('click',()=>{$('githubTokenInput').value='';$('tokenBox').style.display='none';});
-function utf8ToBase64(value){const bytes=new TextEncoder().encode(value);let binary='';bytes.forEach(b=>binary+=String.fromCharCode(b));return btoa(binary);}
-$('saveGitHub').addEventListener('click',async()=>{
- const token=sessionStorage.getItem('apex_github_token');if(!token){alert('Önce GitHub bağlantısı kur.');return;}
- if(!dirty)return;
- const button=$('saveGitHub');button.disabled=true;button.textContent='Kaydediliyor…';
- try{
-  const headers={'Accept':'application/vnd.github+json','Authorization':'Bearer '+token,'X-GitHub-Api-Version':'2022-11-28'};
-  const current=await fetch(GH_API,{headers,cache:'no-store'});
-  if(!current.ok)throw new Error(current.status===401||current.status===403?'Token geçersiz veya Contents izni eksik.': 'GitHub dosyası okunamadı (HTTP '+current.status+').');
-  const file=await current.json();
-  const payload={message:'Edit news from APEX F1 editor',content:utf8ToBase64(JSON.stringify(allNews,null,2)+'\\n'),sha:file.sha,branch:'main'};
+$('download').addEventListener('click',()=>{const blob=new Blob([JSON.stringify(allNews,null,2)+'\n',sha:file.sha,branch:'main'};
   const saved=await fetch(GH_API,{method:'PUT',headers:{...headers,'Content-Type':'application/json'},body:JSON.stringify(payload)});
   if(!saved.ok){const detail=await saved.json().catch(()=>({}));throw new Error(detail.message||'GitHub kayıt işlemi başarısız (HTTP '+saved.status+').');}
   originalNews=JSON.parse(JSON.stringify(allNews));setDirty(false);$('saveInfo').textContent='Başarıyla GitHub’a kaydedildi. Commit oluşturuldu; site birkaç dakika içinde güncellenecek.';button.textContent='✓ GitHub’a kaydedildi';
