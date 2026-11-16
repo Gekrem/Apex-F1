@@ -21,7 +21,7 @@ FEEDS = [
     ("FIA", "https://www.fia.com/rss/news", True),
 ]
 F1_TERMS = re.compile(
-    r"formula\\s*1|\\bf1\\b|grand prix|fia|paddock|pit stop|pole position|"
+    r"formula\s*1|\bf1\b|grand prix|fia|paddock|pit stop|pole position|"
     r"sprint race|drivers'? championship|constructors'? championship|"
     r"formula one|racing bulls|mclaren|ferrari|mercedes|red bull|aston martin|williams|alpine|haas|audi",
     re.I,
@@ -31,7 +31,7 @@ F1_TERMS = re.compile(
 def clean_html(value: str) -> str:
     value = re.sub(r"<[^>]+>", " ", value or "")
     value = unescape(value)
-    return re.sub(r"\\s+", " ", value).strip()[:500]
+    return re.sub(r"\s+", " ", value).strip()[:500]
 
 
 def parse_date(value: str) -> str:
@@ -152,7 +152,7 @@ def main():
     )
     published = [item for item in combined if item.get("status") == "published"]
     drafts = [item for item in combined if item.get("status") != "published"][:80]
-    output = json.dumps(published + drafts, ensure_ascii=False, indent=2) + "\\n"
+    output = json.dumps(published + drafts, ensure_ascii=False, indent=2) + "\n"
 
     if output != original_text:
         NEWS_FILE.write_text(output, encoding="utf-8")
