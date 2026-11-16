@@ -196,7 +196,10 @@
       "circuit": "Sepang International Circuit",
       "start": "2026-10-02",
       "end": "2026-10-04",
-      "sprint": false
+      "sprint": false,
+      "circuitLengthKm": 5.543,
+      "laps": 56,
+      "distanceKm": 310.398
     },
     {
       "round": 17,
