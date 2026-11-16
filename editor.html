@@ -10,11 +10,11 @@
 <body><div class="topline"></div>
 <header><div class="wrap nav"><a class="brand" href="index.html">APEX<span>F1</span><small>BEYOND THE GRID</small></a><nav class="navlinks"><a href="index.html">Siteyi görüntüle</a><a href="https://github.com/Gekrem/Apex-F1/actions/workflows/collect-news.yml" target="_blank" rel="noopener">Haber topla</a><a href="https://github.com/Gekrem/Apex-F1/pulls" target="_blank" rel="noopener">Onay kuyruğu</a></nav></div></header>
 <main class="wrap">
-<section class="hero"><div class="eyebrow">APEX F1 / YAYIN YÖNETİMİ</div><h1>Editör Paneli</h1><p>Haberleri panelden düzenle, kaynaklarını kontrol et ve yayın durumlarını belirle.</p><div class="actions"><a class="btn primary" href="https://github.com/Gekrem/Apex-F1/actions/workflows/collect-news.yml" target="_blank" rel="noopener">＋ Yeni haberleri topla</a><a class="btn" href="https://github.com/Gekrem/Apex-F1/pulls" target="_blank" rel="noopener">Onay kuyruğunu aç ↗</a><button class="btn" id="refresh" type="button">↻ Yenile</button></div></section>
-<div class="notice"><strong>Nasıl kaydedilir?</strong> Haberleri burada düzenleyebilirsin. Değişiklikleri önce <strong>JSON dosyasını indir</strong> ile dışa aktar; ardından GitHub'daki <strong>data/news.json</strong> dosyasını bu dosyayla değiştirip commit et. Bu panel GitHub şifreni veya erişim anahtarını istemez.</div>
+<section class="hero"><div class="eyebrow">APEX F1 / YAYIN YÖNETİMİ</div><h1>Editör Paneli</h1><p>Haberleri panelden düzenle, kaynaklarını kontrol et ve yayın durumlarını belirle.</p><div class="actions"><a class="btn primary" href="https://github.com/Gekrem/Apex-F1/actions/workflows/collect-news.yml" target="_blank" rel="noopener">＋ Yeni haberleri topla</a><a class="btn" href="https://github.com/Gekrem/Apex-F1/pulls" target="_blank" rel="noopener">Onay kuyruğunu aç ↗</a><button class="btn" id="connectGitHub" type="button">GitHub bağlantısı kur</button><button class="btn" id="refresh" type="button">↻ Yenile</button></div></section>
+<div class="notice"><strong>GitHub’a güvenli kayıt:</strong> Yalnızca bu depo için Contents izni olan bir Fine-grained Personal Access Token bağla. Anahtar bu sayfanın koduna yazılmaz; yalnızca açık sekmenin oturum belleğinde tutulur ve sekme kapanınca silinir. Token’ı kimseyle paylaşma.</div>
 <section class="stats"><div class="stat"><strong id="total">—</strong><span>Toplam haber</span></div><div class="stat"><strong id="drafts">—</strong><span>İnceleme bekleyen</span></div><div class="stat"><strong id="published">—</strong><span>Yayımlanmış</span></div></section>
 <div class="toolbar"><input id="search" type="search" placeholder="Başlık, kaynak veya kategori ara…"><select id="filter"><option value="all">Tüm haberler</option><option value="draft">Taslaklar</option><option value="published">Yayımlananlar</option></select><span class="muted" id="updated">Veriler yükleniyor…</span><span class="dirty" id="dirty"></span></div>
-<div class="savebar"><p id="saveInfo">Henüz düzenleme yapılmadı. Düzenlemelerin tarayıcıda geçici olarak tutulur.</p><button class="btn" id="discard" type="button">Değişiklikleri sıfırla</button><button class="btn primary" id="download" type="button">↓ JSON dosyasını indir</button></div>
+<div class="savebar"><p id="saveInfo">Henüz düzenleme yapılmadı. Düzenlemelerin tarayıcıda geçici olarak tutulur.</p><button class="btn" id="discard" type="button">Değişiklikleri sıfırla</button><button class="btn" id="download" type="button">↓ JSON dosyasını indir</button><button class="btn primary" id="saveGitHub" type="button" disabled>GitHub’a kaydet</button></div>
 <section class="list" id="newsList" aria-live="polite"><div class="empty">Haberler yükleniyor…</div></section></main>
 <div class="modal" id="editModal" role="dialog" aria-modal="true" aria-labelledby="editTitle"><div class="dialog"><h2 id="editTitle">Haberi düzenle</h2><p>Başlık ve özetleri iki dilde düzenleyebilir, haberin yayın durumunu değiştirebilirsin.</p><form id="editForm"><input type="hidden" id="editId"><div class="fields">
 <div class="field"><label for="title_tr">Türkçe başlık</label><input id="title_tr" maxlength="180"></div><div class="field"><label for="title_en">English headline</label><input id="title_en" maxlength="180"></div>
@@ -27,7 +27,7 @@
 const REPO='https://github.com/Gekrem/Apex-F1';let allNews=[],originalNews=[],dirty=false;
 const $=id=>document.getElementById(id);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-function setDirty(v){dirty=v;$('dirty').textContent=v?'● Kaydedilmemiş değişiklik var':'';$('saveInfo').textContent=v?'Değişiklikler bu tarayıcı oturumunda hazır. Kalıcı olması için JSON dosyasını indirip GitHub’a yüklemelisin.':'Henüz düzenleme yapılmadı. Düzenlemelerin tarayıcıda geçici olarak tutulur.';}
+function setDirty(v){dirty=v;$('dirty').textContent=v?'● Kaydedilmemiş değişiklik var':'';$('saveInfo').textContent=v?'Değişiklikler hazır. GitHub’a kaydet veya JSON olarak indir.':'Henüz düzenleme yapılmadı.';$('saveGitHub').disabled=!v||!sessionStorage.getItem('apex_github_token');}
 function render(){const q=$('search').value.trim().toLocaleLowerCase('tr');const f=$('filter').value;const rows=allNews.filter(n=>(f==='all'||n.status===f)&&[n.title_tr,n.title_en,n.summary_tr,n.summary_en,n.source_name,n.category].join(' ').toLocaleLowerCase('tr').includes(q));const list=$('newsList');list.replaceChildren();if(!rows.length){list.innerHTML='<div class="empty">Bu filtreyle eşleşen haber bulunamadı.</div>';return;}rows.forEach(n=>{const published=n.status==='published';const title=n.title_tr||n.title_en||'Başlıksız haber';const summary=n.summary_tr||n.summary_en||'Özet henüz eklenmedi.';const card=document.createElement('article');card.className='item';card.innerHTML='<div class="itemtop"><span class="tag">'+esc(n.category||'FORMULA 1')+' · '+esc(n.source_name||'Kaynak belirtilmemiş')+'</span><span class="status '+(published?'published':'')+'">'+(published?'YAYIMLANDI':'TASLAK / İNCELEME')+'</span></div><h2>'+esc(title)+'</h2><p>'+esc(summary)+'</p><p class="en"><strong>EN:</strong> '+esc(n.title_en||'English headline missing')+'</p><div class="itemfoot"><button class="btn primary edit-btn" type="button" data-id="'+esc(n.id)+'">✎ Düzenle</button><a href="'+esc(n.source_url||'#')+'" target="_blank" rel="noopener">Orijinal kaynağı aç ↗</a><span class="muted">'+esc(n.published_at||n.collected_at||'Tarih yok')+'</span></div>';list.append(card);});}
 function openEditor(id){const n=allNews.find(x=>String(x.id)===String(id));if(!n)return;$('editId').value=n.id;['title_tr','title_en','summary_tr','summary_en','category','status','source_name','source_url'].forEach(k=>$(k).value=n[k]??(k==='status'?'draft':''));$('editModal').classList.add('open');$('title_tr').focus();}
 function closeEditor(){$('editModal').classList.remove('open');}
@@ -38,5 +38,34 @@ $('editForm').addEventListener('submit',e=>{e.preventDefault();const id=$('editI
 $('cancelEdit').addEventListener('click',closeEditor);$('editModal').addEventListener('click',e=>{if(e.target===$('editModal'))closeEditor();});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeEditor();});
 $('download').addEventListener('click',()=>{const blob=new Blob([JSON.stringify(allNews,null,2)+'\n'],{type:'application/json;charset=utf-8'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='news.json';document.body.append(a);a.click();a.remove();URL.revokeObjectURL(url);$('saveInfo').textContent='news.json indirildi. Şimdi GitHub’daki data/news.json dosyasını bu dosyayla değiştirip commit et.';});
 $('discard').addEventListener('click',()=>{if(!dirty||confirm('Yaptığın tüm değişiklikler silinsin mi?')){allNews=JSON.parse(JSON.stringify(originalNews));setDirty(false);updateStats();render();}});
-$('refresh').addEventListener('click',()=>{if(!dirty||confirm('Yenilemek geçici değişiklikleri siler. Devam edilsin mi?'))load();});$('search').addEventListener('input',render);$('filter').addEventListener('change',render);load();
+$('refresh').addEventListener('click',()=>{if(!dirty||confirm('Yenilemek geçici değişiklikleri siler. Devam edilsin mi?'))load();});$('search').addEventListener('input',render);$('filter').addEventListener('change',render);
+const GH_API='https://api.github.com/repos/Gekrem/Apex-F1/contents/data/news.json';
+function updateGitHubButton(){$('connectGitHub').textContent=sessionStorage.getItem('apex_github_token')?'✓ GitHub bağlı · Bağlantıyı kes':'GitHub bağlantısı kur';$('saveGitHub').disabled=!dirty||!sessionStorage.getItem('apex_github_token');}
+$('connectGitHub').addEventListener('click',()=>{
+ if(sessionStorage.getItem('apex_github_token')){sessionStorage.removeItem('apex_github_token');updateGitHubButton();$('saveInfo').textContent='GitHub bağlantısı bu sekme için kapatıldı.';return;}
+ const help='GitHub’da Fine-grained token oluştur: sadece Gekrem/Apex-F1 reposunu seç, Repository permissions > Contents için Read and write ver. Token’ı oluşturup kopyala; şifreni değil token’ı buraya yapıştır.';
+ alert(help);
+ window.open('https://github.com/settings/personal-access-tokens/new','_blank','noopener');
+ const token=prompt('Oluşturduğun Fine-grained token’ı buraya yapıştır. Token yalnızca bu sekme açıkken saklanır:');
+ if(token&&token.trim()){sessionStorage.setItem('apex_github_token',token.trim());updateGitHubButton();$('saveInfo').textContent='GitHub bağlantısı kuruldu. Düzenlemelerini artık doğrudan kaydedebilirsin.';}
+});
+function utf8ToBase64(value){const bytes=new TextEncoder().encode(value);let binary='';bytes.forEach(b=>binary+=String.fromCharCode(b));return btoa(binary);}
+$('saveGitHub').addEventListener('click',async()=>{
+ const token=sessionStorage.getItem('apex_github_token');if(!token){alert('Önce GitHub bağlantısı kur.');return;}
+ if(!dirty)return;
+ const button=$('saveGitHub');button.disabled=true;button.textContent='Kaydediliyor…';
+ try{
+  const headers={'Accept':'application/vnd.github+json','Authorization':'Bearer '+token,'X-GitHub-Api-Version':'2022-11-28'};
+  const current=await fetch(GH_API,{headers,cache:'no-store'});
+  if(!current.ok)throw new Error(current.status===401||current.status===403?'Token geçersiz veya Contents izni eksik.': 'GitHub dosyası okunamadı (HTTP '+current.status+').');
+  const file=await current.json();
+  const payload={message:'Edit news from APEX F1 editor',content:utf8ToBase64(JSON.stringify(allNews,null,2)+'\\n'),sha:file.sha,branch:'main'};
+  const saved=await fetch(GH_API,{method:'PUT',headers:{...headers,'Content-Type':'application/json'},body:JSON.stringify(payload)});
+  if(!saved.ok){const detail=await saved.json().catch(()=>({}));throw new Error(detail.message||'GitHub kayıt işlemi başarısız (HTTP '+saved.status+').');}
+  originalNews=JSON.parse(JSON.stringify(allNews));setDirty(false);$('saveInfo').textContent='Başarıyla GitHub’a kaydedildi. Commit oluşturuldu; site birkaç dakika içinde güncellenecek.';button.textContent='✓ GitHub’a kaydedildi';
+  setTimeout(()=>{button.textContent='GitHub’a kaydet';updateGitHubButton();},3000);
+ }catch(err){alert('Kayıt yapılamadı: '+err.message);button.textContent='GitHub’a kaydet';updateGitHubButton();}
+});
+updateGitHubButton();
+load();
 </script></body></html>
