@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#070d0a"><meta name="robots" content="index,follow">
+<title>Haber | APEX F1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#070d0a;--panel:#0d1711;--line:#20392b;--text:#f0f7f1;--muted:#9aada0;--green:#21d18a;--bright:#a2f2c5}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 78% 0%,rgba(27,115,71,.14),transparent 35%),var(--bg);color:var(--text);font:16px/1.7 'Titillium Web',Arial,sans-serif}
+a{color:inherit}.top{height:3px;background:var(--green)}header{position:sticky;top:0;z-index:5;background:rgba(7,13,10,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.wrap{width:min(900px,calc(100% - 36px));margin:auto}.nav{height:68px;display:flex;align-items:center;justify-content:space-between}.brand{font-size:23px;font-weight:900;letter-spacing:-1.5px;text-decoration:none;color:#fff}.brand span{color:var(--green)}.brand small{display:block;font-size:8px;letter-spacing:2.8px;color:var(--muted);margin-top:-6px}.back{font-size:11px;color:var(--bright);text-decoration:none}
+main{padding:52px 0 76px}.eyebrow{font-size:9px;letter-spacing:2px;color:var(--bright);font-weight:900;text-transform:uppercase}.tag{display:inline-block;padding:4px 9px;border:1px solid var(--line);color:var(--bright);font-size:10px;letter-spacing:1px;text-transform:uppercase;margin:12px 0}
+h1{font-size:clamp(36px,6vw,64px);line-height:1.04;letter-spacing:-1.7px;margin:10px 0 14px}.lead{font-size:19px;line-height:1.7;color:#dce9e0;max-width:820px}.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:24px 0}.facts div{padding:13px 15px;background:var(--panel);border:1px solid var(--line);border-radius:4px}.facts small{display:block;color:var(--muted);font-size:9px;letter-spacing:1.2px}.facts strong{color:var(--bright);font-size:13px}
+figure{margin:28px 0 34px}figure img{display:block;width:100%;max-height:520px;aspect-ratio:16/9;object-fit:cover;border:1px solid var(--line);border-radius:5px;background:linear-gradient(135deg,#14251b,#08100b)}figcaption{font-size:10px;color:var(--muted);margin-top:8px}figcaption a{color:var(--bright)}
+.content{max-width:820px}.section{padding:0 0 20px;margin:0 0 24px;border-bottom:1px solid rgba(130,170,145,.16)}.section h2{font-size:23px;line-height:1.3;margin:0 0 8px}.section p{margin:0;color:#d1ddd5;font-size:16px;line-height:1.9}
+.note{max-width:820px;padding:14px 16px;border-left:2px solid var(--green);background:rgba(33,209,138,.045);color:var(--muted);font-size:11px;line-height:1.7}
+.source{margin-top:28px;padding:22px;background:linear-gradient(150deg,#102018,#0b1510);border:1px solid var(--line);border-left:3px solid var(--green);border-radius:4px}.source small{display:block;color:var(--bright);font-size:9px;letter-spacing:1.5px;font-weight:900}.source strong{display:block;margin:5px 0}.source p{margin:4px 0 12px;color:var(--muted);font-size:11px}.source a{color:var(--bright);font-size:12px;text-underline-offset:4px}
+.error{padding:22px;border:1px solid #75413b;background:#211311;color:#f4c7bd;border-radius:4px}
+footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-size:10px}
+@media(max-width:620px){main{padding:34px 0 56px}h1{font-size:clamp(34px,10vw,48px)}.lead{font-size:16px}.facts{grid-template-columns:1fr}.section h2{font-size:20px}.section p{font-size:15px}figure img{aspect-ratio:4/3}}
+</style></head>
+<body><div class="top"></div><header><div class="wrap nav"><a class="brand" href="index.html">APEX<span>F1</span><small>BEYOND THE GRID</small></a><a class="back" href="index.html#news">← Haberlere dön</a></div></header>
+<main class="wrap" id="article"><div class="eyebrow">APEX F1 / NEWSROOM</div><h1>Haber yükleniyor…</h1><p class="lead">Haber içeriği hazırlanıyor.</p></main>
+<footer><div class="wrap">APEX F1 — Bağımsız Formula 1 yayın platformu. Formula 1, FIA ve takımlarla resmî bağlantısı yoktur.</div></footer>
+<script>
+(()=> {
+'use strict';
+const root=document.getElementById('article');
+const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const params=new URLSearchParams(location.search);
+const hash=location.hash.startsWith('#')?new URLSearchParams(location.hash.slice(1)):new URLSearchParams();
+const id=params.get('id')||params.get('news')||hash.get('id')||hash.get('news');
+const special={
+'f55f72ce2cc4b6cc':[
+['2027 pilot pazarı ve Racing Bulls','Racing Bulls’un 2027 pilot kadrosu ve Liam Lawson’ın sezon içindeki performansı, Las Vegas öncesi öne çıkan başlıklardan biri. Lawson’ın son yarışlardaki sonuçları, takımın genç pilot planlaması açısından yakından izleniyor.'],
+['Cadillac’ın ikinci koltuğu','Cadillac’ın 2026 sezonu için pilot kadrosu ve ikinci koltukla ilgili seçenekler, sezonun son bölümünde gündemdeki konulardan biri. Sürücü tercihi, yeni takımın ilk sezon hazırlıklarının önemli bir parçası olacak.'],
+['Haas ve Rafael Camara','Rafael Camara’nın São Paulo’daki ilk F1 hafta sonunun ardından Las Vegas’ta da Haas adına piste çıkması bekleniyor. Bu deneyim, genç pilotun Formula 1 araçlarına ve hafta sonu formatına uyumunu geliştirmesi açısından önemli.'],
+['Takımlar şampiyonasında üçüncülük','Mercedes ve Ferrari’nin üst sıralardaki konumu netleşirken, sezonun kalan yarışlarında McLaren ve Red Bull arasındaki üçüncülük mücadelesi dikkat çekiyor. Her puan, takımların sezon sonu sıralamasını değiştirebilir.'],
+['Las Vegas’ın teknik zorlukları','Las Vegas Strip Circuit’in uzun düzlükleri, gece koşulları ve düşük sıcaklıkları takımların lastik hazırlığı ile enerji yönetimini öne çıkarıyor. Soğuk asfalt, lastikleri çalışma aralığına taşımayı zorlaştırabilir.']
+],
+'401058339ea3ba33':[
+['McLaren’in hedefi','McLaren Yarış Direktörü Randy Singh, takımın sezonun son bölümünde takımlar şampiyonasında üçüncülük için mücadeleyi bırakmayacağını belirtti. Takımın yaklaşımı, kalan yarışlarda her fırsatı puana çevirmek.'],
+['Red Bull ile puan farkı','São Paulo’daki sonuçların ardından Red Bull’un McLaren karşısındaki puan avantajı, sezonun son yarışlarına girilirken baskıyı artırıyor. McLaren’in hedefi, bu farkı azaltacak güçlü hafta sonları geçirmek.'],
+['Güncellemeler ve performans','McLaren’in son yarışlarda kullandığı güncellemelerden daha fazla performans çıkarması gerekiyor. Farklı pist karakterleri, paketin her hafta sonu yeniden optimize edilmesini gerektiriyor.'],
+['Las Vegas neden kritik?','Las Vegas’ın düşük sıcaklıkları, düşük tutunma seviyesi ve uzun düzlükleri, McLaren’in önceki yarışlardan farklı bir ayar yaklaşımı benimsemesini gerektirebilir.'],
+['Sezonun son bölümü','Kalan yarışlar, McLaren’in sezonu nasıl tamamlayacağını belirleyecek. Takımın odağı yalnızca rakiplerin sonuçları değil, kendi performansını her seansta en üst seviyeye taşımak.']
+],
+'fe129dc5e904b6c7':[
+['Camara’ya ikinci yarış hafta sonu','Haas, Rafael Camara’nın São Paulo’daki Formula 1 debutunun ardından Las Vegas’ta da yarışacağını doğruladı. Böylece Brezilyalı pilot, Formula 1’deki deneyimini ikinci bir hafta sonuyla artıracak.'],
+['2027 hazırlığı','Camara’nın Haas ile daha fazla pist zamanı kazanması, gelecek sezon için hazırlık sürecinin bir parçası. Takım, genç pilotun araç ve mühendislik ekibiyle uyumunu geliştirmeyi hedefliyor.'],
+['Hirakawa FP1’de','Ryo Hirakawa’nın Las Vegas ilk antrenmanında Ollie Bearman’ın aracını kullanması planlanıyor. Bu seans, takımın genç ve yedek pilotlara verdiği pist zamanı programının bir parçası.'],
+['Haas için sezon sonu hedefi','Haas, sezonun son yarışlarında araçtan istikrarlı performans almayı ve pilotlarının gelişimini sürdürmeyi hedefliyor. Las Vegas hafta sonu bu açıdan önemli bir sınav olacak.']
+],
+'6c94e09037651f6b':[
+['Pistleri fotoğraftan tanımak','Formula 1 pistleri; viraj geometrisi, bariyerler, kerbler, tribünler ve çevre dokusuyla birbirinden ayrılır. Tek karede bu ipuçlarının yalnızca bir bölümü görüldüğü için dikkatli gözlem gerekir.'],
+['Monaco ve Silverstone','Monaco’nun dar sokakları, yüksek bariyerleri ve liman çevresi; Silverstone’un ise geniş asfaltı ve hızlı viraj kombinasyonları pistleri ayırt etmeye yardımcı olur.'],
+['Suzuka, Monza ve Spa','Suzuka’nın sekiz çizilen yerleşimi, Monza’nın uzun düzlükleri ve şikanları, Spa-Francorchamps’ın büyük irtifa değişimleri pist kimliğinin belirgin özellikleridir.'],
+['Küçük bir gözlem yöntemi','Önce bariyer renklerine ve çevredeki sabit yapılara, sonra virajın açısına ve pistin eğimine bak. Bu ayrıntılar, yalnızca araca bakmaktan daha güçlü ipuçları verebilir.']
+],
+'1365a6b2c6ba99f8':[
+['Mark Sutton’ın kariyeri','Formula 1 fotoğrafçısı Mark Sutton, onlarca yıldır padoktaki önemli anları fotoğraflıyor. Kariyeri boyunca farklı kuşaklardan pilotların yükselişine ve şampiyonluk kutlamalarına tanıklık etti.'],
+['Antonelli’nin erken döneminden bir kare','Sutton’ın arşivinde, genç Kimi Antonelli’nin henüz çocuk yaşta Formula 1 dünyasının içindeyken çekilmiş kareleri bulunuyor. Bu fotoğraflar, yıllar sonra gelen başarılarla farklı bir anlam kazanıyor.'],
+['Şampiyonluk yolculuğu','Antonelli’nin 2026 sezonundaki yükselişi, fotoğrafçılar için sezon boyunca takip edilen güçlü bir hikâyeye dönüştü. Monza ve Meksika’daki kutlamalar bu yolculuğun öne çıkan anları arasında.'],
+['Tek karede spor tarihi','Spor fotoğrafçılığı yalnızca yarış sonucunu kaydetmez; pilotların duygularını, takım içindeki anları ve yıllar sonra değer kazanan karşılaşmaları da saklar.']
+],
+'2169a235b12370a3':[
+['Button’ın değerlendirmesi','2009 dünya şampiyonu Jenson Button’a göre Fernando Alonso’nun Aston Martin’de devam etmesini sağlayacak temel unsur, takımın ilerleme kaydettiğini görmek. Alonso’nun rekabet etme isteği ve kazanma arzusu hâlâ güçlü.'],
+['Takımın gelişim ihtiyacı','Aston Martin’in hedeflerine ulaşabilmesi için aracın performansını ve operasyonel istikrarını geliştirmesi gerekiyor. Button’ın değerlendirmesinde, ilerleme işaretleri pilot motivasyonu açısından belirleyici.'],
+['Alonso’nun yarış tutkusu','Alonso’nun uzun kariyeri, Formula 1’e ve motor sporlarına duyduğu ilginin sürdüğünü gösteriyor. Rekabetçi bir araç ve gelişim perspektifi, kariyerinin devamında önemli rol oynuyor.'],
+['Güven ve takım atmosferi','Pilotun teknik geri bildiriminin dikkate alınması, mühendislerle kurduğu ilişki ve takımın ortak hedeflere inanması uzun vadeli başarı için kritik unsurlar.']
+]};
+const visuals={
+'f55f72ce2cc4b6cc':['https://www.venetianlasvegas.com/adobe/dynamicmedia/deliver/dm-aid--db2f4729-5785-4925-a89f-9f21d71ba8e1/racetrack-1-1200x800.jpg?preferwebp=true&quality=64','Las Vegas gece pist atmosferi','The Venetian Resort','https://www.venetianlasvegas.com/entertainment/f1-grand-prix.html'],
+'401058339ea3ba33':['https://images.ctfassets.net/gy95mqeyjg28/4R1wYTkquW8FqmTByXHp5R/ed46af2f434ec29ce7e1e42bf5735c1e/2026-F1-pre-season-testing-pit-lane-Oscsr.jpg?fm=webp&q=75&w=1800','McLaren Formula 1 aracı pit yolunda','McLaren Racing','https://www.mclaren.com/racing/formula-1/'],
+'fe129dc5e904b6c7':['https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Haas_VF-23_at_the_2023_Austrian_Grand_Prix.jpg/1280px-Haas_VF-23_at_the_2023_Austrian_Grand_Prix.jpg','Haas Formula 1 aracı','Wikimedia Commons','https://commons.wikimedia.org/wiki/Category:Haas_F1_Team'],
+'6c94e09037651f6b':['https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Circuit_de_Monaco_2008.jpg/1280px-Circuit_de_Monaco_2008.jpg','Monaco sokak pisti','Wikimedia Commons','https://commons.wikimedia.org/wiki/Category:Circuit_de_Monaco'],
+'1365a6b2c6ba99f8':['https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Kimi_Antonelli_2024.jpg/960px-Kimi_Antonelli_2024.jpg','Kimi Antonelli','Wikimedia Commons','https://commons.wikimedia.org/wiki/Category:Andrea_Kimi_Antonelli'],
+'2169a235b12370a3':['https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Fernando_Alonso_2023_%28cropped%29.jpg/960px-Fernando_Alonso_2023_%28cropped%29.jpg','Fernando Alonso','Wikimedia Commons','https://commons.wikimedia.org/wiki/Category:Fernando_Alonso']
+};
+function showError(message){document.title='Haber açılamadı | APEX F1';root.innerHTML='<div class="eyebrow">APEX F1 / NEWSROOM</div><div class="error"><h1>Bu haber şu anda açılamıyor</h1><p>'+esc(message)+'</p><p>Haber listesine dönüp başka bir haber seçebilirsin.</p><a href="index.html#news">← Haberlere dön</a></div>'}
+async function start(){
+ if(!id){showError('Haber bağlantısında haber kimliği bulunamadı.');return}
+ try{
+  const response=await fetch('./data/news.json?build=20261117d',{cache:'no-store'});
+  if(!response.ok)throw new Error('Haber arşivine erişilemedi (HTTP '+response.status+').');
+  const records=await response.json();
+  if(!Array.isArray(records))throw new Error('Haber arşivi beklenen formatta değil.');
+  const n=records.find(x=>x&&String(x.id)===String(id)&&x.status==='published');
+  if(!n)throw new Error('Bu haber yayında bulunamadı. Bağlantı kimliği: '+id);
+  const title=n.title_tr||n.title_en||'Formula 1 haberi';
+  const summary=n.summary_tr||n.summary_en||'';
+  const image=visuals[id]||null;
+  const sections=special[id]||[
+   ['Haberin özeti',summary||'Bu haber için henüz açıklama bulunmuyor.'],
+   ['Gelişmenin arka planı','Bu içerik, yayıncı tarafından paylaşılan haber başlığı ve özeti temel alınarak hazırlanmıştır. Kaynakta yer almayan ayrıntılar kesin bilgi olarak sunulmaz.'],
+   ['Takip edilecek noktalar','Gelişmenin etkisi, ilgili takım veya pilotların resmî açıklamaları ve sonraki yarış hafta sonlarında ortaya çıkacak sonuçlarla daha net görülecektir.']
+  ];
+  document.title=title+' | APEX F1';
+  root.innerHTML='<div class="eyebrow">APEX F1 / NEWSROOM</div><div class="tag">'+esc(n.category||'FORMULA 1')+'</div><h1>'+esc(title)+'</h1><p class="lead">'+esc(summary)+'</p><div class="facts"><div><small>YAYINCI</small><strong>'+esc(n.source_name||'APEX F1')+'</strong></div><div><small>YAYIN TARİHİ</small><strong>'+esc((n.published_at||n.collected_at||'').slice(0,10)||'Belirtilmedi')+'</strong></div><div><small>İÇERİK</small><strong>Haber / Editoryal özet</strong></div></div>'+(image?'<figure><img src="'+esc(image[0])+'" alt="'+esc(image[1])+'" loading="eager"><figcaption>Görsel: '+esc(image[2])+' · <a href="'+esc(image[3])+'" target="_blank" rel="noopener noreferrer">Görsel kaynağı ↗</a></figcaption></figure>':'<div class="tag">APEX F1 · HABER DOSYASI</div>')+'<div class="content">'+sections.map((s,i)=>'<section class="section"><h2>'+String(i+1).padStart(2,'0')+' / '+esc(s[0])+'</h2><p>'+esc(s[1])+'</p></section>').join('')+'</div><p class="note">Editoryal not: Bu sayfa APEX F1 tarafından hazırlanmış Türkçe haber özeti ve değerlendirmesidir. Orijinal yayının tam metni değildir. Haber kaynağına aşağıdan ulaşabilirsin.</p><aside class="source"><small>KAYNAK / REFERENCE</small><strong>'+esc(n.source_name||'Orijinal yayın')+'</strong><p>Haberin orijinal yayını ve yayıncının ek güncellemeleri için kaynak bağlantısını kullan.</p>'+(n.source_url?'<a href="'+esc(n.source_url)+'" target="_blank" rel="noopener noreferrer">Orijinal haberi oku ↗</a>':'<span>Orijinal bağlantı bu haber kaydında bulunmuyor.</span>')+'</aside>';
+  const img=root.querySelector('figure img');if(img)img.addEventListener('error',()=>{img.closest('figure').remove()},{once:true});
+ }catch(error){showError(error.message||'Beklenmeyen bir hata oluştu.')}
+}
+start();
+})();
+</script></body></html>
