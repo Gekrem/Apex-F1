@@ -182,6 +182,58 @@
     "collected_at": "2026-11-16T13:24:22Z"
   },
   {
+    "id": "9f8c1a3e0d6e0743",
+    "status": "draft",
+    "category": "F1 NEWS",
+    "title_en": "Camara to race again for Haas in Las Vegas",
+    "summary_en": "Rafael Camara will again race for Haas in the Las Vegas Grand Prix following the sacking of Esteban Ocon.",
+    "title_tr": "",
+    "summary_tr": "",
+    "source_name": "BBC Sport F1",
+    "source_url": "https://www.bbc.co.uk/sport/formula1/articles/c804w7nxr61zo?at_medium=RSS&at_campaign=rss",
+    "published_at": "2026-11-16T08:35:56Z",
+    "collected_at": "2026-11-16T15:06:37Z"
+  },
+  {
+    "id": "e3318224dc951e6d",
+    "status": "draft",
+    "category": "F1 NEWS",
+    "title_en": "How to follow Las Vegas Grand Prix on the BBC",
+    "summary_en": "All the key BBC coverage details for the Las Vegas Grand Prix, which takes place from 20-22 November.",
+    "title_tr": "",
+    "summary_tr": "",
+    "source_name": "BBC Sport F1",
+    "source_url": "https://www.bbc.co.uk/sport/formula1/articles/cx4gnlr603mqo?at_medium=RSS&at_campaign=rss",
+    "published_at": "2026-11-16T08:07:20Z",
+    "collected_at": "2026-11-16T15:06:37Z"
+  },
+  {
+    "id": "c61ce8696ae8e224",
+    "status": "draft",
+    "category": "F1 NEWS",
+    "title_en": "Formula 1's one-race wonders",
+    "summary_en": "Making it to Formula 1 is the undoubted pinnacle of any racing driver’s career – but what became of some of those who only had one shot?",
+    "title_tr": "",
+    "summary_tr": "",
+    "source_name": "BBC Sport F1",
+    "source_url": "https://www.bbc.co.uk/sport/formula1/articles/cqp9dr4kedd3o?at_medium=RSS&at_campaign=rss",
+    "published_at": "2026-11-16T06:53:18Z",
+    "collected_at": "2026-11-16T15:06:37Z"
+  },
+  {
+    "id": "6a58cdacdc1e9351",
+    "status": "draft",
+    "category": "F1 NEWS",
+    "title_en": "Much still to do on F1 diversity - Hamilton",
+    "summary_en": "British Formula 1 driver Lewis Hamilton outlines three steps the sport must take to improve its diversity.",
+    "title_tr": "",
+    "summary_tr": "",
+    "source_name": "BBC Sport F1",
+    "source_url": "https://www.bbc.co.uk/sport/formula1/articles/c52e8kpnje42o?at_medium=RSS&at_campaign=rss",
+    "published_at": "2026-11-16T00:04:45Z",
+    "collected_at": "2026-11-16T15:06:37Z"
+  },
+  {
     "id": "fb5943caee0b620b",
     "status": "draft",
     "category": "F1 NEWS",
@@ -299,6 +351,19 @@
     "collected_at": "2026-11-16T13:24:22Z"
   },
   {
+    "id": "b23f34a374963fa3",
+    "status": "draft",
+    "category": "F1 NEWS",
+    "title_en": "Andrew Benson Q&A: Send us your questions",
+    "summary_en": "Our F1 correspondent Andrew Benson is doing a weekly Q&A this season, so get your questions in now.",
+    "title_tr": "",
+    "summary_tr": "",
+    "source_name": "BBC Sport F1",
+    "source_url": "https://www.bbc.co.uk/sport/formula1/articles/ckg3y15zje8o?at_medium=RSS&at_campaign=rss",
+    "published_at": "2026-11-13T11:30:39Z",
+    "collected_at": "2026-11-16T15:06:37Z"
+  },
+  {
     "id": "c8265cd6b910eeca",
     "status": "draft",
     "category": "F1 NEWS",
@@ -310,6 +375,32 @@
     "source_url": "https://www.autosport.com/f1/news/the-antonelli-you-dont-know-inside-the-mercedes-garage-with-f1s-new-world-champion/10874265/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=uk",
     "published_at": "2026-11-13T10:04:48Z",
     "collected_at": "2026-11-16T13:24:22Z"
+  },
+  {
+    "id": "5de73707b7968339",
+    "status": "draft",
+    "category": "F1 NEWS",
+    "title_en": "Whatever happened to the diamond that went missing in F1 crash?",
+    "summary_en": "Whatever happened to the diamond that went missing after the Formula 1 car it was attached to crashed?",
+    "title_tr": "",
+    "summary_tr": "",
+    "source_name": "BBC Sport F1",
+    "source_url": "https://www.bbc.co.uk/sport/formula1/articles/c60735md0jrpo?at_medium=RSS&at_campaign=rss",
+    "published_at": "2026-11-13T06:12:20Z",
+    "collected_at": "2026-11-16T15:06:37Z"
+  },
+  {
+    "id": "ab45c0f3f7f8fe98",
+    "status": "draft",
+    "category": "F1 NEWS",
+    "title_en": "Lindblad and Lawson to continue at Racing Bulls",
+    "summary_en": "Arvid Lindblad and Liam Lawson will continue as the drivers for Red Bull's second team Racing Bulls in 2027.",
+    "title_tr": "",
+    "summary_tr": "",
+    "source_name": "BBC Sport F1",
+    "source_url": "https://www.bbc.co.uk/sport/formula1/articles/cw24epe29566o?at_medium=RSS&at_campaign=rss",
+    "published_at": "2026-11-12T16:02:16Z",
+    "collected_at": "2026-11-16T15:06:37Z"
   },
   {
     "id": "fb8a38e5c9b5fc45",
@@ -364,6 +455,19 @@
     "collected_at": "2026-11-16T13:24:22Z"
   },
   {
+    "id": "bb37cd89fb4e29b2",
+    "status": "draft",
+    "category": "F1 NEWS",
+    "title_en": "F1: Chequered Flag",
+    "summary_en": "We look back on Kimi Antonelli’s incredible rise to become F1’s youngest ever champion.",
+    "title_tr": "",
+    "summary_tr": "",
+    "source_name": "BBC Sport F1",
+    "source_url": "https://www.bbc.co.uk/sounds/play/p0pmlb1r?at_medium=RSS&at_campaign=rss",
+    "published_at": "2026-11-12T11:03:00Z",
+    "collected_at": "2026-11-16T15:06:37Z"
+  },
+  {
     "id": "15339f8f3c6e35fb",
     "status": "draft",
     "category": "F1 NEWS",
@@ -375,6 +479,19 @@
     "source_url": "https://www.fia.com/news/how-roussel-rose-make-more-macau-history-fia-f4-world-cup-triumph",
     "published_at": "2026-11-12T07:29:00Z",
     "collected_at": "2026-11-16T13:24:22Z"
+  },
+  {
+    "id": "ae5ec84c8818228e",
+    "status": "draft",
+    "category": "F1 NEWS",
+    "title_en": "Freddie Slater's 'surreal' first taste of Formula 1",
+    "summary_en": "The rising star tells the BBC about his experience taking part in F1 practice in Mexico.",
+    "title_tr": "",
+    "summary_tr": "",
+    "source_name": "BBC Sport F1",
+    "source_url": "https://www.bbc.co.uk/news/articles/c6z0k771043xo?at_medium=RSS&at_campaign=rss",
+    "published_at": "2026-11-12T06:11:30Z",
+    "collected_at": "2026-11-16T15:06:37Z"
   },
   {
     "id": "5df09f0f5cbf50c5",
@@ -403,6 +520,19 @@
     "collected_at": "2026-11-16T13:24:22Z"
   },
   {
+    "id": "b8980f6f9c5d6ca9",
+    "status": "draft",
+    "category": "F1 NEWS",
+    "title_en": "Formula 1 to finish season in Middle East",
+    "summary_en": "The 2026 Formula 1 season will conclude with the Qatar and Abu Dhabi grands prix as planned, with Italy's Imola circuit stood down as back-up for the races.",
+    "title_tr": "",
+    "summary_tr": "",
+    "source_name": "BBC Sport F1",
+    "source_url": "https://www.bbc.co.uk/sport/formula1/articles/c53989e97lxwo?at_medium=RSS&at_campaign=rss",
+    "published_at": "2026-11-10T15:04:46Z",
+    "collected_at": "2026-11-16T15:06:37Z"
+  },
+  {
     "id": "d84dc5a1b22fa62c",
     "status": "draft",
     "category": "F1 NEWS",
@@ -429,6 +559,19 @@
     "collected_at": "2026-11-16T13:24:22Z"
   },
   {
+    "id": "171986f403ab8724",
+    "status": "draft",
+    "category": "F1 NEWS",
+    "title_en": "How good is Hamilton and how long can he stay in F1? - Q&A",
+    "summary_en": "BBC F1 correspondent Andrew Benson answers your latest questions after the Sao Paulo Grand Prix.",
+    "title_tr": "",
+    "summary_tr": "",
+    "source_name": "BBC Sport F1",
+    "source_url": "https://www.bbc.co.uk/sport/formula1/articles/cmp3g005zyxko?at_medium=RSS&at_campaign=rss",
+    "published_at": "2026-11-10T08:00:49Z",
+    "collected_at": "2026-11-16T15:06:37Z"
+  },
+  {
     "id": "f04f0edc93f596da",
     "status": "draft",
     "category": "F1 NEWS",
@@ -440,6 +583,19 @@
     "source_url": "https://www.autosport.com/f1/news/whats-behind-piastris-split-with-webber-and-what-it-means-for-his-f1-career/10873410/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=uk",
     "published_at": "2026-11-09T15:53:07Z",
     "collected_at": "2026-11-16T13:24:22Z"
+  },
+  {
+    "id": "89fde9b1612c4cb7",
+    "status": "draft",
+    "category": "F1 NEWS",
+    "title_en": "FIA boss planning to end age limits for office holders",
+    "summary_en": "FIA president Mohammed Ben Sulayem is planning to end age limits for office holders in motorsport's governing body.",
+    "title_tr": "",
+    "summary_tr": "",
+    "source_name": "BBC Sport F1",
+    "source_url": "https://www.bbc.co.uk/sport/formula1/articles/cr9dz7w1xgxvo?at_medium=RSS&at_campaign=rss",
+    "published_at": "2026-11-09T15:20:35Z",
+    "collected_at": "2026-11-16T15:06:37Z"
   },
   {
     "id": "ea9ba71a4118e68b",
@@ -468,6 +624,58 @@
     "collected_at": "2026-11-16T13:24:22Z"
   },
   {
+    "id": "d8366705e54beabc",
+    "status": "draft",
+    "category": "F1 NEWS",
+    "title_en": "The Chequered Flag Podcast",
+    "summary_en": "Harry Benjamin Sam Bird and Andrew Benson reflect on the drama of the São Paulo Grand Prix",
+    "title_tr": "",
+    "summary_tr": "",
+    "source_name": "BBC Sport F1",
+    "source_url": "https://www.bbc.co.uk/iplayer/episode/m0032vl5?at_medium=RSS&at_campaign=rss",
+    "published_at": "2026-11-09T06:00:00Z",
+    "collected_at": "2026-11-16T15:06:37Z"
+  },
+  {
+    "id": "d3a5a29c619f91ab",
+    "status": "draft",
+    "category": "F1 NEWS",
+    "title_en": "Norris sparkles in Sao Paulo despite firework mishap",
+    "summary_en": "Apart from getting too close to a firework, Lando Norris was virtually impeccable during a Sao Paulo Grand Prix that challenged the drivers to their very limits.",
+    "title_tr": "",
+    "summary_tr": "",
+    "source_name": "BBC Sport F1",
+    "source_url": "https://www.bbc.co.uk/sport/formula1/articles/c6gr8e822kzqo?at_medium=RSS&at_campaign=rss",
+    "published_at": "2026-11-08T23:44:53Z",
+    "collected_at": "2026-11-16T15:06:37Z"
+  },
+  {
+    "id": "e747e64decb8d347",
+    "status": "draft",
+    "category": "F1 NEWS",
+    "title_en": "'He was in a league of his own' - Benson on Norris' Brazil GP win",
+    "summary_en": "On The Chequered Flag Podcast, BBC F1 correspondent Andrew Benson reflects on Lando Norris's impressive victory for McLaren at the Sao Paulo Grand Prix.",
+    "title_tr": "",
+    "summary_tr": "",
+    "source_name": "BBC Sport F1",
+    "source_url": "https://www.bbc.co.uk/sport/formula1/videos/cr5yn1n99lqno?at_medium=RSS&at_campaign=rss",
+    "published_at": "2026-11-08T22:46:44Z",
+    "collected_at": "2026-11-16T15:06:37Z"
+  },
+  {
+    "id": "cbdb986b4248fd54",
+    "status": "draft",
+    "category": "F1 NEWS",
+    "title_en": "Norris wins gripping race after Antonelli and Russell errors",
+    "summary_en": "McLaren's Lando Norris wins a gripping Sao Paulo Grand Prix in difficult conditions, as Mercedes secure the 2026 constructors' championship.",
+    "title_tr": "",
+    "summary_tr": "",
+    "source_name": "BBC Sport F1",
+    "source_url": "https://www.bbc.co.uk/sport/formula1/articles/c35yn19r7zkvo?at_medium=RSS&at_campaign=rss",
+    "published_at": "2026-11-08T22:11:31Z",
+    "collected_at": "2026-11-16T15:06:37Z"
+  },
+  {
     "id": "f78a377298c5d410",
     "status": "draft",
     "category": "F1 NEWS",
@@ -479,6 +687,19 @@
     "source_url": "https://www.autosport.com/f1/news/leclerc-penalised-for-lawson-clash-antonelli-and-oliver-bearman-also-punished-after-f1-brazilian-gp/10873166/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=uk",
     "published_at": "2026-11-08T21:59:31Z",
     "collected_at": "2026-11-16T13:24:22Z"
+  },
+  {
+    "id": "41fc099f487a85b5",
+    "status": "draft",
+    "category": "F1 NEWS",
+    "title_en": "Norris brilliant in wet & Verstappen recovery extraordinary - driver ratings",
+    "summary_en": "BBC Radio 5 Live F1 commentator Harry Benjamin rates how the drivers performed during the Sao Paulo Grand Prix.",
+    "title_tr": "",
+    "summary_tr": "",
+    "source_name": "BBC Sport F1",
+    "source_url": "https://www.bbc.co.uk/sport/formula1/articles/c5y43jzvrnz0o?at_medium=RSS&at_campaign=rss",
+    "published_at": "2026-11-08T21:56:33Z",
+    "collected_at": "2026-11-16T15:06:37Z"
   },
   {
     "id": "e4bd1d4a590f16e6",
@@ -533,6 +754,19 @@
     "collected_at": "2026-11-16T13:24:22Z"
   },
   {
+    "id": "2b78af6bfd11c150",
+    "status": "draft",
+    "category": "F1 NEWS",
+    "title_en": "Qualifying conditions borderline - but Norris and Russell hoping for more rain",
+    "summary_en": "Polesitter Lando Norris says qualifying for the Sao Paulo Grand Prix brought \"some of the wettest conditions\" in which he had ever driven.",
+    "title_tr": "",
+    "summary_tr": "",
+    "source_name": "BBC Sport F1",
+    "source_url": "https://www.bbc.co.uk/sport/formula1/articles/cmde81d9nkxko?at_medium=RSS&at_campaign=rss",
+    "published_at": "2026-11-07T23:53:30Z",
+    "collected_at": "2026-11-16T15:06:37Z"
+  },
+  {
     "id": "4ec63530c1f7e431",
     "status": "draft",
     "category": "F1 NEWS",
@@ -544,6 +778,19 @@
     "source_url": "https://www.autosport.com/f1/news/why-russell-was-so-angry-in-brazilian-gp-qualifying-despite-already-having-a-grid-penalty/10872788/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=uk",
     "published_at": "2026-11-07T22:15:40Z",
     "collected_at": "2026-11-16T13:24:22Z"
+  },
+  {
+    "id": "a0cca9ed71a3c6bb",
+    "status": "draft",
+    "category": "F1 NEWS",
+    "title_en": "Hamilton & Verstappen to start from back in Brazil",
+    "summary_en": "Red Bull's Max Verstappen and Ferrari drivers Lewis Hamilton and Charles Leclerc will all have grid penalties at the Sao Paulo Grand Prix.",
+    "title_tr": "",
+    "summary_tr": "",
+    "source_name": "BBC Sport F1",
+    "source_url": "https://www.bbc.co.uk/sport/formula1/articles/c574p28devp4o?at_medium=RSS&at_campaign=rss",
+    "published_at": "2026-11-07T22:07:41Z",
+    "collected_at": "2026-11-16T15:06:37Z"
   },
   {
     "id": "7bdc7d111a210e5c",
@@ -637,6 +884,19 @@
     "collected_at": "2026-11-16T13:24:22Z"
   },
   {
+    "id": "2a482906b8fef4f0",
+    "status": "draft",
+    "category": "F1 NEWS",
+    "title_en": "Ferrari's Hamilton-Leclerc problem - and other F1 stories to follow",
+    "summary_en": "This weekend's Sao Paulo Grand Prix is in many ways the first page of the first chapter of the next championship battle.",
+    "title_tr": "",
+    "summary_tr": "",
+    "source_name": "BBC Sport F1",
+    "source_url": "https://www.bbc.co.uk/sport/formula1/articles/cm62y4283534o?at_medium=RSS&at_campaign=rss",
+    "published_at": "2026-11-06T20:52:24Z",
+    "collected_at": "2026-11-16T15:06:37Z"
+  },
+  {
     "id": "1e8e62f2801fbb91",
     "status": "draft",
     "category": "F1 NEWS",
@@ -702,6 +962,19 @@
     "collected_at": "2026-11-16T13:24:22Z"
   },
   {
+    "id": "988123f4c0879828",
+    "status": "draft",
+    "category": "F1 NEWS",
+    "title_en": "Permane to stay as Racing Bulls team principal",
+    "summary_en": "Red Bull extend Alan Permane's contract as boss of their second team until the end of 2031.",
+    "title_tr": "",
+    "summary_tr": "",
+    "source_name": "BBC Sport F1",
+    "source_url": "https://www.bbc.co.uk/sport/formula1/articles/cw80zzd8jk1go?at_medium=RSS&at_campaign=rss",
+    "published_at": "2026-11-06T11:53:34Z",
+    "collected_at": "2026-11-16T15:06:37Z"
+  },
+  {
     "id": "e1d1dbda3b11515d",
     "status": "draft",
     "category": "F1 NEWS",
@@ -726,6 +999,19 @@
     "source_url": "https://www.autosport.com/f1/news/permane-signs-new-racing-bulls-f1-deal/10871999/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=uk",
     "published_at": "2026-11-06T09:24:07Z",
     "collected_at": "2026-11-16T13:24:22Z"
+  },
+  {
+    "id": "ecfc56fad8703261",
+    "status": "draft",
+    "category": "F1 NEWS",
+    "title_en": "Russell to have 'deep, deep look in mirror'",
+    "summary_en": "Mercedes' George Russell speaks about his season after team-mate Kimi Antonelli won the championship",
+    "title_tr": "",
+    "summary_tr": "",
+    "source_name": "BBC Sport F1",
+    "source_url": "https://www.bbc.co.uk/sport/formula1/articles/cr3wvvpxnx1wo?at_medium=RSS&at_campaign=rss",
+    "published_at": "2026-11-05T19:55:51Z",
+    "collected_at": "2026-11-16T15:06:37Z"
   },
   {
     "id": "ea6633c256e9afb7",
@@ -764,149 +1050,6 @@
     "source_name": "Autosport",
     "source_url": "https://www.autosport.com/f1/news/how-mercedes-can-win-the-f1-world-constructors-title-in-brazil/10871661/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=uk",
     "published_at": "2026-11-05T09:52:25Z",
-    "collected_at": "2026-11-16T13:24:22Z"
-  },
-  {
-    "id": "46da99a915f3f6e4",
-    "status": "draft",
-    "category": "F1 NEWS",
-    "title_en": "1980 F1 world champion Alan Jones dies aged 80",
-    "summary_en": "Alan Jones, who has died aged 80 after a short illness, could or should have been a multiple Formula 1 world champion. The 1980 title winner’s shock decision to quit at the end of 1981 opened the door for Keke Rosberg to join Williams, where the Finn took the 1982 crown. Jones was the first driver to win the title with Williams, forming a strong partnership with team founders Frank ... Keep reading",
-    "title_tr": "",
-    "summary_tr": "",
-    "source_name": "Autosport",
-    "source_url": "https://www.autosport.com/f1/news/1980-f1-world-champion-alan-jones-dies-aged-80/10871644/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=uk",
-    "published_at": "2026-11-05T08:58:53Z",
-    "collected_at": "2026-11-16T13:24:22Z"
-  },
-  {
-    "id": "c7af844031f2ce63",
-    "status": "draft",
-    "category": "F1 NEWS",
-    "title_en": "Liverpool FC owners emerge as potential buyers of Cadillac F1 shares amid TWG uncertainty",
-    "summary_en": "Fresh doubts have emerged over the future of Cadillac Formula 1's majority ownership amid reports Mark Walter's TWG Global is looking to offload some of its shares - with Liverpool FC owner Fenway Sports Group said to be among the interested parties. US billionaire Walter and his companies are the subject of a federal probe by the U.S. Department of Justice, investigating whether Walter's ... Keep reading",
-    "title_tr": "",
-    "summary_tr": "",
-    "source_name": "Autosport",
-    "source_url": "https://www.autosport.com/f1/news/liverpool-fc-owners-emerge-as-potential-buyers-of-cadillac-f1-shares-amid-twg-uncertainty/10871500/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=uk",
-    "published_at": "2026-11-04T14:34:40Z",
-    "collected_at": "2026-11-16T13:24:22Z"
-  },
-  {
-    "id": "a2f8221ba325a4fd",
-    "status": "draft",
-    "category": "F1 NEWS",
-    "title_en": "Ocon's F1 story is one of success, even if this is the end",
-    "summary_en": "There's really not much reason to think otherwise: it looks increasingly likely that this could be the end of Esteban Ocon's active Formula 1 career. A career blessed with plenty of highlights, a handful of podiums and a victory scored behind the wheel of a car that wasn't capable of winning on merit. He made a lot of the opportunities that came his way - not just on the track, but throughout ... Keep reading",
-    "title_tr": "",
-    "summary_tr": "",
-    "source_name": "Autosport",
-    "source_url": "https://www.autosport.com/f1/news/ocons-f1-story-is-one-of-success/10871449/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=uk",
-    "published_at": "2026-11-04T10:38:04Z",
-    "collected_at": "2026-11-16T13:24:22Z"
-  },
-  {
-    "id": "4310670217662bc2",
-    "status": "draft",
-    "category": "F1 NEWS",
-    "title_en": "Mercedes takes blame for Russell's poor Mexico GP: \"We let him down\"",
-    "summary_en": "Mercedes team principal Toto Wolff has admitted to ‘letting George Russell down’ at Formula 1’s Mexico Grand Prix, with the Briton’s bid for victory derailed within seconds by a technical issue. Russell was starting from the front row alongside Lewis Hamilton at Autodromo Hermanos Rodriguez, and his initial getaway was good enough to retain that position and take the polesitter’s ... Keep reading",
-    "title_tr": "",
-    "summary_tr": "",
-    "source_name": "Autosport",
-    "source_url": "https://www.autosport.com/f1/news/mercedes-takes-blame-for-russells-poor-mexico-gp/10871439/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=uk",
-    "published_at": "2026-11-04T10:00:55Z",
-    "collected_at": "2026-11-16T13:24:22Z"
-  },
-  {
-    "id": "282901c443e5f359",
-    "status": "draft",
-    "category": "F1 NEWS",
-    "title_en": "Herta to contest FP1 for Cadillac in Brazil to obtain final superlicence point",
-    "summary_en": "Cadillac test driver Colton Herta will conduct his sixth Friday practice session of the Formula 1 season at this weekend's Brazil Grand Prix to collect his missing FIA superlicence point required to race in the series. Herta, who has been building up for an F1 campaign with private testing, FP1 sessions and a troubled F2 campaign, needs 40 points to obtain the required FIA superlicence ... Keep reading",
-    "title_tr": "",
-    "summary_tr": "",
-    "source_name": "Autosport",
-    "source_url": "https://www.autosport.com/f1/news/herta-to-contest-fp1-in-brazil/10871438/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=uk",
-    "published_at": "2026-11-04T09:42:43Z",
-    "collected_at": "2026-11-16T13:24:22Z"
-  },
-  {
-    "id": "525cfc0404e69dca",
-    "status": "draft",
-    "category": "F1 NEWS",
-    "title_en": "Ocon to skip the rest of F1 2026 with Camara to debut for Haas in Brazil",
-    "summary_en": "The Haas Formula 1 team has decided that Esteban Ocon will not race again for the squad, with 2027 rookie Rafael Camara getting an early debut this weekend on home soil. Following increasingly strained relations between Ocon and the squad, a heated argument in Mexico proved the final straw that made team principal Ayao Komatsu decide to bench the Frenchman. Reserve driver and Toyota ... Keep reading",
-    "title_tr": "",
-    "summary_tr": "",
-    "source_name": "Autosport",
-    "source_url": "https://www.autosport.com/f1/news/ocon-to-skip-the-rest-of-f1-2026-with-camara-to-debut-in-brazil/10871378/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=uk",
-    "published_at": "2026-11-03T20:47:12Z",
-    "collected_at": "2026-11-16T13:24:22Z"
-  },
-  {
-    "id": "4dd3a1b333f99463",
-    "status": "draft",
-    "category": "F1 NEWS",
-    "title_en": "Why Bearman is yet to be announced as a Haas driver for F1 2027",
-    "summary_en": "With Oliver Bearman firing on all cylinders in his sophomore Formula 1 campaign, it feels odd that Haas has been able to confirm the identity of Esteban Ocon's replacement in the second seat for 2027 before announcing Bearman is staying put for a third year. There is no real doubt that Bearman will stay where he is, with both parties keen to continue for another season into 2027. “I think ... Keep reading",
-    "title_tr": "",
-    "summary_tr": "",
-    "source_name": "Autosport",
-    "source_url": "https://www.autosport.com/f1/news/why-bearman-is-yet-to-be-announced-as-a-haas-driver-for-f1-2027/10871339/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=uk",
-    "published_at": "2026-11-03T17:39:09Z",
-    "collected_at": "2026-11-16T13:24:22Z"
-  },
-  {
-    "id": "000700602d20f6cd",
-    "status": "draft",
-    "category": "F1 NEWS",
-    "title_en": "McLaren to bring upgrades to Brazil GP with F1 2027 in mind",
-    "summary_en": "McLaren will introduce upgrades to its MCL40 Formula 1 car at this weekend’s Brazil Grand Prix, featuring a front wing concept which is expected to feature on its 2027 challenger. The team had surged to the front when it substantially updated the MCL40 in Hungary, with Lando Norris winning that race and the following one at Zandvoort, but it has since slipped back in the pecking order despite ... Keep reading",
-    "title_tr": "",
-    "summary_tr": "",
-    "source_name": "Autosport",
-    "source_url": "https://www.autosport.com/f1/news/mclaren-to-bring-upgrades-to-brazil-gp-with-f1-2027-in-mind/10871328/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=uk",
-    "published_at": "2026-11-03T16:48:36Z",
-    "collected_at": "2026-11-16T13:24:22Z"
-  },
-  {
-    "id": "0ede31ce3c47d612",
-    "status": "draft",
-    "category": "F1 NEWS",
-    "title_en": "The reason behind Honda’s power unit lasting five laps in Mexico GP",
-    "summary_en": "In its Mexico Grand Prix preview, Honda’s Shintaro Orihara had described Autodromo Hermanos Rodriguez as “a very challenging track for the power unit”, but he perhaps didn’t expect Aston Martin’s weekend to go so awry. Despite decent pace and mileage in free practice – Fernando Alonso was just 0.769s down on pacesetter Charles Leclerc in FP2, with the AMR26s covering a whopping 144 ... Keep reading",
-    "title_tr": "",
-    "summary_tr": "",
-    "source_name": "Autosport",
-    "source_url": "https://www.autosport.com/f1/news/the-reason-behind-hondas-power-unit-lasting-five-laps-in-mexico/10871286/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=uk",
-    "published_at": "2026-11-03T13:45:54Z",
-    "collected_at": "2026-11-16T13:24:22Z"
-  },
-  {
-    "id": "cb3a5e25572491e4",
-    "status": "draft",
-    "category": "F1 NEWS",
-    "title_en": "Red Bull's key strategy call behind Verstappen's Mexico win",
-    "summary_en": "Although Sunday at the Autodromo Hermanos Rodriguez was above all Kimi Antonelli's day, there were naturally two other major storylines in the Formula 1 paddock: the tensions at Ferrari and how Fred Vasseur will manage them, plus Max Verstappen's sixth victory in Mexico. When the latter came up in the post-race press conference, the Dutchman immediately joked: \"Yeah, they should actually call ... Keep reading",
-    "title_tr": "",
-    "summary_tr": "",
-    "source_name": "Autosport",
-    "source_url": "https://www.autosport.com/f1/news/red-bulls-key-strategy-call-behind-verstappens-mexico-win-10871260/10871260/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=uk",
-    "published_at": "2026-11-03T12:04:20Z",
-    "collected_at": "2026-11-16T13:24:22Z"
-  },
-  {
-    "id": "cd0d352f9f97d97c",
-    "status": "draft",
-    "category": "F1 NEWS",
-    "title_en": "What was Antonelli’s best moment of his F1 title-winning campaign? Our writers have their say",
-    "summary_en": "Kimi Antonelli’s record-breaking Formula 1 world championship triumph was highlighted by many superb performances. But which one was his best? Antonelli duly wrapped up his maiden F1 crown in Mexico with four rounds to spare – becoming the youngest-ever world champion in the process. Our writers have picked out the moments they believe turned the Italian from a contender into a world ... Keep reading",
-    "title_tr": "",
-    "summary_tr": "",
-    "source_name": "Autosport",
-    "source_url": "https://www.autosport.com/f1/news/what-was-antonellis-best-moment-of-his-f1-title-winning-campaign-our-writers-have-their-say/10871078/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=uk",
-    "published_at": "2026-11-02T15:59:08Z",
     "collected_at": "2026-11-16T13:24:22Z"
   }
 ]
