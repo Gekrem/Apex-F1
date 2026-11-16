@@ -123,6 +123,7 @@ document.getElementById("langBtn").addEventListener("click",()=>{
  lang=lang==="tr"?"en":"tr";document.documentElement.lang=lang;
  document.getElementById("langBtn").textContent=lang==="tr"?"EN":"TR";
  document.querySelectorAll("[data-i]").forEach(el=>{const value=translations[lang][el.dataset.i];if(value!==undefined)el.innerHTML=value;});
+  loadApprovedNews();
 });
 async function loadApprovedNews(){
  const grid=document.getElementById("liveNewsGrid");
