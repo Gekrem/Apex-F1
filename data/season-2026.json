@@ -13,7 +13,29 @@
     "lengthKm": 6.201,
     "laps": 50,
     "distanceKm": 309.958,
-    "officialUrl": "https://www.formula1.com/en/racing/2026/las-vegas"
+    "officialUrl": "https://www.formula1.com/en/racing/2026/las-vegas",
+    "sessions": [
+      {
+        "name": "1. Antrenman",
+        "utc": "2026-11-20T00:30:00Z"
+      },
+      {
+        "name": "2. Antrenman",
+        "utc": "2026-11-20T04:00:00Z"
+      },
+      {
+        "name": "3. Antrenman",
+        "utc": "2026-11-21T00:30:00Z"
+      },
+      {
+        "name": "Sıralama turları",
+        "utc": "2026-11-21T04:00:00Z"
+      },
+      {
+        "name": "Yarış",
+        "utc": "2026-11-22T04:00:00Z"
+      }
+    ]
   },
   "calendar": [
     {
