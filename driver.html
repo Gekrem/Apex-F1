@@ -44,7 +44,7 @@ function loadPhoto(profile,name){
   img.onload=()=>{img.classList.add('loaded');credit.textContent='Fotoğraf: Wikimedia Commons / Wikipedia';};
   img.onerror=()=>{credit.textContent='Portre fotoğrafı şu anda yüklenemiyor';};
   img.src=photo;
- }).catch(()=>{credit.textContent='Portre fotoğrafı şu anda yüklenemiyor';});
+ }).catch(()=>{if(profile.fallbackImage){img.onload=()=>{img.classList.add('loaded');credit.textContent='Fotoğraf: Wikimedia Commons';};img.onerror=()=>{credit.textContent='Portre fotoğrafı şu anda yüklenemiyor';};img.src=profile.fallbackImage;}else{credit.textContent='Portre fotoğrafı şu anda yüklenemiyor';}});
 }
 load();
 </script></body></html>
