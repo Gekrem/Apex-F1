@@ -61,13 +61,7 @@ function updateStats(){$('total').textContent=allNews.length;$('drafts').textCon
 $('newsList').addEventListener('click',e=>{const b=e.target.closest('.edit-btn');if(b)openEditor(b.dataset.id);});
 $('editForm').addEventListener('submit',e=>{e.preventDefault();const id=$('editId').value;const n=allNews.find(x=>String(x.id)===String(id));if(!n)return;const audit=runQualityAudit();if($('status').value==='published'&&(!audit.ok||!$('checkSource').checked||!$('checkFacts').checked||!$('checkOriginal').checked)){alert('Haber henüz yayın koşullarını karşılamıyor. Eksik otomatik kontrolleri ve üç editör onayını tamamla.');return;}['title_tr','title_en','summary_tr','summary_en','category','status','source_name','source_url'].forEach(k=>n[k]=$(k).value.trim());if(n.status==='published'&&!n.published_at)n.published_at=new Date().toISOString();if(n.status==='draft')n.published_at='';setDirty(true);updateStats();render();closeEditor();});
 $('cancelEdit').addEventListener('click',closeEditor);$('editModal').addEventListener('click',e=>{if(e.target===$('editModal'))closeEditor();});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeEditor();});
-$('download').addEventListener('click',()=>{const blob=new Blob([JSON.stringify(allNews,null,2)+'\n',sha:file.sha,branch:'main'};
-  const saved=await fetch(GH_API,{method:'PUT',headers:{...headers,'Content-Type':'application/json'},body:JSON.stringify(payload)});
-  if(!saved.ok){const detail=await saved.json().catch(()=>({}));throw new Error(detail.message||'GitHub kayıt işlemi başarısız (HTTP '+saved.status+').');}
-  originalNews=JSON.parse(JSON.stringify(allNews));setDirty(false);$('saveInfo').textContent='Başarıyla GitHub’a kaydedildi. Commit oluşturuldu; site birkaç dakika içinde güncellenecek.';button.textContent='✓ GitHub’a kaydedildi';
-  setTimeout(()=>{button.textContent='GitHub’a kaydet';updateGitHubButton();},3000);
- }catch(err){alert('Kayıt yapılamadı: '+err.message);button.textContent='GitHub’a kaydet';updateGitHubButton();}
-});
-updateGitHubButton();
+$('download').addEventListener('click',()=>{const blob=new Blob([JSON.stringify(allNews,null,2)+'\n'],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='apex-f1-news.json';a.click();URL.revokeObjectURL(url);});
+$('discard').addEventListener('click',()=>{if(!dirty||confirm('Kaydedilmemiş değişiklikler sıfırlansın mı?')){allNews=JSON.parse(JSON.stringify(originalNews));setDirty(false);updateStats();render();}});
 load();
 </script></body></html>
