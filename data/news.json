@@ -14,7 +14,7 @@
   },
   {
     "id": "401058339ea3ba33",
-    "status": "published",
+    "status": "draft",
     "category": "F1 NEWS",
     "title_en": "McLaren determined to take fight for P3 ‘down to the wire’",
     "summary_en": "On the latest episode of F1 Nation, Racing Director Randy Singh opened up on the pressure McLaren are under to clinch P3 in the Teams’ Championship.",
@@ -22,12 +22,12 @@
     "summary_tr": "F1 Nation'ın son bölümünde McLaren Yarış Direktörü Randy Singh, Takımlar Şampiyonası'nda üçüncülüğü elde etmek için takımın üzerinde oluşan baskıyı anlattı.",
     "source_name": "Formula 1",
     "source_url": "https://www.formula1.com/en/latest/article/well-make-sure-it-goes-down-to-the-wire-mclaren-on-determination-to-finish-p3-in-teams-championship.2CPaMf6YTIkLE4pZlahf9y",
-    "published_at": "2026-11-16T18:11:58.833Z",
+    "published_at": "",
     "collected_at": "2026-11-16T13:24:22Z"
   },
   {
     "id": "fe129dc5e904b6c7",
-    "status": "draft",
+    "status": "published",
     "category": "F1 NEWS",
     "title_en": "Haas confirm Camara to race for the team in Las Vegas",
     "summary_en": "Rafael Camara will return for his second Formula 1 race weekend at the Las Vegas Grand Prix, having made his debut for Haas last time out in Sao Paulo.",
@@ -35,7 +35,7 @@
     "summary_tr": "Rafael Camara, São Paulo'daki son yarışta Haas ile Formula 1'deki ilk yarışına çıktıktan sonra Las Vegas Grand Prix'sinde ikinci F1 yarış hafta sonuna katılacak.",
     "source_name": "Formula 1",
     "source_url": "https://www.formula1.com/en/latest/article/haas-confirm-camara-to-race-for-the-team-in-las-vegas-as-hirakawa-returns-for-fp1-appearance.2as7TuSF4UHgXczZlu4245",
-    "published_at": "",
+    "published_at": "2026-11-16T18:12:22.873Z",
     "collected_at": "2026-11-16T13:24:22Z"
   },
   {
