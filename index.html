@@ -33,6 +33,7 @@
     .driver-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.driver{background:linear-gradient(145deg,#1b1b20,#111114);border:1px solid var(--line);border-radius:10px;padding:18px;min-height:130px;position:relative;overflow:hidden}.driver:after{content:"";position:absolute;width:90px;height:90px;border:12px solid rgba(225,6,0,.16);border-radius:50%;right:-28px;bottom:-38px}.driver small{color:var(--red);font-weight:900;letter-spacing:2px}.driver h3{margin:9px 0 2px;font-size:19px}.driver p{color:var(--muted);font-size:11px;margin:0}
     footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);font-size:11px}.foot{display:flex;justify-content:space-between;gap:20px;align-items:center}.foot strong{color:#fff;font-size:16px}
     .notice{margin-top:18px;border:1px solid #51422a;background:#211b12;color:#d9c9a8;padding:12px 14px;border-radius:8px;font-size:11px}
+    .news-empty{grid-column:1/-1;border:1px dashed var(--line);border-radius:11px;padding:28px;color:var(--muted);font-size:13px}.news h3 a:hover{color:#ff8b86}
     @media(max-width:850px){.links{display:none;position:absolute;top:76px;left:0;right:0;background:#101014;padding:20px;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}.links.open{display:flex}.menu{display:block}.hero-grid{grid-template-columns:1fr}.hero-main{min-height:410px}.hero-side{display:grid;grid-template-columns:repeat(3,1fr)}.side-card{min-height:145px;padding:15px}.side-card h3{font-size:15px}.driver-grid{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:600px){.wrap{width:min(100% - 28px,var(--max))}.nav{height:66px}.links{top:66px}.hero{padding-top:36px}.hero-main{min-height:390px}.hero-content{left:22px;right:22px;bottom:25px}h1{font-size:43px;letter-spacing:-2px}.hero-side{grid-template-columns:1fr}.side-card{min-height:110px}.news-grid,.split{grid-template-columns:1fr}.news-art{height:150px}.section{padding:32px 0}.section-head h2{font-size:22px}.foot{align-items:flex-start;flex-direction:column}}
   </style>
@@ -70,12 +71,8 @@
 
   <section class="section wrap" id="news">
     <div class="section-head"><div><div class="section-label" data-i="latestLabel">GÜNDEM</div><h2 data-i="latestTitle">Öne çıkanlar</h2></div><p data-i="latestSub">Formula 1 evreninden seçkiler</p></div>
-    <div class="news-grid">
-      <article class="news"><div class="news-art"></div><div class="news-body"><div class="tag" data-i="tagAnalysis">ANALİZ</div><h3 data-i="news1Title">Modern F1'de yarış stratejisini belirleyen faktörler</h3><p data-i="news1Text">Lastik yönetimi, pit stop penceresi ve pist üstü pozisyon mücadelesine yakından bakış.</p><div class="meta"><span>APEX F1 EDITORIAL</span><span>06 MIN</span></div></div></article>
-      <article class="news"><div class="news-art art-two"></div><div class="news-body"><div class="tag" data-i="tagTech">TEKNOLOJİ</div><h3 data-i="news2Title">Bir F1 aracını hızlı yapan mühendislik</h3><p data-i="news2Text">Aerodinamik verimlilikten süspansiyon ayarlarına, performansın arkasındaki detaylar.</p><div class="meta"><span>APEX F1 TECH</span><span>08 MIN</span></div></div></article>
-      <article class="news"><div class="news-art art-three"></div><div class="news-body"><div class="tag" data-i="tagHistory">TARİH</div><h3 data-i="news3Title">Formula 1'in unutulmaz rekabetleri</h3><p data-i="news3Text">Şampiyonluk mücadelelerini, ikonik anları ve spora yön veren isimleri hatırla.</p><div class="meta"><span>APEX F1 ARCHIVE</span><span>05 MIN</span></div></div></article>
-    </div>
-    <div class="notice" data-i="demoNotice">Editör notu: Bu ilk sürüm bir tasarım prototipidir. Kartlardaki içerikler örnek metindir; doğrulanmış güncel haber veya canlı yarış verisi değildir.</div>
+    <div class="news-grid" id="liveNewsGrid" aria-live="polite"><div class="news-empty" data-i="newsLoading">Onaylanmış haberler yükleniyor…</div></div>
+    <div class="news-status" data-i="newsPolicy">Haber taslakları otomatik toplanır; yalnızca editör onayından sonra yayımlanır. Her haberin özgün kaynağına bağlantı verilir.</div>
   </section>
 
   <section class="section wrap" id="calendar">
@@ -106,9 +103,8 @@ const translations = {
   navNews:"Haberler",navCalendar:"Takvim",navStandings:"Puan Durumu",navDrivers:"Pilotlar",navAbout:"Hakkımızda",
   eyebrow:"Formula 1'in nabzı burada",heroKicker:"HIZ. STRATEJİ. TUTKU.",heroTitle:"Yarışın<br>ötesine geç.",heroText:"Formula 1 dünyasından haberler, analizler, istatistikler ve unutulmaz hikâyeler. Grid'in her anını keşfet.",heroButton:"Hikâyeleri keşfet",
   side1Title:"Paddock'tan son gelişmeler",side1Text:"Haberler ve yorumlar",side2Title:"Pilotları ve takımları tanı",side2Text:"Grid'in tamamı tek yerde",side3Title:"Rakamların anlattığı yarış",side3Text:"Takvim ve şampiyona verileri",
-  latestLabel:"GÜNDEM",latestTitle:"Öne çıkanlar",latestSub:"Formula 1 evreninden seçkiler",tagAnalysis:"ANALİZ",tagTech:"TEKNOLOJİ",tagHistory:"TARİH",
+  latestLabel:"GÜNDEM",latestTitle:"Öne çıkanlar",latestSub:"Formula 1 evreninden seçkiler",newsLoading:"Onaylanmış haberler yükleniyor…",newsPolicy:"Haber taslakları otomatik toplanır; yalnızca editör onayından sonra yayımlanır. Her haberin özgün kaynağına bağlantı verilir.",newsEmpty:"Henüz editör onayından geçmiş haber yok. Yeni haber taslakları otomatik olarak toplanıyor.",newsError:"Haber akışı şu anda yüklenemedi. Lütfen daha sonra tekrar deneyin.",
   news1Title:"Modern F1'de yarış stratejisini belirleyen faktörler",news1Text:"Lastik yönetimi, pit stop penceresi ve pist üstü pozisyon mücadelesine yakından bakış.",news2Title:"Bir F1 aracını hızlı yapan mühendislik",news2Text:"Aerodinamik verimlilikten süspansiyon ayarlarına, performansın arkasındaki detaylar.",news3Title:"Formula 1'in unutulmaz rekabetleri",news3Text:"Şampiyonluk mücadelelerini, ikonik anları ve spora yön veren isimleri hatırla.",
-  demoNotice:"Editör notu: Bu ilk sürüm bir tasarım prototipidir. Kartlardaki içerikler örnek metindir; doğrulanmış güncel haber veya canlı yarış verisi değildir.",
   raceLabel:"SEZON TAKİBİ",raceTitle:"Yarış merkezi",raceSub:"Takvim ve şampiyona alanı",calendarHeading:"Yarış takvimi",calendarDesc:"Sezon yarışları, pist bilgileri ve hafta sonu programı.",calendarPlaceholder:"Takvim verisi eklenecek",calendarDetail:"Resmî seans saatleri ve pist detayları",standingsHeading:"Şampiyona puan durumu",standingsDesc:"Pilotlar ve takımlar klasmanını takip et.",driverTable:"Pilotlar şampiyonası",teamTable:"Takımlar şampiyonası",
   gridLabel:"THE GRID",driversTitle:"Pilotlar ve takımlar",driversSub:"Profil ve istatistik arşivi",driverCard1:"Pilot profilleri",driverDesc1:"Kariyer, başarılar ve istatistikler",driverCard2:"Takım profilleri",driverDesc2:"Tarihçe, kadro ve teknik bilgiler",driverCard3:"Pist rehberi",driverDesc3:"Virajlar, sektörler ve rekorlar",driverCard4:"F1 sözlüğü",driverDesc4:"Terimler ve yarış kuralları",aboutTitle:"Sadece sonucu değil, hikâyeyi de takip et.",aboutText:"APEX F1; Formula 1'i haber, veri, teknoloji ve tarih perspektiflerinden ele alan bağımsız bir yayın platformu olarak tasarlanıyor.",footerTag:"BEYOND THE GRID",footerDisclaimer:"Bağımsız taraftar projesi. Formula 1 ve ilgili markalar hak sahiplerine aittir."
  },
@@ -116,9 +112,8 @@ const translations = {
   navNews:"News",navCalendar:"Calendar",navStandings:"Standings",navDrivers:"Drivers",navAbout:"About",
   eyebrow:"The pulse of Formula 1",heroKicker:"SPEED. STRATEGY. PASSION.",heroTitle:"Go beyond<br>the race.",heroText:"News, analysis, statistics and unforgettable stories from the world of Formula 1. Explore every moment of the grid.",heroButton:"Explore stories",
   side1Title:"The latest from the paddock",side1Text:"News and opinion",side2Title:"Meet the drivers and teams",side2Text:"The entire grid in one place",side3Title:"The race told by numbers",side3Text:"Calendar and championship data",
-  latestLabel:"IN FOCUS",latestTitle:"Top stories",latestSub:"Selected stories from the F1 universe",tagAnalysis:"ANALYSIS",tagTech:"TECHNOLOGY",tagHistory:"HISTORY",
+  latestLabel:"IN FOCUS",latestTitle:"Top stories",latestSub:"Selected stories from the F1 universe",newsLoading:"Loading approved stories…",newsPolicy:"News drafts are collected automatically and published only after editorial approval. Every story links to its original source.",newsEmpty:"No stories have been approved by the editor yet. New drafts are being collected automatically.",newsError:"The news feed could not be loaded. Please try again later.",
   news1Title:"What shapes race strategy in modern F1",news1Text:"A closer look at tyre management, pit-stop windows and on-track positioning.",news2Title:"The engineering that makes an F1 car fast",news2Text:"From aerodynamic efficiency to suspension setup, explore the details behind performance.",news3Title:"Formula 1's most unforgettable rivalries",news3Text:"Remember title battles, iconic moments and the people who shaped the sport.",
-  demoNotice:"Editor's note: This first release is a design prototype. Card content is sample copy, not verified current news or live race data.",
   raceLabel:"SEASON TRACKER",raceTitle:"Race centre",raceSub:"Calendar and championship hub",calendarHeading:"Race calendar",calendarDesc:"Season races, circuit information and weekend schedules.",calendarPlaceholder:"Calendar data to be added",calendarDetail:"Official session times and circuit details",standingsHeading:"Championship standings",standingsDesc:"Follow the drivers' and constructors' rankings.",driverTable:"Drivers' championship",teamTable:"Constructors' championship",
   gridLabel:"THE GRID",driversTitle:"Drivers and teams",driversSub:"Profiles and statistics archive",driverCard1:"Driver profiles",driverDesc1:"Careers, achievements and statistics",driverCard2:"Team profiles",driverDesc2:"History, line-ups and technical details",driverCard3:"Circuit guide",driverDesc3:"Corners, sectors and lap records",driverCard4:"F1 glossary",driverDesc4:"Terminology and racing rules",aboutTitle:"Follow the story, not just the result.",aboutText:"APEX F1 is being designed as an independent publication covering Formula 1 through news, data, technology and history.",footerTag:"BEYOND THE GRID",footerDisclaimer:"Independent fan project. Formula 1 and related marks belong to their respective owners."
  }
@@ -129,6 +124,30 @@ document.getElementById("langBtn").addEventListener("click",()=>{
  document.getElementById("langBtn").textContent=lang==="tr"?"EN":"TR";
  document.querySelectorAll("[data-i]").forEach(el=>{const value=translations[lang][el.dataset.i];if(value!==undefined)el.innerHTML=value;});
 });
+async function loadApprovedNews(){
+ const grid=document.getElementById("liveNewsGrid");
+ try{
+  const response=await fetch("data/news.json",{cache:"no-store"});
+  if(!response.ok) throw new Error("news.json unavailable");
+  const items=await response.json();
+  const approved=items.filter(item=>item.status==="published").sort((a,b)=>(b.published_at||b.collected_at||"").localeCompare(a.published_at||a.collected_at||"")).slice(0,9);
+  grid.replaceChildren();
+  if(!approved.length){const empty=document.createElement("div");empty.className="news-empty";empty.textContent=translations[lang].newsEmpty;grid.append(empty);return;}
+  approved.forEach((item,index)=>{
+   const article=document.createElement("article");article.className="news";
+   const art=document.createElement("div");art.className="news-art"+(index%3===1?" art-two":index%3===2?" art-three":"");
+   const body=document.createElement("div");body.className="news-body";
+   const tag=document.createElement("div");tag.className="tag";tag.textContent=item.category||"FORMULA 1";
+   const heading=document.createElement("h3");const link=document.createElement("a");link.href=item.source_url;link.target="_blank";link.rel="noopener noreferrer";link.textContent=(lang==="tr"?(item.title_tr||item.title_en):(item.title_en||item.title_tr));heading.append(link);
+   const summary=document.createElement("p");summary.textContent=lang==="tr"?(item.summary_tr||item.summary_en||""):(item.summary_en||item.summary_tr||"");
+   const meta=document.createElement("div");meta.className="meta";
+   const source=document.createElement("span");source.textContent=item.source_name||"SOURCE";
+   const date=document.createElement("span");const raw=item.published_at||item.collected_at||"";date.textContent=raw?new Date(raw).toLocaleDateString(lang==="tr"?"tr-TR":"en-GB"):"";
+   meta.append(source,date);body.append(tag,heading,summary,meta);article.append(art,body);grid.append(article);
+  });
+ }catch(error){grid.replaceChildren();const box=document.createElement("div");box.className="news-empty";box.textContent=translations[lang].newsError;grid.append(box);}
+}
+loadApprovedNews();
 document.getElementById("menuBtn").addEventListener("click",()=>document.getElementById("navlinks").classList.toggle("open"));
 document.querySelectorAll("#navlinks a").forEach(a=>a.addEventListener("click",()=>document.getElementById("navlinks").classList.remove("open")));
 </script>
