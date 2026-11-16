@@ -25,6 +25,26 @@ a:focus-visible{outline:2px solid var(--green);outline-offset:3px}
 .story-section p{margin:0;font-size:16px;line-height:1.9;color:#d0ddd3}
 .editorial-note{margin:26px 0;color:var(--muted);font-size:11px;line-height:1.7;border-left:2px solid var(--green);padding-left:12px}
 @media(max-width:620px){.news-visual .hero-image{aspect-ratio:4/3}.story-section p{font-size:15px}}
+
+/* Editorial long-form newsroom */
+.article{max-width:900px}
+.news-visual{margin:30px 0 32px;position:relative}
+.news-visual .hero-image{max-height:520px;aspect-ratio:16/9;object-fit:cover;border-radius:5px;margin:0}
+.news-visual.image-unavailable{min-height:250px;display:grid;place-items:center;background:radial-gradient(ellipse at 70% 15%,rgba(33,209,138,.22),transparent 55%),linear-gradient(135deg,#14251b,#08100b);border:1px solid var(--line);border-radius:5px;padding:28px}
+.news-visual.image-unavailable:before{content:'APEX F1  /  THE STORY';display:block;color:var(--bright);font-size:10px;letter-spacing:2px;font-weight:900}
+.news-visual.image-unavailable .caption{display:none}
+.news-visual .caption{margin:9px 0 0}
+.story-content{max-width:820px}
+.story-content .story-section{padding:0 0 18px;margin:0 0 20px;border-bottom:1px solid rgba(130,170,145,.16)}
+.story-content .subhead{font-size:22px;margin:0 0 8px;color:#f0f7f1}
+.story-content p{margin:0;color:#d1ddd5;font-size:16px;line-height:1.85}
+.story-lead{font-size:18px!important;line-height:1.8!important;color:#dce9e0!important;max-width:820px}
+.story-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:24px 0}
+.story-facts>div{padding:14px;background:var(--panel);border:1px solid var(--line);border-radius:4px}
+.story-facts small{display:block;color:var(--muted);font-size:9px;letter-spacing:1.3px;text-transform:uppercase}
+.story-facts strong{display:block;color:var(--bright);font-size:14px;margin-top:4px}
+.editorial-note{max-width:820px;padding:14px 16px;border-left:2px solid var(--green);background:rgba(33,209,138,.045);color:var(--muted);font-size:11px;line-height:1.7}
+@media(max-width:620px){.story-facts{grid-template-columns:1fr}.story-content .subhead{font-size:19px}.story-content p{font-size:15px}}
 </style></head><body><div class="top"></div><header><div class="wrap nav"><a class="brand" href="index.html">APEX<span>F1</span><small>BEYOND THE GRID</small></a><a class="back" href="index.html">← Ana sayfaya dön</a></div></header>
 <main class="wrap article" id="content"><div class="eyebrow">APEX F1 / NEWSROOM</div><h1>Las Vegas GP Öncesinde Öne Çıkan 5 Konu</h1><p class="dek">2026 sezonunun 21. yarışı Las Vegas Grand Prix'si öncesinde F1 dünyasının en önemli gündem maddeleri ve merak edilen gelişmeler.</p><p class="notice">Yayıncı: Formula 1</p><p class="body-copy">2026 sezonunun 21. yarışı Las Vegas Grand Prix'si öncesinde F1 dünyasının en önemli gündem maddeleri ve merak edilen gelişmeler.</p><aside class="source-box"><small>KAYNAK / REFERENCE</small><strong>Formula 1</strong><p>Haber özeti APEX F1 tarafından sunulmuştur.</p><a href="https://www.formula1.com/en/latest/article/its-race-week-5-storylines-were-excited-about-ahead-of-the-2026-las-vegas-grand-prix.3fjavheTbHD8fjZI0i7BWd" target="_blank" rel="noopener noreferrer">Orijinal haberi aç ↗</a></aside></main><footer><div class="wrap">APEX F1 — Bağımsız Formula 1 yayın platformu. Formula 1, FIA ve takımlarla resmî bağlantısı yoktur.</div></footer>
 <script>
@@ -88,11 +108,15 @@ async function renderNews(id){
   if(!n){notFound();return;}
   const title=n.title_tr||n.title_en||'Formula 1 haberi';
   const summary=n.summary_tr||n.summary_en||'';
-  const sections=articleSections[id]||[['Haberin özeti',summary],['Bu gelişme neden önemli?','Bu gelişmenin takımların ve pilotların sezon planlamasına etkisi, kalan yarışlarda alınacak kararlarla daha net görülecek.']];
+  const sections=articleSections[id]||[
+   ['Haberin ayrıntıları',summary||'Bu haberin ayrıntıları kaynak yayında paylaşılan bilgiler doğrultusunda takip ediliyor.'],
+   ['Formula 1 açısından önemi', 'Bu gelişme, ilgili takımın/pilotun sezon içindeki hedefleri ve rekabet dengesi açısından değerlendirilmelidir. APEX F1, doğrulanmamış ayrıntıları kesin bilgi gibi sunmaz.'],
+   ['Bundan sonra ne takip edilmeli?', 'Kaynak yayının güncellemeleri, takımın resmî açıklamaları ve hafta sonu seanslarında ortaya çıkacak veriler bu haberin etkisini netleştirecek.']
+  ];
   const visual=articleVisuals[id]||articleVisuals['f55f72ce2cc4b6cc'];
   document.title=title+' | APEX F1';
-  $('content').innerHTML='<div class="eyebrow">'+esc(n.category||'FORMULA 1')+' / APEX F1 NEWSROOM</div><h1>'+esc(title)+'</h1><p class="dek">'+esc(summary)+'</p><p class="notice">Kaynak: '+esc(n.source_name||'Belirtilmedi')+(n.published_at?' · '+esc(n.published_at.slice(0,10)):'')+'</p><figure class="news-visual"><img class="hero-image" src="'+esc(visual.url)+'" alt="'+esc(visual.alt)+'" loading="eager"><figcaption class="caption">Görsel: '+esc(visual.credit)+' · <a href="'+esc(visual.creditUrl)+'" target="_blank" rel="noopener noreferrer">Görsel kaynağı ↗</a></figcaption></figure><div class="body-copy">'+sections.map((v,i)=>'<section class="story-section"><h2 class="subhead">'+(i+1)+'. '+esc(v[0])+'</h2><p>'+esc(v[1])+'</p></section>').join('')+'</div><p class="editorial-note">Editoryal not: Bu içerik, kaynak haberde yer alan bilgiler temel alınarak APEX F1 tarafından hazırlanmış Türkçe haber ve analiz özetidir; orijinal yayının tam metni değildir.</p>'+sourceBox(n.source_name||'Orijinal yayın',n.source_url||'#','Orijinal kaynağı görüntüle ↗');
-  const img=$('.hero-image');img.addEventListener('error',()=>{img.closest('.news-visual').classList.add('image-unavailable');img.remove();},{once:true});
+  $('content').innerHTML='<div class="eyebrow">'+esc(n.category||'FORMULA 1')+' / APEX F1 NEWSROOM</div><h1>'+esc(title)+'</h1><p class="dek story-lead">'+esc(summary)+'</p><div class="story-facts"><div><small>YAYINCI</small><strong>'+esc(n.source_name||'APEX F1')+'</strong></div><div><small>YAYIN TARİHİ</small><strong>'+esc((n.published_at||n.collected_at||'').slice(0,10)||'Güncel')+'</strong></div><div><small>İÇERİK TÜRÜ</small><strong>Haber ve editoryal analiz</strong></div></div><figure class="news-visual"><img class="hero-image" src="'+esc(visual.url)+'" alt="'+esc(visual.alt)+'" loading="eager"><figcaption class="caption">Görsel: '+esc(visual.credit)+' · <a href="'+esc(visual.creditUrl)+'" target="_blank" rel="noopener noreferrer">Görsel kaynağı ↗</a></figcaption></figure><div class="body-copy story-content">'+sections.map((v,i)=>'<section class="story-section"><h2 class="subhead">'+(i+1)+'. '+esc(v[0])+'</h2><p>'+esc(v[1])+'</p></section>').join('')+'</div><p class="editorial-note">Editoryal not: Bu sayfa, haberin başlığı ve özeti temel alınarak APEX F1 tarafından hazırlanmış Türkçe haber/analiz içeriğidir. Kaynak yayının tam metni değildir; doğrulanmamış ayrıntılar eklenmez.</p>'+sourceBox(n.source_name||'Orijinal yayın',n.source_url||'#','Orijinal kaynağı görüntüle ↗');
+  const img=$('.hero-image');img.addEventListener('error',()=>{const figure=img.closest('.news-visual');figure.classList.add('image-unavailable');img.remove();figure.insertAdjacentHTML('afterbegin','<div class="fallback-title">'+esc(title)+'</div>');},{once:true});
  }catch(error){
   document.title='Haber yüklenemedi | APEX F1';
   $('content').innerHTML='<div class="eyebrow">APEX F1 / NEWSROOM</div><h1>Haber şu anda yüklenemiyor</h1><p class="dek">Haber arşivine erişilemedi. Lütfen birkaç saniye sonra yeniden dene.</p><p class="notice">'+esc(error.message)+'</p><a class="back" href="index.html#news">← Haberlere dön</a>';
