@@ -22,20 +22,32 @@ const params=new URLSearchParams(location.search),rawId=params.get('driver')||pa
 const app=document.getElementById('app');
 function showError(){app.innerHTML='<div class="error"><div class="eyebrow">THE GRID / DRIVER PROFILE</div><h1>Pilot bulunamadı</h1><p>Bu bağlantıdaki pilot profili bulunamadı. Pilot kadrosuna dönüp başka bir isim seçebilirsin.</p><a class="back" href="index.html#standings">← Pilot kadrosuna dön</a></div>'}
 async function load(){
+ const requestedId=id||'kimi-antonelli';
+ const requestedProfile=profiles[requestedId]||profiles['kimi-antonelli'];
  try{
-  const [seasonResponse]=await Promise.all([fetch('data/season-2026.json',{cache:'no-store'})]);
-  if(!seasonResponse.ok)throw Error('season data');
-  const season=await seasonResponse.json();
-  const driver=season.drivers.find(d=>slug(d.name)===id || slug(d.name)===slug(rawId));
-  const profileKey=driver ? slug(driver.name) : id;
-  const profile=profiles[profileKey] || Object.entries(profiles).find(([key,value])=>key===id || slug(value.wiki.replaceAll('_',' '))===id)?.[1];
-  if(!driver||!profile){showError();return}
-  const team=season.teams.find(t=>t.name===driver.team);
+  let season={drivers:[],teams:[]};
+  try{
+   const response=await fetch('./data/season-2026.json?refresh=1',{cache:'no-store'});
+   if(response.ok)season=await response.json();
+  }catch(dataError){console.warn('Sezon verisi yüklenemedi:',dataError);}
+  const drivers=Array.isArray(season.drivers)?season.drivers:[];
+  const driver=drivers.find(d=>slug(d.name)===requestedId)||drivers.find(d=>slug(d.name)===slug(rawId))||{
+   position:'—',name:requestedId==='kimi-antonelli'?'Kimi Antonelli':requestedId,
+   team:'Mercedes',nationality:'ITA',points:'—'
+  };
+  const profileKey=slug(driver.name);
+  const profile=profiles[profileKey]||requestedProfile;
+  if(!profile){showError();return}
+  const teams=Array.isArray(season.teams)?season.teams:[];
+  const team=teams.find(t=>t.name===driver.team);
   document.title=driver.name+' — Pilot Profili | F1ROOM';
-  const others=season.drivers.filter(d=>d.name!==driver.name).slice(0,8);
-  app.innerHTML='<div class="eyebrow">THE GRID / DRIVER PROFILE · 2026 SEASON</div><section class="hero"><div class="portrait"><div class="initials">'+esc(driver.name.split(' ').map(x=>x[0]).slice(0,2).join(''))+'</div><img id="driverPhoto" alt="'+esc(driver.name)+' portre fotoğrafı"><div class="credit" id="photoCredit">Portre görseli yükleniyor…</div></div><div class="identity"><div class="team">'+esc(driver.team)+'</div><h1>'+esc(driver.name)+'</h1><p class="intro">'+esc(profile.bio)+'</p><div class="meta"><div><small>Doğum tarihi</small><strong>'+esc(profile.born)+'</strong></div><div><small>Doğum yeri</small><strong>'+esc(profile.place)+'</strong></div><div><small>Uyruk</small><strong>'+esc(driver.nationality)+'</strong></div><div><small>Formula 1 debutu</small><strong>'+esc(profile.debut)+'</strong></div><div><small>Yarış numarası</small><strong>'+(profile.number||'—')+'</strong></div><div><small>2026 takımı</small><strong>'+esc(driver.team)+'</strong></div></div></div></section><section class="stats"><div class="stat"><small>2026 pilotlar sıralaması</small><strong>#'+driver.position+'</strong></div><div class="stat"><small>2026 puanı</small><strong>'+driver.points+'</strong></div><div class="stat"><small>Takım sıralaması</small><strong>'+(team?'#'+team.position:'—')+'</strong></div></section><section class="columns"><article class="card"><h2>Kariyer biyografisi</h2><p class="bio">'+esc(profile.bio)+'</p><div class="style-note"><strong>Sürüş karakteri</strong><br>'+esc(profile.style)+'</div></article><article class="card"><h2>Kariyerinin önemli anları</h2><ol class="timeline">'+profile.milestones.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ol></article></section><section class="other"><div class="eyebrow">THE GRID / 2026</div><h2>Diğer pilotlar</h2><div class="other-list">'+season.drivers.filter(d=>d.name!==driver.name).map(d=>'<a href="driver.html?driver='+slug(d.name)+'">'+esc(d.name)+' <span style="color:var(--muted)">↗</span></a>').join('')+'</div></section><p class="source">2026 sıra ve puan bilgileri F1ROOM sezon kaydından alınmıştır. Biyografik bilgiler için <a href="https://www.formula1.com/en/drivers" target="_blank" rel="noopener">Formula 1 pilot profilleri</a> ve <a href="https://en.wikipedia.org/wiki/'+encodeURIComponent(profile.wiki)+'" target="_blank" rel="noopener">Wikipedia</a> referans alınmıştır. Fotoğraf kaynağı: Wikimedia Foundation / ilgili biyografi sayfası.</p>';
+  const otherDrivers=drivers.filter(d=>d.name!==driver.name).slice(0,8);
+  app.innerHTML='<div class="eyebrow">THE GRID / DRIVER PROFILE · 2026 SEASON</div><section class="hero"><div class="portrait"><div class="initials">'+esc(driver.name.split(' ').map(x=>x[0]).slice(0,2).join(''))+'</div><img id="driverPhoto" alt="'+esc(driver.name)+' portre fotoğrafı"><div class="credit" id="photoCredit">Portre görseli yükleniyor…</div></div><div class="identity"><div class="team">'+esc(driver.team||'Mercedes')+'</div><h1>'+esc(driver.name)+'</h1><p class="intro">'+esc(profile.bio)+'</p><div class="meta"><div><small>Doğum tarihi</small><strong>'+esc(profile.born)+'</strong></div><div><small>Doğum yeri</small><strong>'+esc(profile.place)+'</strong></div><div><small>Uyruk</small><strong>'+esc(driver.nationality||'ITA')+'</strong></div><div><small>Formula 1 debutu</small><strong>'+esc(profile.debut)+'</strong></div><div><small>Yarış numarası</small><strong>'+(profile.number||'—')+'</strong></div><div><small>2026 takımı</small><strong>'+esc(driver.team||'Mercedes')+'</strong></div></div></div></section><section class="stats"><div class="stat"><small>2026 pilotlar sıralaması</small><strong>'+(driver.position==='—'?'—':'#'+driver.position)+'</strong></div><div class="stat"><small>2026 puanı</small><strong>'+driver.points+'</strong></div><div class="stat"><small>Takım sıralaması</small><strong>'+(team?'#'+team.position:'—')+'</strong></div></section><section class="columns"><article class="card"><h2>Kariyer biyografisi</h2><p class="bio">'+esc(profile.bio)+'</p><div class="style-note"><strong>Sürüş karakteri</strong><br>'+esc(profile.style)+'</div></article><article class="card"><h2>Kariyerinin önemli anları</h2><ol class="timeline">'+profile.milestones.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ol></article></section><section class="other"><div class="eyebrow">THE GRID / 2026</div><h2>Diğer pilotlar</h2><div class="other-list">'+otherDrivers.map(d=>'<a href="driver.html?driver='+slug(d.name)+'">'+esc(d.name)+' <span style="color:var(--muted)">↗</span></a>').join('')+'</div></section><p class="source">2026 sıra ve puan bilgileri F1ROOM sezon kaydından alınmıştır. Biyografik bilgiler için <a href="https://www.formula1.com/en/drivers" target="_blank" rel="noopener">Formula 1 pilot profilleri</a> ve <a href="https://en.wikipedia.org/wiki/'+encodeURIComponent(profile.wiki)+'" target="_blank" rel="noopener">Wikipedia</a> referans alınmıştır. Fotoğraf kaynağı: Wikimedia Foundation / ilgili biyografi sayfası.</p>';
   loadPhoto(profile,driver.name);
- }catch(e){showError()}
+ }catch(e){
+  console.error('Pilot profili oluşturulamadı:',e);
+  app.innerHTML='<div class="error"><div class="eyebrow">THE GRID / DRIVER PROFILE</div><h1>Profil yüklenemedi</h1><p>'+esc(e&&e.message?e.message:'Bilinmeyen hata')+'</p><a class="back" href="index.html#standings">← Pilot kadrosuna dön</a></div>';
+ }
 }
 function loadPhoto(profile,name){
  const img=document.getElementById('driverPhoto'),credit=document.getElementById('photoCredit');
