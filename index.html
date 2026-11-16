@@ -64,6 +64,14 @@ footer,.foot{border-color:var(--line);color:var(--muted)}
 /* About section now contains only the source panel */
 #about .about-grid{grid-template-columns:minmax(0,1fr)}
 #about .about-grid>.panel{max-width:none}
+
+/* Fixed F1ROOM whale mascot */
+.f1room-whale{position:fixed;top:74px;right:clamp(14px,3.5vw,54px);z-index:60;width:clamp(92px,10vw,154px);height:auto;pointer-events:none;filter:drop-shadow(0 8px 18px rgba(0,0,0,.38));animation:whale-float 4.5s ease-in-out infinite}
+@keyframes whale-float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(7px) rotate(-2deg)}}
+@media(max-width:900px){.f1room-whale{top:69px;right:10px;width:100px}}
+@media(max-width:520px){.f1room-whale{top:68px;right:7px;width:76px}}
+@media(prefers-reduced-motion:reduce){.f1room-whale{animation:none}}
+
 </style>
 <link rel="icon" type="image/png" href="assets/f1room-logo.jpg">
 </head>
@@ -74,6 +82,7 @@ footer,.foot{border-color:var(--line);color:var(--muted)}
 <nav class="links" id="navlinks"><a href="#news" data-tr="Haberler" data-en="News">Haberler</a><a href="#next-race" data-tr="Sıradaki yarış" data-en="Next race">Sıradaki yarış</a><a href="#calendar" data-tr="Takvim" data-en="Calendar">Takvim</a><a href="#standings" data-tr="Puan durumu" data-en="Standings">Puan durumu</a><a href="#grid" data-tr="Grid" data-en="The grid">Grid</a><a href="#about" data-tr="Hakkımızda" data-en="About">Hakkımızda</a></nav>
 <div class="nav-actions"><button class="control" id="langBtn">EN</button><button class="control menu" id="menuBtn" aria-label="Menüyü aç">☰</button></div>
 </div></header>
+<img class="f1room-whale" src="assets/f1room-whale.png" alt="F1ROOM mavi balina maskotu" aria-hidden="true">
 <main>
 <section class="hero wrap">
 <div class="eyebrow"><span class="dot"></span><span data-tr="HIZ. STRATEJİ. TUTKU." data-en="SPEED. STRATEGY. PASSION.">HIZ. STRATEJİ. TUTKU.</span></div>
