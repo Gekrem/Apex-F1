@@ -249,7 +249,10 @@
       "circuit": "Las Vegas Strip Circuit",
       "start": "2026-11-19",
       "end": "2026-11-21",
-      "sprint": false
+      "sprint": false,
+      "circuitLengthKm": 6.201,
+      "laps": 50,
+      "distanceKm": 309.958
     },
     {
       "round": 22,
