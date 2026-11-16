@@ -1,0 +1,523 @@
+{
+  "season": 2026,
+  "updatedAt": "2026-11-16T14:00:00Z",
+  "nextRace": {
+    "round": 21,
+    "name": "Las Vegas Grand Prix",
+    "country": "United States",
+    "city": "Las Vegas",
+    "circuit": "Las Vegas Strip Circuit",
+    "start": "2026-11-22T04:00:00Z",
+    "eventStart": "2026-11-19",
+    "eventEnd": "2026-11-21",
+    "lengthKm": 6.201,
+    "laps": 50,
+    "distanceKm": 309.958,
+    "officialUrl": "https://www.formula1.com/en/racing/2026/las-vegas"
+  },
+  "calendar": [
+    {
+      "round": 1,
+      "country": "Australia",
+      "name": "Australian Grand Prix",
+      "city": "Melbourne",
+      "circuit": "Albert Park Grand Prix Circuit",
+      "start": "2026-03-06",
+      "end": "2026-03-08",
+      "sprint": false
+    },
+    {
+      "round": 2,
+      "country": "China",
+      "name": "Chinese Grand Prix",
+      "city": "Shanghai",
+      "circuit": "Shanghai International Circuit",
+      "start": "2026-03-13",
+      "end": "2026-03-15",
+      "sprint": true
+    },
+    {
+      "round": 3,
+      "country": "Japan",
+      "name": "Japanese Grand Prix",
+      "city": "Suzuka",
+      "circuit": "Suzuka International Racing Course",
+      "start": "2026-03-27",
+      "end": "2026-03-29",
+      "sprint": false
+    },
+    {
+      "round": 4,
+      "country": "United States",
+      "name": "Miami Grand Prix",
+      "city": "Miami",
+      "circuit": "Miami International Autodrome",
+      "start": "2026-05-01",
+      "end": "2026-05-03",
+      "sprint": true
+    },
+    {
+      "round": 5,
+      "country": "Canada",
+      "name": "Canadian Grand Prix",
+      "city": "Montreal",
+      "circuit": "Circuit Gilles-Villeneuve",
+      "start": "2026-05-22",
+      "end": "2026-05-24",
+      "sprint": true
+    },
+    {
+      "round": 6,
+      "country": "Monaco",
+      "name": "Monaco Grand Prix",
+      "city": "Monaco",
+      "circuit": "Circuit de Monaco",
+      "start": "2026-06-05",
+      "end": "2026-06-07",
+      "sprint": false
+    },
+    {
+      "round": 7,
+      "country": "Spain",
+      "name": "Barcelona-Catalunya Grand Prix",
+      "city": "Barcelona",
+      "circuit": "Circuit de Barcelona-Catalunya",
+      "start": "2026-06-12",
+      "end": "2026-06-14",
+      "sprint": false
+    },
+    {
+      "round": 8,
+      "country": "Austria",
+      "name": "Austrian Grand Prix",
+      "city": "Spielberg",
+      "circuit": "Red Bull Ring",
+      "start": "2026-06-26",
+      "end": "2026-06-28",
+      "sprint": false
+    },
+    {
+      "round": 9,
+      "country": "United Kingdom",
+      "name": "British Grand Prix",
+      "city": "Silverstone",
+      "circuit": "Silverstone Circuit",
+      "start": "2026-07-03",
+      "end": "2026-07-05",
+      "sprint": true
+    },
+    {
+      "round": 10,
+      "country": "Belgium",
+      "name": "Belgian Grand Prix",
+      "city": "Spa",
+      "circuit": "Circuit de Spa-Francorchamps",
+      "start": "2026-07-17",
+      "end": "2026-07-19",
+      "sprint": false
+    },
+    {
+      "round": 11,
+      "country": "Hungary",
+      "name": "Hungarian Grand Prix",
+      "city": "Budapest",
+      "circuit": "Hungaroring",
+      "start": "2026-07-24",
+      "end": "2026-07-26",
+      "sprint": false
+    },
+    {
+      "round": 12,
+      "country": "Netherlands",
+      "name": "Dutch Grand Prix",
+      "city": "Zandvoort",
+      "circuit": "Circuit Zandvoort",
+      "start": "2026-08-21",
+      "end": "2026-08-23",
+      "sprint": true
+    },
+    {
+      "round": 13,
+      "country": "Italy",
+      "name": "Italian Grand Prix",
+      "city": "Monza",
+      "circuit": "Autodromo Nazionale Monza",
+      "start": "2026-09-04",
+      "end": "2026-09-06",
+      "sprint": false
+    },
+    {
+      "round": 14,
+      "country": "Spain",
+      "name": "Spanish Grand Prix",
+      "city": "Madrid",
+      "circuit": "Madrid Street Circuit",
+      "start": "2026-09-11",
+      "end": "2026-09-13",
+      "sprint": false
+    },
+    {
+      "round": 15,
+      "country": "Azerbaijan",
+      "name": "Azerbaijan Grand Prix",
+      "city": "Baku",
+      "circuit": "Baku City Circuit",
+      "start": "2026-09-24",
+      "end": "2026-09-26",
+      "sprint": false
+    },
+    {
+      "round": 16,
+      "country": "Singapore",
+      "name": "Singapore Grand Prix",
+      "city": "Singapore",
+      "circuit": "Marina Bay Street Circuit",
+      "start": "2026-10-09",
+      "end": "2026-10-11",
+      "sprint": true
+    },
+    {
+      "round": 17,
+      "country": "United States",
+      "name": "United States Grand Prix",
+      "city": "Austin",
+      "circuit": "Circuit of The Americas",
+      "start": "2026-10-23",
+      "end": "2026-10-25",
+      "sprint": false
+    },
+    {
+      "round": 18,
+      "country": "Mexico",
+      "name": "Mexico City Grand Prix",
+      "city": "Mexico City",
+      "circuit": "Autódromo Hermanos Rodríguez",
+      "start": "2026-10-30",
+      "end": "2026-11-01",
+      "sprint": false
+    },
+    {
+      "round": 19,
+      "country": "Brazil",
+      "name": "São Paulo Grand Prix",
+      "city": "São Paulo",
+      "circuit": "Autódromo José Carlos Pace",
+      "start": "2026-11-06",
+      "end": "2026-11-08",
+      "sprint": false
+    },
+    {
+      "round": 21,
+      "country": "United States",
+      "name": "Las Vegas Grand Prix",
+      "city": "Las Vegas",
+      "circuit": "Las Vegas Strip Circuit",
+      "start": "2026-11-19",
+      "end": "2026-11-21",
+      "sprint": false
+    },
+    {
+      "round": 22,
+      "country": "Las Vegas",
+      "name": "Las Vegas Grand Prix",
+      "city": "Las Vegas",
+      "circuit": "Las Vegas Strip Circuit",
+      "start": "2026-11-19",
+      "end": "2026-11-21",
+      "sprint": false
+    },
+    {
+      "round": 23,
+      "country": "Qatar",
+      "name": "Qatar Grand Prix",
+      "city": "Lusail",
+      "circuit": "Lusail International Circuit",
+      "start": "2026-11-27",
+      "end": "2026-11-29",
+      "sprint": false
+    },
+    {
+      "round": 22,
+      "country": "United Arab Emirates",
+      "name": "Abu Dhabi Grand Prix",
+      "city": "Abu Dhabi",
+      "circuit": "Yas Marina Circuit",
+      "start": "2026-12-04",
+      "end": "2026-12-06",
+      "sprint": false
+    }
+  ],
+  "drivers": [
+    {
+      "position": 1,
+      "name": "Kimi Antonelli",
+      "team": "Mercedes",
+      "nationality": "ITA",
+      "points": 390
+    },
+    {
+      "position": 2,
+      "name": "Max Verstappen",
+      "team": "Red Bull Racing",
+      "nationality": "NED",
+      "points": 279
+    },
+    {
+      "position": 3,
+      "name": "George Russell",
+      "team": "Mercedes",
+      "nationality": "GBR",
+      "points": 262
+    },
+    {
+      "position": 4,
+      "name": "Lewis Hamilton",
+      "team": "Ferrari",
+      "nationality": "GBR",
+      "points": 261
+    },
+    {
+      "position": 5,
+      "name": "Charles Leclerc",
+      "team": "Ferrari",
+      "nationality": "MON",
+      "points": 249
+    },
+    {
+      "position": 6,
+      "name": "Lando Norris",
+      "team": "McLaren",
+      "nationality": "GBR",
+      "points": 246
+    },
+    {
+      "position": 7,
+      "name": "Oscar Piastri",
+      "team": "McLaren",
+      "nationality": "AUS",
+      "points": 152
+    },
+    {
+      "position": 8,
+      "name": "Isack Hadjar",
+      "team": "Red Bull Racing",
+      "nationality": "FRA",
+      "points": 122
+    },
+    {
+      "position": 9,
+      "name": "Liam Lawson",
+      "team": "Racing Bulls",
+      "nationality": "NZL",
+      "points": 89
+    },
+    {
+      "position": 10,
+      "name": "Pierre Gasly",
+      "team": "Alpine",
+      "nationality": "FRA",
+      "points": 42
+    },
+    {
+      "position": 11,
+      "name": "Arvid Lindblad",
+      "team": "Racing Bulls",
+      "nationality": "GBR",
+      "points": 38
+    },
+    {
+      "position": 12,
+      "name": "Franco Colapinto",
+      "team": "Alpine",
+      "nationality": "ARG",
+      "points": 27
+    },
+    {
+      "position": 13,
+      "name": "Oliver Bearman",
+      "team": "Haas F1 Team",
+      "nationality": "GBR",
+      "points": 23
+    },
+    {
+      "position": 14,
+      "name": "Gabriel Bortoleto",
+      "team": "Audi",
+      "nationality": "BRA",
+      "points": 14
+    },
+    {
+      "position": 15,
+      "name": "Nico Hulkenberg",
+      "team": "Audi",
+      "nationality": "GER",
+      "points": 14
+    },
+    {
+      "position": 16,
+      "name": "Esteban Ocon",
+      "team": "Haas F1 Team",
+      "nationality": "FRA",
+      "points": 7
+    },
+    {
+      "position": 17,
+      "name": "Fernando Alonso",
+      "team": "Aston Martin",
+      "nationality": "ESP",
+      "points": 7
+    },
+    {
+      "position": 18,
+      "name": "Carlos Sainz",
+      "team": "Williams",
+      "nationality": "ESP",
+      "points": 7
+    },
+    {
+      "position": 19,
+      "name": "Alexander Albon",
+      "team": "Williams",
+      "nationality": "THA",
+      "points": 5
+    },
+    {
+      "position": 20,
+      "name": "Yuki Tsunoda",
+      "team": "Racing Bulls",
+      "nationality": "JPN",
+      "points": 1
+    },
+    {
+      "position": 21,
+      "name": "Ryo Hirakawa",
+      "team": "Haas F1 Team",
+      "nationality": "JPN",
+      "points": 1
+    },
+    {
+      "position": 22,
+      "name": "Lance Stroll",
+      "team": "Aston Martin",
+      "nationality": "CAN",
+      "points": 0
+    },
+    {
+      "position": 23,
+      "name": "Valtteri Bottas",
+      "team": "Cadillac",
+      "nationality": "FIN",
+      "points": 0
+    },
+    {
+      "position": 24,
+      "name": "Sergio Perez",
+      "team": "Cadillac",
+      "nationality": "MEX",
+      "points": 0
+    },
+    {
+      "position": 25,
+      "name": "Rafael Camara",
+      "team": "Haas F1 Team",
+      "nationality": "BRA",
+      "points": 0
+    }
+  ],
+  "teams": [
+    {
+      "position": 1,
+      "name": "Mercedes",
+      "points": 652
+    },
+    {
+      "position": 2,
+      "name": "Ferrari",
+      "points": 510
+    },
+    {
+      "position": 3,
+      "name": "Red Bull Racing",
+      "points": 415
+    },
+    {
+      "position": 4,
+      "name": "McLaren",
+      "points": 398
+    },
+    {
+      "position": 5,
+      "name": "Racing Bulls",
+      "points": 114
+    },
+    {
+      "position": 6,
+      "name": "Alpine",
+      "points": 69
+    },
+    {
+      "position": 7,
+      "name": "Haas F1 Team",
+      "points": 31
+    },
+    {
+      "position": 8,
+      "name": "Audi",
+      "points": 28
+    },
+    {
+      "position": 9,
+      "name": "Williams",
+      "points": 12
+    },
+    {
+      "position": 10,
+      "name": "Aston Martin",
+      "points": 7
+    },
+    {
+      "position": 11,
+      "name": "Cadillac",
+      "points": 0
+    }
+  ],
+  "latestResult": {
+    "name": "São Paulo Grand Prix",
+    "date": "2026-11-08",
+    "winner": "Lando Norris",
+    "podium": [
+      [
+        "Lando Norris",
+        "McLaren"
+      ],
+      [
+        "Max Verstappen",
+        "Red Bull Racing"
+      ],
+      [
+        "Isack Hadjar",
+        "Red Bull Racing"
+      ]
+    ],
+    "fastestLap": null,
+    "officialUrl": "https://www.fia.com/news/f1-norris-triumphs-sao-paulo-2026-constructors-championship"
+  },
+  "sources": [
+    {
+      "name": "Formula 1 — 2026 Calendar",
+      "url": "https://www.formula1.com/en/racing/2026"
+    },
+    {
+      "name": "Formula 1 — Drivers' Standings",
+      "url": "https://www.formula1.com/en/results/2026/drivers"
+    },
+    {
+      "name": "Formula 1 — Teams' Standings",
+      "url": "https://www.formula1.com/en/results/2026/team"
+    },
+    {
+      "name": "FIA — São Paulo GP Report",
+      "url": "https://www.fia.com/news/f1-norris-triumphs-sao-paulo-2026-constructors-championship"
+    }
+  ]
+}
