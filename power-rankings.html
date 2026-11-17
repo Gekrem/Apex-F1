@@ -11,7 +11,20 @@
 @media(max-width:900px){.f1room-whale{top:69px;right:10px;width:100px}}
 @media(max-width:520px){.f1room-whale{top:68px;right:7px;width:76px}}
 @media(prefers-reduced-motion:reduce){.f1room-whale{animation:none}}
-</style></head><body><img class="f1room-whale" src="assets/f1room-whale.png" alt="F1ROOM balina maskotu" aria-hidden="true"><div class="topline"></div><header><div class="wrap nav"><a class="brand" href="index.html">F1<span>ROOM</span><small>NO ROOM FOR FORMULA 1</small></a><nav class="navlinks"><a href="index.html">Ana sayfa</a><a href="power-rankings.html">Power Rankings</a><a href="archive.html">Tarih arşivi</a><a href="radar.html">Radar</a></nav></div></header>
+
+/* Whale water spout: one short spray every 30 seconds */
+.f1room-water{position:fixed;top:54px;right:clamp(112px,12vw,205px);z-index:61;width:54px;height:54px;pointer-events:none;opacity:0}
+.f1room-water i{position:absolute;left:50%;bottom:3px;width:7px;height:11px;border-radius:80% 20% 70% 35%;background:linear-gradient(145deg,#d8fff7,#36c9d7 72%);box-shadow:0 0 8px rgba(70,220,225,.35);opacity:0;transform:translate(-50%,8px) scale(.4);animation:whale-spout 30s infinite}
+.f1room-water i:nth-child(1){--dx:-15px;--dy:-26px;animation-delay:0s}
+.f1room-water i:nth-child(2){--dx:0px;--dy:-37px;animation-delay:.08s}
+.f1room-water i:nth-child(3){--dx:15px;--dy:-25px;animation-delay:.16s}
+.f1room-water i:nth-child(4){--dx:-7px;--dy:-17px;animation-delay:.24s}
+.f1room-water i:nth-child(5){--dx:9px;--dy:-18px;animation-delay:.32s}
+@keyframes whale-spout{0%,1%{opacity:0;transform:translate(-50%,8px) scale(.35)}1.5%{opacity:1;transform:translate(calc(-50% + var(--dx)),var(--dy)) scale(1)}3.2%{opacity:.9;transform:translate(calc(-50% + var(--dx)),calc(var(--dy) - 5px)) scale(.85)}4.5%,100%{opacity:0;transform:translate(calc(-50% + var(--dx)),calc(var(--dy) + 10px)) scale(.3)}}
+@media(max-width:900px){.f1room-water{top:51px;right:105px;transform:scale(.8);transform-origin:top right}}
+@media(max-width:520px){.f1room-water{top:51px;right:83px;transform:scale(.65);transform-origin:top right}}
+@media(prefers-reduced-motion:reduce){.f1room-water{display:none}}
+</style></head><body><img class="f1room-whale" src="assets/f1room-whale.png" alt="F1ROOM balina maskotu" aria-hidden="true"><span class="f1room-water" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><div class="topline"></div><header><div class="wrap nav"><a class="brand" href="index.html">F1<span>ROOM</span><small>NO ROOM FOR FORMULA 1</small></a><nav class="navlinks"><a href="index.html">Ana sayfa</a><a href="power-rankings.html">Power Rankings</a><a href="archive.html">Tarih arşivi</a><a href="radar.html">Radar</a></nav></div></header>
 <main class="wrap"><div class="intro"><div class="eyebrow">F1ROOM ORIGINALS / 01</div><h1>POWER<br><span style="color:var(--green)">RANKINGS</span></h1><p>Şampiyona puanlarından bağımsız değil; ancak yalnızca puan tablosunu da tekrar etmiyor. F1ROOM sezon formunu, son yarış etkisini ve istikrarı birlikte değerlendiriyor.</p></div>
 <section class="panel" style="margin-bottom:18px"><div class="tag">DEĞERLENDİRME METODOLOJİSİ</div><p class="muted" style="margin:8px 0 0;font-size:12px">100 üzerinden editoryal form puanı: sezon puan performansı (%70) + son yarış podyum etkisi (%20) + güncel şampiyona sırası bonusu (%10). Bu liste resmî FIA sıralaması değildir; F1ROOM'un editoryal değerlendirmesidir. Veriler 16 Kasım 2026 tarihli sezon dosyasına dayanır.</p></section>
 <div class="toolbar"><label class="muted" for="rankFilter">Görünüm</label><select id="rankFilter" class="field"><option value="all">İlk 10 pilot</option><option value="top">İlk 5 pilot</option></select><span class="muted" id="rankUpdated" style="font-size:11px;align-self:center"></span></div><div id="rankingList" class="list"></div></main>
