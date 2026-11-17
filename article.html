@@ -19,6 +19,19 @@ figure{margin:28px 0 34px}figure img{display:block;width:100%;max-height:520px;a
 .error{padding:22px;border:1px solid #75413b;background:#211311;color:#f4c7bd;border-radius:4px}
 footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-size:10px}
 @media(max-width:620px){main{padding:34px 0 56px}h1{font-size:clamp(34px,10vw,48px)}.lead{font-size:16px}.facts{grid-template-columns:1fr}.section h2{font-size:20px}.section p{font-size:15px}figure img{aspect-ratio:4/3}}
+.history-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:30px 0 36px}
+.history-gallery figure{margin:0;background:#0b1510;border:1px solid var(--line);border-radius:5px;overflow:hidden}
+.history-gallery figure:first-child{grid-column:1/-1}
+.history-gallery img{display:block;width:100%;height:270px;object-fit:cover;background:#101b14}
+.history-gallery figure:first-child img{height:clamp(240px,42vw,500px)}
+.history-gallery figcaption{padding:9px 12px 11px;margin:0;font-size:10px}
+.history-gallery figcaption a{color:var(--bright)}
+.history-kicker{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 14px;color:var(--muted);font-size:10px;letter-spacing:1px;text-transform:uppercase}
+.history-kicker span{border:1px solid var(--line);padding:4px 8px;color:var(--bright)}
+.story-nav{display:flex;justify-content:space-between;gap:12px;margin-top:34px;padding-top:20px;border-top:1px solid var(--line)}
+.story-nav a{color:var(--bright);font-size:12px;text-decoration:none}
+@media(max-width:620px){.history-gallery{grid-template-columns:1fr}.history-gallery figure:first-child{grid-column:auto}.history-gallery img,.history-gallery figure:first-child img{height:230px}.story-nav{flex-direction:column}}
+
 
 
 
@@ -125,7 +138,22 @@ const visuals={
 '2169a235b12370a3':['https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Fernando_Alonso_2023_%28cropped%29.jpg/960px-Fernando_Alonso_2023_%28cropped%29.jpg','Fernando Alonso','Wikimedia Commons','https://commons.wikimedia.org/wiki/Category:Fernando_Alonso']
 };
 function showError(message){document.title='Haber açılamadı | F1ROOM';root.innerHTML='<div class="eyebrow">F1ROOM / NEWSROOM</div><div class="error"><h1>Bu haber şu anda açılamıyor</h1><p>'+esc(message)+'</p><p>Haber listesine dönüp başka bir haber seçebilirsin.</p><a href="index.html#news">← Haberlere dön</a></div>'}
+async function renderHistory(year){
+ const response=await fetch('./data/history.json?build=20261117a',{cache:'no-store'});
+ if(!response.ok)throw new Error('Tarih arşivi yüklenemedi (HTTP '+response.status+').');
+ const records=await response.json();
+ const index=records.findIndex(x=>Number(x.year)===Number(year));
+ if(index<0)throw new Error('Bu tarih dosyası arşivde bulunamadı.');
+ const item=records[index];
+ const photos=(item.images||[]).map(p=>'<figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/'+encodeURIComponent(p.file.replaceAll(' ','_'))+'?width=1400" alt="'+esc(p.caption)+'" loading="lazy"><figcaption>'+esc(p.caption)+' · <a href="'+esc(p.source)+'" target="_blank" rel="noopener noreferrer">Görsel kaynağı / lisans ↗</a></figcaption></figure>').join('');
+ const previous=records[index-1],next=records[index+1];
+ document.title=item.title+' | F1ROOM Tarih Dosyası';
+ root.innerHTML='<div class="eyebrow">F1ROOM / HISTORY DESK</div><div class="history-kicker"><span>'+esc(item.tag)+'</span><span>'+esc(item.year)+'</span><span>'+esc(item.place)+'</span></div><h1>'+esc(item.title)+'</h1><p class="lead">'+esc(item.lead)+'</p><div class="facts"><div><small>YIL</small><strong>'+esc(item.year)+'</strong></div><div><small>ÖNE ÇIKAN İSİMLER</small><strong>'+esc(item.driver)+'</strong></div><div><small>F1ROOM DOSYA</small><strong>Tarih / Arşiv</strong></div></div>'+(photos?'<div class="history-gallery">'+photos+'</div>':'<div class="note">Bu tarih dosyası için doğrulanmış fotoğraf galerisi henüz eklenmedi. Yeni görseller doğrulandıkça arşive eklenecek.</div>')+'<div class="content">'+item.sections.map((s,i)=>'<section class="section"><h2>'+String(i+1).padStart(2,'0')+' / '+esc(s[0])+'</h2><p>'+esc(s[1])+'</p></section>').join('')+'</div><p class="note">Editoryal not: Bu içerik F1ROOM tarafından hazırlanmış tarih dosyasıdır. Fotoğraf bağlantıları Wikimedia Commons dosya sayfalarına yönlendirir; kullanım ve atıf koşulları ilgili dosya sayfasında belirtilmiştir.</p><div class="story-nav"><a href="archive.html">← Tüm tarih arşivine dön</a><span>'+(previous?'<a href="article.html?history='+previous.year+'">← '+previous.year+' dosyası</a>':'')+'</span><span>'+(next?'<a href="article.html?history='+next.year+'">'+next.year+' dosyası →</a>':'')+'</span></div>';
+ root.querySelectorAll('.history-gallery img').forEach(img=>img.addEventListener('error',()=>{img.closest('figure').remove()},{once:true}));
+}
 async function start(){
+ const historyYear=params.get('history');
+ if(historyYear){try{await renderHistory(historyYear)}catch(error){showError(error.message||'Tarih dosyası yüklenemedi.')}return}
  if(!id){showError('Haber bağlantısında haber kimliği bulunamadı.');return}
  try{
   const response=await fetch('./data/news.json?build=20261117d',{cache:'no-store'});
