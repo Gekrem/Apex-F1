@@ -20,8 +20,21 @@ footer{border-top:1px solid var(--line);padding:24px 0 34px;color:var(--muted);f
 @media(max-width:900px){.f1room-whale{top:69px;right:10px;width:100px}}
 @media(max-width:520px){.f1room-whale{top:68px;right:7px;width:76px}}
 @media(prefers-reduced-motion:reduce){.f1room-whale{animation:none}}
+
+/* Whale water spout: one short spray every 30 seconds */
+.f1room-water{position:fixed;top:54px;right:clamp(112px,12vw,205px);z-index:61;width:54px;height:54px;pointer-events:none;opacity:0}
+.f1room-water i{position:absolute;left:50%;bottom:3px;width:7px;height:11px;border-radius:80% 20% 70% 35%;background:linear-gradient(145deg,#d8fff7,#36c9d7 72%);box-shadow:0 0 8px rgba(70,220,225,.35);opacity:0;transform:translate(-50%,8px) scale(.4);animation:whale-spout 30s infinite}
+.f1room-water i:nth-child(1){--dx:-15px;--dy:-26px;animation-delay:0s}
+.f1room-water i:nth-child(2){--dx:0px;--dy:-37px;animation-delay:.08s}
+.f1room-water i:nth-child(3){--dx:15px;--dy:-25px;animation-delay:.16s}
+.f1room-water i:nth-child(4){--dx:-7px;--dy:-17px;animation-delay:.24s}
+.f1room-water i:nth-child(5){--dx:9px;--dy:-18px;animation-delay:.32s}
+@keyframes whale-spout{0%,1%{opacity:0;transform:translate(-50%,8px) scale(.35)}1.5%{opacity:1;transform:translate(calc(-50% + var(--dx)),var(--dy)) scale(1)}3.2%{opacity:.9;transform:translate(calc(-50% + var(--dx)),calc(var(--dy) - 5px)) scale(.85)}4.5%,100%{opacity:0;transform:translate(calc(-50% + var(--dx)),calc(var(--dy) + 10px)) scale(.3)}}
+@media(max-width:900px){.f1room-water{top:51px;right:105px;transform:scale(.8);transform-origin:top right}}
+@media(max-width:520px){.f1room-water{top:51px;right:83px;transform:scale(.65);transform-origin:top right}}
+@media(prefers-reduced-motion:reduce){.f1room-water{display:none}}
 </style></head>
-<body><img class="f1room-whale" src="assets/f1room-whale.png" alt="F1ROOM balina maskotu" aria-hidden="true"><div class="topline"></div><header><div class="wrap nav"><a class="brand" href="index.html">F1<span>ROOM</span><small>NO ROOM FOR FORMULA 1</small></a><nav class="navlinks"><a href="index.html">Ana sayfa</a><a href="power-rankings.html">Power Rankings</a><a class="active" href="archive.html">Tarih arşivi</a><a href="radar.html">Radar</a></nav></div></header>
+<body><img class="f1room-whale" src="assets/f1room-whale.png" alt="F1ROOM balina maskotu" aria-hidden="true"><span class="f1room-water" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><div class="topline"></div><header><div class="wrap nav"><a class="brand" href="index.html">F1<span>ROOM</span><small>NO ROOM FOR FORMULA 1</small></a><nav class="navlinks"><a href="index.html">Ana sayfa</a><a href="power-rankings.html">Power Rankings</a><a class="active" href="archive.html">Tarih arşivi</a><a href="radar.html">Radar</a></nav></div></header>
 <main class="wrap">
 <section class="intro"><div class="eyebrow">F1ROOM VAULT / THE HISTORY OF FORMULA 1</div><h1>HIZIN<br><span style="color:var(--green)">HAFIZASI.</span></h1><p>1950'de Silverstone'da başlayan dünya şampiyonasından bugünün hibrit çağ yarışlarına uzanan yolculuk. Efsane pilotlar, kırılma anları, unutulmaz finaller ve pist üstünde yazılan tarih.</p></section>
 <div class="hero-stats"><div class="stat"><strong>1950</strong><span>İlk dünya şampiyonası</span></div><div class="stat"><strong>75+</strong><span>Yıllık yarış mirası</span></div><div class="stat"><strong id="totalCount">20</strong><span>Arşiv dosyası</span></div></div>
