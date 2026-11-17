@@ -80,8 +80,31 @@ body::before{
     linear-gradient(90deg,transparent 0%,rgba(28,130,77,.035) 50%,transparent 100%);
   opacity:.7;
 }
+
+/* F1ROOM — editorial motorsport typography system */
+:root{
+ --font-ui:'DM Sans',Arial,sans-serif;
+ --font-display:'Barlow Condensed','Arial Narrow',sans-serif;
+ --font-data:'Space Mono',monospace;
+}
+body{font-family:var(--font-ui)!important}
+h1,h2,h3,h4,.brand,.hero-title,.section-title,.driver-name,.team-name{
+ font-family:var(--font-display)!important;
+ font-weight:800;
+ letter-spacing:-.025em;
+}
+h1{font-weight:900!important;letter-spacing:-.035em!important}
+h2{font-weight:800!important;letter-spacing:-.02em!important}
+h3,h4{font-weight:700!important}
+nav a,.nav a,.button,button,.btn{font-family:var(--font-ui)!important;font-weight:700}
+.eyebrow,.kicker,.label,.credit,.source,.meta small,.stat small,.tag,.badge,.date,.number,.rank,.points,.caption{
+ font-family:var(--font-data)!important;
+ letter-spacing:.055em;
+}
+.brand{font-family:var(--font-display)!important;font-weight:900!important;letter-spacing:-.035em!important}
 </style>
 <link rel="icon" type="image/png" href="assets/f1room-logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body><div class="top"></div><header><div class="wrap nav"><a class="brand" href="index.html"><img src="assets/f1room-logo.jpg" alt="F1ROOM logo" style="width:44px;height:44px;object-fit:contain;border-radius:0;background:#101317;vertical-align:middle;margin-right:9px">F1ROOM<small>No Room For Formula 1</small></a><div class="navright"><a class="link" href="index.html#calendar" data-tr="← Yarış takvimi" data-en="← Race calendar">← Yarış takvimi</a><button class="link" id="lang">EN</button></div></div></header>
 <main class="wrap">
