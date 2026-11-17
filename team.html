@@ -3,17 +3,14 @@
 :root{--bg:#070d0a;--panel:#0d1711;--line:#20392b;--text:#f0f7f1;--muted:#9aada0;--green:#21d18a;--bright:#a2f2c5;--max:1120px}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 78% 0%,rgba(27,115,71,.16),transparent 36%),var(--bg);color:var(--text);font:15px/1.7 'Titillium Web',Arial,sans-serif}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}.topline{height:3px;background:var(--green)}header{position:sticky;top:0;z-index:10;background:rgba(7,13,10,.9);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.nav{height:72px;display:flex;align-items:center;justify-content:space-between}.brand{font-size:25px;font-weight:900;letter-spacing:-1.5px;text-decoration:none;color:var(--text)}.brand span{color:var(--green)}.brand small{display:block;font-size:8px;letter-spacing:3px;color:var(--muted);margin-top:-6px}.back{color:var(--bright);font-size:11px;text-decoration:none}main{padding:42px 0 76px}.eyebrow{color:var(--bright);font-size:9px;font-weight:900;letter-spacing:2px;text-transform:uppercase}.hero{display:grid;grid-template-columns:330px minmax(0,1fr);gap:34px;align-items:center;margin:18px 0 26px}.crest{height:300px;border:1px solid var(--line);background:linear-gradient(145deg,#14271b,#0b130e);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:26px}.crest img{width:100%;height:100%;object-fit:contain;position:absolute;inset:0;padding:38px;opacity:0;transition:opacity .2s}.crest img.loaded{opacity:1}.crest:has(img.loaded) .fallback{opacity:0}.crest .fallback{font-size:48px;font-weight:900;letter-spacing:-2px;color:var(--team-accent,var(--bright));text-align:center}.identity h1{font-size:clamp(44px,7vw,78px);line-height:.95;letter-spacing:-2.5px;margin:10px 0}.identity .base{color:var(--bright);font-size:13px}.identity .bio{max-width:690px;color:#c4d3c8;font-size:16px;line-height:1.85}.tag{display:inline-block;border:1px solid var(--line);padding:5px 10px;color:var(--muted);font-size:9px;letter-spacing:1px;text-transform:uppercase}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:24px 0 36px}.stat{background:linear-gradient(145deg,#102017,#0b130e);border:1px solid var(--line);padding:20px}.stat small{display:block;color:var(--muted);font-size:10px;letter-spacing:1px;text-transform:uppercase}.stat strong{display:block;font-size:34px;line-height:1.15;color:var(--bright);margin-top:5px}.stat em{font-style:normal;font-size:10px;color:var(--muted)}.columns{display:grid;grid-template-columns:1fr 1fr;gap:16px}.card{background:rgba(13,23,17,.82);border:1px solid var(--line);padding:24px}.card h2{font-size:24px;line-height:1.2;margin:0 0 18px}.timeline{list-style:none;padding:0;margin:0;counter-reset:item}.timeline li{position:relative;padding:0 0 18px 30px;border-left:1px solid #31533e;margin-left:7px;color:#c8d5cc}.timeline li:before{counter-increment:item;content:counter(item,decimal-leading-zero);position:absolute;left:-8px;top:0;background:#10271a;color:var(--bright);font-size:9px;font-weight:900;padding:2px}.timeline li:last-child{border-left-color:transparent;padding-bottom:0}.drivers{margin-top:28px}.driver-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.driver{border:1px solid var(--line);background:#0c1510;padding:13px 15px;text-decoration:none;transition:border-color .2s,transform .2s}.driver:hover{border-color:var(--green);transform:translateY(-2px)}.driver small{display:block;color:var(--muted);font-size:9px}.driver strong{font-size:16px}.driver span{float:right;color:var(--bright);font-size:10px}.source{border-top:1px solid var(--line);margin-top:32px;padding-top:16px;color:var(--muted);font-size:10px}.source a{color:var(--bright)}.error{padding:60px 0}.error h1{font-size:42px}@media(max-width:760px){.hero{grid-template-columns:1fr;gap:18px}.crest{height:220px}.stats{grid-template-columns:1fr}.columns{grid-template-columns:1fr}.driver-grid{grid-template-columns:1fr 1fr}.identity h1{font-size:48px}}@media(max-width:420px){.driver-grid{grid-template-columns:1fr}}
 
 
-/* F1ROOM — immersive emerald circuit backdrop */
-html{background:#050b08!important}
+
+/* F1ROOM — restrained black and emerald background */
+html{background:#050706!important}
 body{
-  position:relative!important;
-  isolation:isolate!important;
   background:
-    radial-gradient(ellipse 70% 55% at 8% 0%,rgba(0,225,125,.22),transparent 68%),
-    radial-gradient(ellipse 52% 48% at 100% 18%,rgba(0,155,91,.20),transparent 70%),
-    radial-gradient(ellipse 65% 60% at 55% 100%,rgba(0,105,62,.19),transparent 72%),
-    repeating-linear-gradient(135deg,rgba(66,190,121,.035) 0px,rgba(66,190,121,.035) 1px,transparent 1px,transparent 86px),
-    linear-gradient(180deg,#091a11 0%,#07130d 42%,#050b08 100%)!important;
+    radial-gradient(ellipse 58% 42% at 50% 0%,rgba(0,105,58,.10),transparent 72%),
+    linear-gradient(180deg,#080d0a 0%,#060907 48%,#040605 100%)!important;
+  background-color:#050706!important;
   background-attachment:fixed!important;
 }
 body::before{
@@ -23,11 +20,8 @@ body::before{
   z-index:-1;
   pointer-events:none;
   background:
-    linear-gradient(rgba(115,220,157,.055) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(115,220,157,.055) 1px,transparent 1px),
-    radial-gradient(ellipse at 50% 0%,transparent 25%,rgba(0,0,0,.16) 100%);
-  background-size:64px 64px,64px 64px,100% 100%;
-  mask-image:linear-gradient(to bottom,rgba(0,0,0,.95),rgba(0,0,0,.4) 75%,transparent);
+    linear-gradient(90deg,transparent 0%,rgba(28,130,77,.035) 50%,transparent 100%);
+  opacity:.7;
 }
 </style><link rel="icon" type="image/png" href="assets/f1room-logo.jpg">
 </head><body><div class="topline"></div><header><div class="wrap nav"><a class="brand" href="index.html"><img src="assets/f1room-logo.jpg" alt="F1ROOM logo" style="width:44px;height:44px;object-fit:contain;border-radius:0;background:#101317;vertical-align:middle;margin-right:9px">F1ROOM<small>No Room For Formula 1</small></a><a class="back" href="index.html#standings">← Takımlar sıralamasına dön</a></div></header><main class="wrap" id="app"><div class="eyebrow">THE PADDOCK / TEAM PROFILE</div><h1>Takım profili yükleniyor…</h1></main><footer class="wrap source">F1ROOM — Bağımsız Formula 1 yayın platformu. Formula 1, FIA ve takımlarla resmî bağlantısı yoktur.</footer>
