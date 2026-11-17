@@ -25,8 +25,37 @@
 @media(max-width:900px){.f1room-water{top:51px;right:105px;transform:scale(.8);transform-origin:top right}}
 @media(max-width:520px){.f1room-water{top:51px;right:83px;transform:scale(.65);transform-origin:top right}}
 @media(prefers-reduced-motion:reduce){.f1room-water{display:none}}
+
+/* Interactive F1ROOM whale mascot */
+.f1room-mascot{position:fixed;top:74px;right:clamp(14px,3.5vw,54px);z-index:80;width:clamp(92px,10vw,154px);padding:0;border:0;background:transparent;cursor:pointer;pointer-events:auto;isolation:isolate;filter:drop-shadow(0 8px 18px rgba(0,0,0,.38));animation:whale-float 4.5s ease-in-out infinite}
+.f1room-mascot .f1room-whale{position:relative;inset:auto;display:block;width:100%;height:auto;pointer-events:none;transition:transform .22s ease,filter .22s ease;filter:none}
+.f1room-mascot:hover .f1room-whale,.f1room-mascot:focus-visible .f1room-whale{transform:translateY(-5px) rotate(-3deg) scale(1.045);filter:brightness(1.12) saturate(1.15)}
+.f1room-mascot:focus-visible{outline:2px solid #5ce5b0;outline-offset:5px;border-radius:50%}
+.f1room-mascot.is-happy .f1room-whale{animation:whale-happy .55s ease-in-out}
+@keyframes whale-happy{0%,100%{transform:scale(1) rotate(0)}25%{transform:scale(1.1) rotate(-7deg) translateY(-5px)}55%{transform:scale(1.08) rotate(5deg) translateY(-8px)}}
+.f1room-water{position:absolute;top:-9px;left:52%;right:auto;bottom:auto;z-index:2;width:52px;height:58px;pointer-events:none;opacity:0;transform:none;display:block}
+.f1room-water i{position:absolute;left:50%;bottom:0;width:7px;height:13px;border-radius:75% 25% 65% 35%;background:linear-gradient(150deg,#f0ffff 0%,#8df5ef 38%,#20b9d0 100%);box-shadow:0 0 9px rgba(70,220,235,.7);opacity:0;transform:translate(-50%,8px) scale(.3)}
+.f1room-water i:nth-child(1){--dx:-19px;--dy:-31px}
+.f1room-water i:nth-child(2){--dx:-10px;--dy:-43px}
+.f1room-water i:nth-child(3){--dx:0px;--dy:-51px}
+.f1room-water i:nth-child(4){--dx:11px;--dy:-42px}
+.f1room-water i:nth-child(5){--dx:20px;--dy:-29px}
+.f1room-water i:nth-child(6){--dx:-3px;--dy:-27px}
+.f1room-mascot.is-happy .f1room-water{opacity:1}
+.f1room-mascot.is-happy .f1room-water i{animation:whale-click-spout .95s cubic-bezier(.2,.7,.25,1) both}
+.f1room-mascot.is-happy .f1room-water i:nth-child(2){animation-delay:.04s}
+.f1room-mascot.is-happy .f1room-water i:nth-child(3){animation-delay:.08s}
+.f1room-mascot.is-happy .f1room-water i:nth-child(4){animation-delay:.12s}
+.f1room-mascot.is-happy .f1room-water i:nth-child(5){animation-delay:.16s}
+.f1room-mascot.is-happy .f1room-water i:nth-child(6){animation-delay:.1s}
+@keyframes whale-click-spout{0%{opacity:0;transform:translate(-50%,8px) scale(.2)}18%{opacity:1;transform:translate(calc(-50% + var(--dx)*.45),calc(var(--dy)*.55)) scale(1.2)}55%{opacity:1;transform:translate(calc(-50% + var(--dx)),var(--dy)) scale(.95)}100%{opacity:0;transform:translate(calc(-50% + var(--dx)*1.25),calc(var(--dy) - 12px)) scale(.25)}}
+.f1room-mascot .whale-hint{position:absolute;right:100%;top:34%;margin-right:10px;white-space:nowrap;padding:5px 8px;border:1px solid rgba(105,226,177,.45);background:#09140e;color:#b8f7d4;font:700 9px/1.2 Arial,sans-serif;letter-spacing:.5px;border-radius:4px;opacity:0;transform:translateX(5px);transition:.2s;pointer-events:none}
+.f1room-mascot:hover .whale-hint,.f1room-mascot:focus-visible .whale-hint{opacity:1;transform:translateX(0)}
+@media(max-width:900px){.f1room-mascot{top:69px;right:10px;width:100px}}
+@media(max-width:520px){.f1room-mascot{top:68px;right:7px;width:76px}.f1room-mascot .whale-hint{display:none}}
+@media(prefers-reduced-motion:reduce){.f1room-mascot,.f1room-mascot *{animation:none!important;transition:none!important}}
 </style></head>
-<body><img class="f1room-whale" src="assets/f1room-whale.png" alt="F1ROOM balina maskotu" aria-hidden="true"><span class="f1room-water" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><div class="topline"></div><header><div class="wrap nav"><a class="brand" href="index.html">F1<span>ROOM</span><small>NO ROOM FOR FORMULA 1</small></a><nav class="navlinks"><a href="index.html">Ana Sayfa</a><a href="power-rankings.html">Power Rankings</a><a class="active" href="f1-data.html">Live Timing & Data</a><a href="archive.html">Tarih Arşivi</a><a href="radar.html">Radar</a></nav></div></header>
+<body><button class="f1room-mascot" type="button" aria-label="Balina mutlu olsun ve su püskürtsün"><img class="f1room-whale" src="assets/f1room-whale.png" alt="F1ROOM balina maskotu"><span class="whale-hint" aria-hidden="true">BANA TIKLA!</span><span class="f1room-water" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span></button><div class="topline"></div><header><div class="wrap nav"><a class="brand" href="index.html">F1<span>ROOM</span><small>NO ROOM FOR FORMULA 1</small></a><nav class="navlinks"><a href="index.html">Ana Sayfa</a><a href="power-rankings.html">Power Rankings</a><a class="active" href="f1-data.html">Live Timing & Data</a><a href="archive.html">Tarih Arşivi</a><a href="radar.html">Radar</a></nav></div></header>
 <main class="wrap"><section class="hero"><div class="eyebrow">F1ROOM DATA CENTER / 01</div><h1>LIVE TIMING<span style="color:var(--green)">.</span><br>F1 DATA<span style="color:var(--green)">.</span></h1><p>Seans sonuçları, tur zamanları, pilot performansı, lastik stratejisi, telemetri ve yarış kontrolü. Geçmiş seansları ücretsiz OpenF1 verileriyle incele.</p><div class="statusline"><i class="dot off" id="statusDot"></i><span id="statusText">Veri bağlantısı kuruluyor…</span><span class="pill">HISTORICAL DATA / FREE</span></div></section>
 <section class="toolbar"><div class="field"><label for="year">Sezon</label><select id="year"><option>2026</option><option>2025</option><option>2024</option><option>2023</option></select></div><div class="field"><label for="meeting">Grand Prix</label><select id="meeting"><option>Yükleniyor…</option></select></div><div class="field"><label for="session">Seans</label><select id="session"><option>Yükleniyor…</option></select></div><div class="field"><label>&nbsp;</label><button id="loadBtn">VERİLERİ GETİR ↻</button></div></section>
 <div id="notice" class="notice">Ücretsiz mod: 2023 sezonundan itibaren tamamlanmış seans verileri kullanılabilir. Gerçek zamanlı veri akışı OpenF1'in ücretli erişim planında sunulur; bu sayfa canlı veri varmış gibi davranmaz.</div>
@@ -64,4 +93,8 @@ async function loadTelemetry(){const n=$('teleDriver').value;const box=$('teleDa
 function renderStats(){const c=cache,fast=(c.lap||[]).filter(x=>x.lap_duration).sort((a,b)=>a.lap_duration-b.lap_duration)[0];$('stats').innerHTML=[[''+(c.drv||[]).length,'Pilot sayısı'],[''+(c.lap||[]).length,'Tur kaydı'],[fast?fmt(fast.lap_duration):'—','En hızlı tur'],[''+(c.stint||[]).length,'Lastik stint’i']].map(x=>'<div class="stat"><strong>'+esc(x[0])+'</strong><span>'+esc(x[1])+'</span></div>').join('');const w=(c.weather||[]).slice(-1)[0];$('weather').textContent=w?'Son hava kaydı: hava '+w.air_temperature+'°C · pist '+w.track_temperature+'°C · nem '+w.humidity+'% · yağış '+(w.rainfall?'var':'yok'):'Bu seans için hava durumu kaydı bulunamadı.'}
 function renderControl(){const list=(cache.control||[]).slice().reverse().slice(0,35);$('raceControl').innerHTML=list.length?list.map(x=>'<div class="feeditem"><time>'+new Date(x.date).toLocaleTimeString('tr-TR')+'</time><span class="flag">'+esc(x.flag||x.category)+'</span> · '+esc(x.message||x.category)+'</div>').join(''):'<div class="empty">Bu seans için yarış kontrol mesajı bulunamadı.</div>'}
 $('year').addEventListener('change',async()=>{try{await loadMeetings();await loadChampionship();await loadSessionData()}catch(e){setStatus('Sezon verisi yüklenemedi')}});$('meeting').addEventListener('change',async()=>{try{await loadSessions();await loadSessionData()}catch(e){setStatus('Grand Prix seansları yüklenemedi')}});$('session').addEventListener('change',loadSessionData);$('loadBtn').addEventListener('click',loadSessionData);$('tabs').addEventListener('click',e=>{const b=e.target.closest('[data-tab]');if(!b)return;activeTab=b.dataset.tab;document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x===b));renderTab()});init();
-</script></body></html>
+</script>
+<script>
+(()=>{const whale=document.querySelector('.f1room-mascot');if(!whale||whale.dataset.interactive==='1')return;whale.dataset.interactive='1';let reset;whale.addEventListener('click',()=>{whale.classList.remove('is-happy');void whale.offsetWidth;whale.classList.add('is-happy');clearTimeout(reset);reset=setTimeout(()=>whale.classList.remove('is-happy'),1150);});})();
+</script>
+</body></html>
