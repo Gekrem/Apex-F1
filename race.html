@@ -60,17 +60,14 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--green);outline-offs
 @media(max-width:480px){.track-gallery-grid{grid-template-columns:1fr}.track-photo:first-child{grid-column:auto;min-height:220px}.track-gallery .head{align-items:flex-start;flex-direction:column}}
 
 
-/* F1ROOM — immersive emerald circuit backdrop */
-html{background:#050b08!important}
+
+/* F1ROOM — restrained black and emerald background */
+html{background:#050706!important}
 body{
-  position:relative!important;
-  isolation:isolate!important;
   background:
-    radial-gradient(ellipse 70% 55% at 8% 0%,rgba(0,225,125,.22),transparent 68%),
-    radial-gradient(ellipse 52% 48% at 100% 18%,rgba(0,155,91,.20),transparent 70%),
-    radial-gradient(ellipse 65% 60% at 55% 100%,rgba(0,105,62,.19),transparent 72%),
-    repeating-linear-gradient(135deg,rgba(66,190,121,.035) 0px,rgba(66,190,121,.035) 1px,transparent 1px,transparent 86px),
-    linear-gradient(180deg,#091a11 0%,#07130d 42%,#050b08 100%)!important;
+    radial-gradient(ellipse 58% 42% at 50% 0%,rgba(0,105,58,.10),transparent 72%),
+    linear-gradient(180deg,#080d0a 0%,#060907 48%,#040605 100%)!important;
+  background-color:#050706!important;
   background-attachment:fixed!important;
 }
 body::before{
@@ -80,11 +77,8 @@ body::before{
   z-index:-1;
   pointer-events:none;
   background:
-    linear-gradient(rgba(115,220,157,.055) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(115,220,157,.055) 1px,transparent 1px),
-    radial-gradient(ellipse at 50% 0%,transparent 25%,rgba(0,0,0,.16) 100%);
-  background-size:64px 64px,64px 64px,100% 100%;
-  mask-image:linear-gradient(to bottom,rgba(0,0,0,.95),rgba(0,0,0,.4) 75%,transparent);
+    linear-gradient(90deg,transparent 0%,rgba(28,130,77,.035) 50%,transparent 100%);
+  opacity:.7;
 }
 </style>
 <link rel="icon" type="image/png" href="assets/f1room-logo.jpg">
