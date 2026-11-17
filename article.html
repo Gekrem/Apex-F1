@@ -96,10 +96,39 @@ nav a,.nav a,.button,button,.btn{font-family:var(--font-ui)!important;font-weigh
 @media(max-width:900px){.f1room-water{top:51px;right:105px;transform:scale(.8);transform-origin:top right}}
 @media(max-width:520px){.f1room-water{top:51px;right:83px;transform:scale(.65);transform-origin:top right}}
 @media(prefers-reduced-motion:reduce){.f1room-water{display:none}}
+
+/* Interactive F1ROOM whale mascot */
+.f1room-mascot{position:fixed;top:74px;right:clamp(14px,3.5vw,54px);z-index:80;width:clamp(92px,10vw,154px);padding:0;border:0;background:transparent;cursor:pointer;pointer-events:auto;isolation:isolate;filter:drop-shadow(0 8px 18px rgba(0,0,0,.38));animation:whale-float 4.5s ease-in-out infinite}
+.f1room-mascot .f1room-whale{position:relative;inset:auto;display:block;width:100%;height:auto;pointer-events:none;transition:transform .22s ease,filter .22s ease;filter:none}
+.f1room-mascot:hover .f1room-whale,.f1room-mascot:focus-visible .f1room-whale{transform:translateY(-5px) rotate(-3deg) scale(1.045);filter:brightness(1.12) saturate(1.15)}
+.f1room-mascot:focus-visible{outline:2px solid #5ce5b0;outline-offset:5px;border-radius:50%}
+.f1room-mascot.is-happy .f1room-whale{animation:whale-happy .55s ease-in-out}
+@keyframes whale-happy{0%,100%{transform:scale(1) rotate(0)}25%{transform:scale(1.1) rotate(-7deg) translateY(-5px)}55%{transform:scale(1.08) rotate(5deg) translateY(-8px)}}
+.f1room-water{position:absolute;top:-9px;left:52%;right:auto;bottom:auto;z-index:2;width:52px;height:58px;pointer-events:none;opacity:0;transform:none;display:block}
+.f1room-water i{position:absolute;left:50%;bottom:0;width:7px;height:13px;border-radius:75% 25% 65% 35%;background:linear-gradient(150deg,#f0ffff 0%,#8df5ef 38%,#20b9d0 100%);box-shadow:0 0 9px rgba(70,220,235,.7);opacity:0;transform:translate(-50%,8px) scale(.3)}
+.f1room-water i:nth-child(1){--dx:-19px;--dy:-31px}
+.f1room-water i:nth-child(2){--dx:-10px;--dy:-43px}
+.f1room-water i:nth-child(3){--dx:0px;--dy:-51px}
+.f1room-water i:nth-child(4){--dx:11px;--dy:-42px}
+.f1room-water i:nth-child(5){--dx:20px;--dy:-29px}
+.f1room-water i:nth-child(6){--dx:-3px;--dy:-27px}
+.f1room-mascot.is-happy .f1room-water{opacity:1}
+.f1room-mascot.is-happy .f1room-water i{animation:whale-click-spout .95s cubic-bezier(.2,.7,.25,1) both}
+.f1room-mascot.is-happy .f1room-water i:nth-child(2){animation-delay:.04s}
+.f1room-mascot.is-happy .f1room-water i:nth-child(3){animation-delay:.08s}
+.f1room-mascot.is-happy .f1room-water i:nth-child(4){animation-delay:.12s}
+.f1room-mascot.is-happy .f1room-water i:nth-child(5){animation-delay:.16s}
+.f1room-mascot.is-happy .f1room-water i:nth-child(6){animation-delay:.1s}
+@keyframes whale-click-spout{0%{opacity:0;transform:translate(-50%,8px) scale(.2)}18%{opacity:1;transform:translate(calc(-50% + var(--dx)*.45),calc(var(--dy)*.55)) scale(1.2)}55%{opacity:1;transform:translate(calc(-50% + var(--dx)),var(--dy)) scale(.95)}100%{opacity:0;transform:translate(calc(-50% + var(--dx)*1.25),calc(var(--dy) - 12px)) scale(.25)}}
+.f1room-mascot .whale-hint{position:absolute;right:100%;top:34%;margin-right:10px;white-space:nowrap;padding:5px 8px;border:1px solid rgba(105,226,177,.45);background:#09140e;color:#b8f7d4;font:700 9px/1.2 Arial,sans-serif;letter-spacing:.5px;border-radius:4px;opacity:0;transform:translateX(5px);transition:.2s;pointer-events:none}
+.f1room-mascot:hover .whale-hint,.f1room-mascot:focus-visible .whale-hint{opacity:1;transform:translateX(0)}
+@media(max-width:900px){.f1room-mascot{top:69px;right:10px;width:100px}}
+@media(max-width:520px){.f1room-mascot{top:68px;right:7px;width:76px}.f1room-mascot .whale-hint{display:none}}
+@media(prefers-reduced-motion:reduce){.f1room-mascot,.f1room-mascot *{animation:none!important;transition:none!important}}
 </style><link rel="icon" type="image/png" href="assets/f1room-logo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body><img class="f1room-whale" src="assets/f1room-whale.png" alt="F1ROOM balina maskotu" aria-hidden="true"><span class="f1room-water" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><div class="top"></div><header><div class="wrap nav"><a class="brand" href="index.html"><img src="assets/f1room-logo.jpg" alt="F1ROOM logo" style="width:44px;height:44px;object-fit:contain;border-radius:0;background:#101317;vertical-align:middle;margin-right:9px">F1ROOM<small>No Room For Formula 1</small></a><a class="back" href="index.html#news">← Haberlere dön</a></div></header>
+<body><button class="f1room-mascot" type="button" aria-label="Balina mutlu olsun ve su püskürtsün"><img class="f1room-whale" src="assets/f1room-whale.png" alt="F1ROOM balina maskotu"><span class="whale-hint" aria-hidden="true">BANA TIKLA!</span><span class="f1room-water" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span></button><div class="top"></div><header><div class="wrap nav"><a class="brand" href="index.html"><img src="assets/f1room-logo.jpg" alt="F1ROOM logo" style="width:44px;height:44px;object-fit:contain;border-radius:0;background:#101317;vertical-align:middle;margin-right:9px">F1ROOM<small>No Room For Formula 1</small></a><a class="back" href="index.html#news">← Haberlere dön</a></div></header>
 <main class="wrap" id="article"><div class="eyebrow">F1ROOM / NEWSROOM</div><h1>Haber yükleniyor…</h1><p class="lead">Haber içeriği hazırlanıyor.</p></main>
 <footer><div class="wrap">F1ROOM — Bağımsız Formula 1 yayın platformu. Formula 1, FIA ve takımlarla resmî bağlantısı yoktur.</div></footer>
 <script>
@@ -196,4 +225,8 @@ async function start(){
 }
 start();
 })();
-</script></body></html>
+</script>
+<script>
+(()=>{const whale=document.querySelector('.f1room-mascot');if(!whale||whale.dataset.interactive==='1')return;whale.dataset.interactive='1';let reset;whale.addEventListener('click',()=>{whale.classList.remove('is-happy');void whale.offsetWidth;whale.classList.add('is-happy');clearTimeout(reset);reset=setTimeout(()=>whale.classList.remove('is-happy'),1150);});})();
+</script>
+</body></html>
