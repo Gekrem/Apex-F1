@@ -1,0 +1,586 @@
+[
+  {
+    "year": 1950,
+    "title": "Dünya şampiyonası sahneye çıkıyor",
+    "driver": "Giuseppe Farina · Alfa Romeo",
+    "place": "Silverstone · Birleşik Krallık",
+    "tag": "KURULUŞ",
+    "lead": "13 Mayıs 1950’de Silverstone’da atılan start, motor sporlarının en büyük dünya şampiyonasının başlangıcı oldu.",
+    "sections": [
+      [
+        "Yeni bir şampiyona",
+        "FIA, Avrupa’nın önde gelen Grand Prix yarışlarını tek bir dünya şampiyonası çatısı altında topladı. İlk sezon yedi yarıştan oluşuyordu ve Britanya Grand Prix’si Silverstone’da düzenlendi."
+      ],
+      [
+        "Farina’nın tarihi zaferi",
+        "Alfa Romeo’nun 158 modeli ilk yarışta güçlüydü. Giuseppe Farina yarışı kazandı ve sezon sonunda ilk dünya sürücüler şampiyonu oldu."
+      ],
+      [
+        "Bir mirasın başlangıcı",
+        "1950 otomobilleri bugünün makinelerinden çok uzaktı. Ancak pilot, takım, mühendis ve strateji arasındaki ilişki o dönemde de Formula 1’in temelini oluşturuyordu."
+      ]
+    ],
+    "images": [
+      {
+        "file": "Grand prix vers 1950.jpg",
+        "caption": "1950 dönemi Grand Prix otomobili",
+        "source": "https://commons.wikimedia.org/wiki/File:Grand_prix_vers_1950.jpg"
+      }
+    ]
+  },
+  {
+    "year": 1957,
+    "title": "Fangio’nun Nürburgring ustalığı",
+    "driver": "Juan Manuel Fangio · Maserati",
+    "place": "Nürburgring · Almanya",
+    "tag": "EFSANE YARIŞ",
+    "lead": "1957 Almanya Grand Prix’si, Juan Manuel Fangio’nun yarış zekâsını ve hızını aynı anda sergilediği unutulmaz bir geri dönüşe sahne oldu.",
+    "sections": [
+      [
+        "Pit stop sonrası kayıp",
+        "Fangio, yakıt ve lastik için pite girdiğinde Ferrari pilotları Mike Hawthorn ve Peter Collins’in gerisine düştü."
+      ],
+      [
+        "Tur rekorlarıyla gelen takip",
+        "Maserati pilotu kalan turlarda olağanüstü tempo yakaladı. Tur rekorlarını art arda geliştirerek iki Ferrari’yi yakaladı ve geçti."
+      ],
+      [
+        "Beşinci dünya şampiyonluğu",
+        "Fangio yarışı kazandı ve beşinci dünya şampiyonluğunu garantiledi. Nürburgring’deki bu performans kariyerinin zirvelerinden biri olarak anılıyor."
+      ]
+    ],
+    "images": [
+      {
+        "file": "Fangio pit stop Nurburgring 1957.jpg",
+        "caption": "Fangio’nun 1957 Nürburgring yarışındaki pit stopu",
+        "source": "https://commons.wikimedia.org/wiki/File:Fangio_pit_stop_Nurburgring_1957.jpg"
+      }
+    ]
+  },
+  {
+    "year": 1961,
+    "title": "Ferrari ve Phil Hill’in şampiyonluğu",
+    "driver": "Phil Hill · Ferrari",
+    "place": "Monza · İtalya",
+    "tag": "ŞAMPİYONLUK",
+    "lead": "Ferrari’nin 156 modeli 1961 sezonunun en güçlü otomobillerinden biriydi. Phil Hill, Monza’daki dramatik finalin ardından dünya şampiyonluğunu kazandı.",
+    "sections": [
+      [
+        "Ferrari 156 dönemi",
+        "Motor düzeni ve aerodinamik yaklaşımıyla öne çıkan Ferrari 156, sezon boyunca rekabetçi bir paket sundu. Phil Hill ve Wolfgang von Trips şampiyonluk mücadelesinin merkezindeydi."
+      ],
+      [
+        "Monza’da zafer ve trajedi",
+        "İtalya Grand Prix’si şampiyonluğu belirledi. Ancak Wolfgang von Trips’in kazada hayatını kaybetmesi ve seyircilerin etkilenmesi, hafta sonunu F1 tarihinin en karanlık olaylarından biri hâline getirdi."
+      ],
+      [
+        "Phil Hill zirvede",
+        "Phil Hill, Formula 1’in ilk Amerikalı dünya şampiyonu oldu. Ferrari de tarihindeki önemli şampiyonluklardan birini elde etti."
+      ]
+    ],
+    "images": [
+      {}
+    ]
+  },
+  {
+    "year": 1966,
+    "title": "Jack Brabham kendi takımıyla zirvede",
+    "driver": "Jack Brabham · Brabham",
+    "place": "1966 sezonu",
+    "tag": "İLKLER",
+    "lead": "Jack Brabham, kendi adını taşıyan takımla dünya şampiyonluğunu kazanarak Formula 1 tarihine geçen benzersiz bir başarıya imza attı.",
+    "sections": [
+      [
+        "Yeni motor kuralları",
+        "1966 sezonunda motor hacmi kuralları değişti. Takımlar yeni teknik döneme uyum sağlamaya çalışırken Brabham, Repco motorlu BT19 ile güvenilir ve dengeli bir otomobil ortaya koydu."
+      ],
+      [
+        "Pilot ve takım patronu",
+        "Jack Brabham yalnızca direksiyon başında değildi; takımın kurucusu ve teknik kararların merkezindeki isimlerden biriydi. Kendi takımıyla şampiyonluğa ulaşması eşsizdi."
+      ],
+      [
+        "Tarihe geçen şampiyonluk",
+        "Brabham, 1966’da pilotlar şampiyonluğunu kazandı. Brabham takımı da üreticiler şampiyonasında zirveye çıktı."
+      ]
+    ],
+    "images": [
+      {
+        "file": "BrabhamJack1966B.jpg",
+        "caption": "Jack Brabham, 1966",
+        "source": "https://commons.wikimedia.org/wiki/File:BrabhamJack1966B.jpg"
+      }
+    ]
+  },
+  {
+    "year": 1968,
+    "title": "Güvenlik ve aerodinamiğin değişen yüzü",
+    "driver": "Jim Clark · Graham Hill",
+    "place": "Hockenheim ve sezon geneli",
+    "tag": "DÖNÜM NOKTASI",
+    "lead": "1968 sezonu Formula 1’in hem teknik görünümünü hem de güvenlik tartışmalarını değiştirdi. Jim Clark’ın kaybı sporun hafızasında derin bir iz bıraktı.",
+    "sections": [
+      [
+        "Jim Clark’ın kaybı",
+        "İki kez dünya şampiyonu Jim Clark, Hockenheim’da düzenlenen Formula 2 yarışı sırasında hayatını kaybetti. Bu kayıp, motor sporlarında güvenlik koşullarının kırılganlığını ortaya koydu."
+      ],
+      [
+        "Kanatlar ve aerodinami",
+        "Aynı dönemde otomobillerde yüksek kanatlar ve farklı aerodinamik çözümler yaygınlaşmaya başladı. Takımlar yere basma kuvvetini artırarak viraj hızlarını yükseltmenin yollarını arıyordu."
+      ],
+      [
+        "Değişen bir spor",
+        "1968, Formula 1’in yalnızca daha hızlı değil, aynı zamanda daha güvenli ve sistematik bir mühendislik yaklaşımına ihtiyaç duyduğunu gösterdi."
+      ]
+    ],
+    "images": [
+      {}
+    ]
+  },
+  {
+    "year": 1976,
+    "title": "Lauda – Hunt: unutulmaz şampiyonluk savaşı",
+    "driver": "Niki Lauda · James Hunt",
+    "place": "Nürburgring · Fuji",
+    "tag": "REKABET",
+    "lead": "1976 sezonu, Niki Lauda’nın korkunç kazadan dönüşü ve James Hunt ile arasındaki tek puanlık şampiyonluk mücadelesiyle tarihe geçti.",
+    "sections": [
+      [
+        "Nürburgring’de kaza",
+        "Lauda, Almanya Grand Prix’sinde ağır bir kaza geçirdi. Ferrari pilotunun ciddi yaralanmalarla mücadele ettiği bu olay kariyerinin ve hayatının dönüm noktasıydı."
+      ],
+      [
+        "Altı hafta sonra kokpitte",
+        "Lauda kazadan yalnızca altı hafta sonra İtalya Grand Prix’sinde yarışlara geri döndü. Hunt ise puan farkını kapatarak şampiyonluk mücadelesini son yarışa taşıdı."
+      ],
+      [
+        "Fuji’de son karar",
+        "Japonya’daki yağmurlu finalde Lauda güvenlik gerekçesiyle yarıştan çekildi. Hunt yarışı tamamlayarak şampiyonluğu tek puan farkla kazandı."
+      ]
+    ],
+    "images": [
+      {
+        "file": "LaudaNiki19760731Ferrari312T2.jpg",
+        "caption": "Niki Lauda, 1976 Almanya GP antrenmanında",
+        "source": "https://commons.wikimedia.org/wiki/File:LaudaNiki19760731Ferrari312T2.jpg"
+      },
+      {
+        "file": "Hunt Wins 09.jpg",
+        "caption": "James Hunt, 1976 sezonu",
+        "source": "https://commons.wikimedia.org/wiki/Category:1976_British_Grand_Prix"
+      }
+    ]
+  },
+  {
+    "year": 1982,
+    "title": "Yedi farklı kazananın sezonu",
+    "driver": "Keke Rosberg · Williams",
+    "place": "1982 sezonu",
+    "tag": "KAOTİK SEZON",
+    "lead": "1982 sezonu, kazananların sürekli değiştiği ve güvenilirliğin şampiyonlukta belirleyici olduğu sıra dışı bir yıldı. Keke Rosberg yalnızca bir yarış kazanarak dünya şampiyonu oldu.",
+    "sections": [
+      [
+        "Tahmin edilmesi zor sezon",
+        "1982’de çok sayıda takım ve üretici yarış kazanabilecek hıza sahipti. Sezon boyunca yedi farklı pilot Grand Prix zaferi elde etti."
+      ],
+      [
+        "Rosberg’in istikrarı",
+        "Williams pilotu Keke Rosberg, sezonun tek galibiyetini İsviçre Grand Prix’sinde aldı. Puan toplama konusundaki istikrarı onu rakiplerinin önüne taşıdı."
+      ],
+      [
+        "Bir galibiyetle şampiyonluk",
+        "Rosberg’in şampiyonluğu, tek bir yarış zaferinden çok sezon geneline yayılan istikrarın önemini gösterdi."
+      ]
+    ],
+    "images": [
+      {}
+    ]
+  },
+  {
+    "year": 1986,
+    "title": "Üçlü final: Prost, Mansell ve Piquet",
+    "driver": "Alain Prost · Nigel Mansell · Nelson Piquet",
+    "place": "Adelaide · Avustralya",
+    "tag": "FİNAL",
+    "lead": "1986 şampiyonluğu Adelaide’de üç pilotun mücadelesine sahne oldu. Lastik arızası ve Williams’ın stratejik kararı, Alain Prost’un sezonu zirvede bitirmesini sağladı.",
+    "sections": [
+      [
+        "Üç pilot, tek hedef",
+        "Nigel Mansell, Nelson Piquet ve Alain Prost son yarışa şampiyonluk ihtimaliyle girdi. Williams hızlı otomobillere sahipti; Prost fırsat kolluyordu."
+      ],
+      [
+        "Mansell’in lastik arızası",
+        "Mansell’in yüksek hızda yaşadığı lastik patlaması yarışın kaderini değiştirdi. Williams, Piquet’in de benzer sorun yaşamasını önlemek için onu pite çağırdı."
+      ],
+      [
+        "Prost fırsatı kaçırmadı",
+        "Prost yarışı kazanarak ikinci dünya şampiyonluğunu elde etti. Adelaide finali, stratejinin ve dayanıklılığın önemini gösterdi."
+      ]
+    ],
+    "images": [
+      {}
+    ]
+  },
+  {
+    "year": 1988,
+    "title": "McLaren MP4/4 ve 15 galibiyet",
+    "driver": "Ayrton Senna · Alain Prost",
+    "place": "1988 sezonu",
+    "tag": "DOMİNASYON",
+    "lead": "McLaren-Honda, 1988 sezonunda 16 yarışın 15’ini kazanarak Formula 1 tarihinin en baskın sezonlarından birini yaşadı.",
+    "sections": [
+      [
+        "MP4/4: güçlü paket",
+        "McLaren MP4/4; düşük gövdesi, Honda turbo motoru ve verimli aerodinamik yapısıyla rakiplerinin önüne geçti."
+      ],
+      [
+        "Senna ve Prost rekabeti",
+        "Ayrton Senna ve Alain Prost aynı takımda yarışırken pist üstünde kıyasıya mücadele etti. Senna sezon sonunda ilk dünya şampiyonluğunu kazandı."
+      ],
+      [
+        "16 yarışta 15 zafer",
+        "McLaren’in 15 galibiyeti teknik üstünlüğünü ortaya koydu. 1988, otomobil tasarımı ve pilot rekabeti açısından referans sezonlardan biri oldu."
+      ]
+    ],
+    "images": [
+      {
+        "file": "Ayrton Senna 1988 Canada 1.jpg",
+        "caption": "Ayrton Senna, 1988 Kanada GP",
+        "source": "https://commons.wikimedia.org/wiki/Category:Ayrton_Senna_in_1988"
+      },
+      {
+        "file": "Senna Prost and Boutsen Montreal 1988.jpg",
+        "caption": "Senna ve Prost, Montreal 1988",
+        "source": "https://commons.wikimedia.org/wiki/Category:Alain_Prost_in_1988"
+      }
+    ]
+  },
+  {
+    "year": 1989,
+    "title": "Suzuka’da Senna – Prost çarpışması",
+    "driver": "Ayrton Senna · Alain Prost",
+    "place": "Suzuka · Japonya",
+    "tag": "TARTIŞMALI AN",
+    "lead": "1989 Japonya Grand Prix’sinde Senna ve Prost’un çarpışması, Formula 1’in en tartışmalı şampiyonluk finallerinden birini yarattı.",
+    "sections": [
+      [
+        "Şampiyonluk baskısı",
+        "McLaren takım arkadaşları Senna ve Prost sezon boyunca şampiyonluk için mücadele etti. Suzuka’ya gelindiğinde iki pilot arasındaki gerilim zirveye ulaşmıştı."
+      ],
+      [
+        "Şikan öncesi temas",
+        "İki otomobil şikan öncesinde çarpıştı. Prost yarış dışı kaldı; Senna otomobilini yeniden çalıştırarak piste döndü ve yarışı kazandı."
+      ],
+      [
+        "Diskalifiye ve sonuç",
+        "Yarış sonrası Senna diskalifiye edildi. Şampiyonluk Prost’a gitti. Olay, yarış yönetimi ve sportif kararlar üzerine yıllarca süren tartışmaların merkezinde kaldı."
+      ]
+    ],
+    "images": [
+      {
+        "file": "Formula 1, GP San Marino 1989, Imola, Prost e Senna.jpg",
+        "caption": "Senna ve Prost, 1989 sezonu",
+        "source": "https://commons.wikimedia.org/wiki/Category:1989_San_Marino_Grand_Prix"
+      }
+    ]
+  },
+  {
+    "year": 1991,
+    "title": "Senna’nın üçüncü dünya şampiyonluğu",
+    "driver": "Ayrton Senna · McLaren",
+    "place": "1991 sezonu",
+    "tag": "ŞAMPİYONLUK",
+    "lead": "Ayrton Senna, 1991’de üçüncü kez dünya şampiyonu oldu. McLaren-Honda ile elde ettiği başarı, kariyerinin en güçlü dönemlerinden birini taçlandırdı.",
+    "sections": [
+      [
+        "Sezonun kontrolü",
+        "Senna sezonun ilk bölümünde üst üste yarışlar kazanarak önemli bir puan avantajı elde etti. McLaren-Honda paketi rekabetçiydi."
+      ],
+      [
+        "Rakip baskısı",
+        "Williams ve Ferrari farklı yarışlarda güçlü performans gösterse de Senna kritik puanlar topladı. Japonya’daki yarış şampiyonluğu kesinleştirdi."
+      ],
+      [
+        "Üçüncü taç",
+        "Senna, 1991 sonunda üçüncü dünya şampiyonluğunu kazandı. Bu başarı onu dönemin en etkili pilotlarından biri olarak tarihe yazdı."
+      ]
+    ],
+    "images": [
+      {}
+    ]
+  },
+  {
+    "year": 1994,
+    "title": "Imola: F1’in güvenlik dönüm noktası",
+    "driver": "Ayrton Senna · Roland Ratzenberger",
+    "place": "Imola · San Marino",
+    "tag": "GÜVENLİK TARİHİ",
+    "lead": "1994 San Marino Grand Prix hafta sonu, Roland Ratzenberger ve Ayrton Senna’nın hayatını kaybetmesiyle Formula 1 tarihinin en karanlık sayfalarından biri oldu.",
+    "sections": [
+      [
+        "Kara hafta sonu",
+        "Cumartesi günü sıralama turlarında Roland Ratzenberger’in kazası ölümle sonuçlandı. Pazar günü yarış sırasında Ayrton Senna’nın yaşadığı kaza ise sporu derinden sarstı."
+      ],
+      [
+        "Güvenlik yeniden gündemde",
+        "İki pilotun kaybı, otomobil tasarımı, pist güvenliği, kokpit koruması ve yarış hafta sonu prosedürlerinin kapsamlı biçimde yeniden değerlendirilmesini hızlandırdı."
+      ],
+      [
+        "Kalıcı değişim",
+        "Sonraki yıllarda güvenlik standartlarında önemli ilerlemeler kaydedildi. Imola 1994, güvenliğin sistematik biçimde ele alınması gerektiğini hatırlatan dönüm noktasıdır."
+      ]
+    ],
+    "images": [
+      {
+        "file": "Ratzenberger.jpg",
+        "caption": "Roland Ratzenberger, Imola 1994",
+        "source": "https://commons.wikimedia.org/wiki/File:Ratzenberger.jpg"
+      }
+    ]
+  },
+  {
+    "year": 2000,
+    "title": "Ferrari’nin 21 yıllık bekleyişi bitti",
+    "driver": "Michael Schumacher · Ferrari",
+    "place": "Suzuka · Japonya",
+    "tag": "GERİ DÖNÜŞ",
+    "lead": "Michael Schumacher, Suzuka’da kazandığı yarışla Ferrari’ye 1979’dan beri ilk sürücüler şampiyonluğunu getirdi.",
+    "sections": [
+      [
+        "Ferrari’nin bekleyişi",
+        "Ferrari, 1979’dan sonra sürücüler şampiyonluğunu kazanamamıştı. Schumacher’in takıma katılmasıyla teknik yapılanma ve takım kültürü yeniden şekillendi."
+      ],
+      [
+        "Suzuka’da belirleyici yarış",
+        "2000 Japonya Grand Prix’sinde Schumacher, Mika Häkkinen ile doğrudan mücadele etti. Yarışı kazanmasıyla sezonun bitimine bir yarış kala şampiyonluğu garantiledi."
+      ],
+      [
+        "Kırmızı dönemin başlangıcı",
+        "Bu şampiyonluk, Ferrari’nin 2000’lerdeki başarı serisinin başlangıcı oldu. Schumacher ve Ferrari sonraki yıllarda da şampiyonluklar kazandı."
+      ]
+    ],
+    "images": [
+      {
+        "file": "Ferrari F1-2000 and Japanese GP 2000 winner's trophy Michael Schumacher Private Collection.jpg",
+        "caption": "Michael Schumacher’in 2000 şampiyonluk hatırası",
+        "source": "https://commons.wikimedia.org/wiki/Category:2000_Japanese_Grand_Prix"
+      }
+    ]
+  },
+  {
+    "year": 2004,
+    "title": "Schumacher ve Ferrari’nin zirve sezonu",
+    "driver": "Michael Schumacher · Ferrari",
+    "place": "2004 sezonu",
+    "tag": "REKOR",
+    "lead": "Michael Schumacher, 2004’te 18 yarışın 13’ünü kazanarak yedinci dünya şampiyonluğunu elde etti. Ferrari F2004 sezonun en baskın otomobillerinden biriydi.",
+    "sections": [
+      [
+        "F2004’ün üstünlüğü",
+        "Ferrari F2004; güçlü motoru, dengeli şasisi ve lastik performansıyla sezon boyunca rakiplerinin önünde yer aldı."
+      ],
+      [
+        "13 galibiyet, yedinci şampiyonluk",
+        "Schumacher 18 yarışın 13’ünü kazanarak sürücüler şampiyonluğunu garantiledi. Rubens Barrichello da Ferrari’nin puan katkısını artırdı."
+      ],
+      [
+        "Bir dönemin zirvesi",
+        "Ferrari 2004’te takımlar şampiyonluğunu da kazandı. Bu sezon Schumacher-Ferrari ortaklığının zirve noktalarından biri olarak kabul ediliyor."
+      ]
+    ],
+    "images": [
+      {
+        "file": "Michael Schumacher Ferrari 2004.jpg",
+        "caption": "Michael Schumacher, 2004 ABD Grand Prix",
+        "source": "https://commons.wikimedia.org/wiki/File:Michael_Schumacher_Ferrari_2004.jpg"
+      },
+      {
+        "file": "Detailansicht Ferrari F2004, Michael Schumacher.jpg",
+        "caption": "Ferrari F2004 detayları",
+        "source": "https://commons.wikimedia.org/wiki/File:Detailansicht_Ferrari_F2004,_Michael_Schumacher.jpg"
+      }
+    ]
+  },
+  {
+    "year": 2008,
+    "title": "Interlagos’ta son tur mucizesi",
+    "driver": "Lewis Hamilton · McLaren",
+    "place": "Interlagos · Brezilya",
+    "tag": "SON TUR",
+    "lead": "2008 Brezilya Grand Prix’sinde şampiyonluk son turlara kadar belirsizliğini korudu. Lewis Hamilton, son turda yaptığı geçişle Formula 1 tarihinin en dramatik finallerinden birini kazandı.",
+    "sections": [
+      [
+        "Massa evinde kazanıyor",
+        "Felipe Massa, Interlagos’ta yarışı kazanarak Ferrari ile şampiyonluğa çok yaklaştı. Hamilton’ın şampiyon olması için ilk beş içinde bitirmesi gerekiyordu."
+      ],
+      [
+        "Glock geçişi",
+        "Yağmurun etkilediği son turlarda Timo Glock kuru zemin lastikleriyle pistte kalmıştı. Hamilton son turda Glock’u geçerek beşinciliğe yükseldi."
+      ],
+      [
+        "Bir puan farkla tarih",
+        "Massa damalı bayrağı ilk sırada gördü; ancak Hamilton şampiyonluğu tek puan farkla kazandı. Bu sonuç unutulmaz finallerden biri oldu."
+      ]
+    ],
+    "images": [
+      {
+        "file": "Hamilton Brazil 2008 celebrations.jpg",
+        "caption": "Lewis Hamilton, 2008 Brezilya GP kutlamaları",
+        "source": "https://commons.wikimedia.org/wiki/File:Hamilton_Brazil_2008_celebrations.jpg"
+      }
+    ]
+  },
+  {
+    "year": 2010,
+    "title": "Dört pilotun son yarış hesabı",
+    "driver": "Sebastian Vettel · Red Bull Racing",
+    "place": "Yas Marina · Abu Dhabi",
+    "tag": "ŞAMPİYONLUK",
+    "lead": "2010 Abu Dhabi finaline dört pilot matematiksel şampiyonluk şansıyla girdi. Sebastian Vettel yarışı kazanarak kariyerinin ilk dünya şampiyonluğunu elde etti.",
+    "sections": [
+      [
+        "Dört adaylı final",
+        "Fernando Alonso, Mark Webber, Sebastian Vettel ve Lewis Hamilton son yarışa şampiyonluk ihtimaliyle geldi."
+      ],
+      [
+        "Strateji düğümü",
+        "Alonso ve Webber erken pit stopların ardından trafik içinde kaldı. Vettel ise yarışın başından itibaren liderliği korudu."
+      ],
+      [
+        "En genç şampiyon",
+        "Vettel yarışı kazandı ve ilk dünya şampiyonluğunu elde etti. O tarihte Formula 1’in en genç dünya şampiyonu oldu."
+      ]
+    ],
+    "images": [
+      {
+        "file": "Vettel abu dabi 2010.jpg",
+        "caption": "Sebastian Vettel, 2010 Abu Dhabi şampiyonluğu",
+        "source": "https://commons.wikimedia.org/wiki/File:Vettel_abu_dabi_2010.jpg"
+      }
+    ]
+  },
+  {
+    "year": 2012,
+    "title": "Vettel’in üçlü şampiyonluğu",
+    "driver": "Sebastian Vettel · Red Bull Racing",
+    "place": "Interlagos · Brezilya",
+    "tag": "GERİ DÖNÜŞ",
+    "lead": "2012 sezonu, Sebastian Vettel ile Fernando Alonso arasındaki mücadelenin ardından Interlagos’ta karara bağlandı.",
+    "sections": [
+      [
+        "Sezon boyunca yakın mücadele",
+        "Vettel ve Alonso farklı yarışlarda puan avantajını el değiştirdi. Red Bull’un sezonun ikinci yarısındaki performans artışı belirleyici oldu."
+      ],
+      [
+        "Interlagos’ta hasarlı otomobil",
+        "Vettel, Brezilya finalinin ilk turunda temas yaşadı ve gerilere düştü. Yarış boyunca toparlanarak puan almayı başardı."
+      ],
+      [
+        "Üst üste üçüncü şampiyonluk",
+        "Vettel sezonu Alonso’nun üç puan önünde tamamlayarak üçüncü kez dünya şampiyonu oldu."
+      ]
+    ],
+    "images": [
+      {}
+    ]
+  },
+  {
+    "year": 2016,
+    "title": "Rosberg’in tek ve son şampiyonluğu",
+    "driver": "Nico Rosberg · Mercedes",
+    "place": "Yas Marina · Abu Dhabi",
+    "tag": "ŞAMPİYONLUK",
+    "lead": "Nico Rosberg, Mercedes takım arkadaşı Lewis Hamilton ile sezon boyu süren mücadelesini Abu Dhabi’de tamamladı ve ilk dünya şampiyonluğunu kazandı.",
+    "sections": [
+      [
+        "Takım arkadaşları arasında savaş",
+        "Rosberg ve Hamilton, Mercedes’in üstün otomobiliyle sezon boyunca galibiyetleri paylaştı. İki pilotun mücadelesi takım içindeki gerilimi artırdı."
+      ],
+      [
+        "Abu Dhabi’de kontrollü final",
+        "Rosberg’in şampiyon olması için yarışı podyumda tamamlaması yeterliydi. Hamilton tempoyu düşürerek Rosberg’i rakiplerin baskısı altına sokmaya çalıştı."
+      ],
+      [
+        "Beş gün sonra emeklilik",
+        "Rosberg yarışı ikinci bitirerek şampiyon oldu. Beş gün sonra Formula 1’den emekli olduğunu açıkladı."
+      ]
+    ],
+    "images": [
+      {}
+    ]
+  },
+  {
+    "year": 2021,
+    "title": "Abu Dhabi: son turda karar",
+    "driver": "Max Verstappen · Lewis Hamilton",
+    "place": "Yas Marina · Abu Dhabi",
+    "tag": "TARİHİ FİNAL",
+    "lead": "Max Verstappen ve Lewis Hamilton, 2021 sezonunun son yarışına eşit puanla girdi. Abu Dhabi finali son turda yaşanan olaylarla tarihin en tartışmalı finallerinden birine dönüştü.",
+    "sections": [
+      [
+        "Eşit puanla son yarış",
+        "Verstappen ve Hamilton sezon boyunca şampiyonluk için mücadele etti. Abu Dhabi’ye aynı puanla gelmeleri finali tek yarışlık düelloya çevirdi."
+      ],
+      [
+        "Güvenlik aracı ve yeniden start",
+        "Yarışın son bölümünde güvenlik aracı çıktı. Yeniden start prosedürü ve tur bindirilmiş araçlarla ilgili uygulama, FIA tarafından incelendi ve tartışma yarattı."
+      ],
+      [
+        "Verstappen ilk kez şampiyon",
+        "Son turdaki mücadelede Verstappen Hamilton’ı geçerek yarışı ve ilk dünya şampiyonluğunu kazandı."
+      ]
+    ],
+    "images": [
+      {}
+    ]
+  },
+  {
+    "year": 2023,
+    "title": "Red Bull’un rekor sezonu",
+    "driver": "Max Verstappen · Red Bull Racing",
+    "place": "2023 sezonu",
+    "tag": "REKOR SEZON",
+    "lead": "Red Bull, 2023’te 22 yarışın 21’ini kazanarak olağanüstü bir üstünlük kurdu. Max Verstappen 19 galibiyetle sürücüler şampiyonluğunu domine etti.",
+    "sections": [
+      [
+        "RB19’un verimliliği",
+        "Red Bull RB19, aerodinamik verimlilik, lastik yönetimi ve yarış temposu bakımından sezonun en güçlü otomobiliydi."
+      ],
+      [
+        "Verstappen’in 19 zaferi",
+        "Verstappen 22 yarışlık takvimde 19 galibiyet elde etti. Sergio Pérez de iki yarış kazanarak takımın toplam zafer sayısını 21’e çıkardı."
+      ],
+      [
+        "Takım tarihine geçen yıl",
+        "Red Bull takımlar şampiyonluğunu rahat şekilde kazandı. 2023, tek takımın kurduğu en büyük dominasyon örneklerinden biri olarak anılıyor."
+      ]
+    ],
+    "images": [
+      {}
+    ]
+  },
+  {
+    "year": 2026,
+    "title": "2026: yeni teknik dönem",
+    "driver": "Yeni nesil güç üniteleri · 2026 grid’i",
+    "place": "2026 sezonu",
+    "tag": "YENİ DÖNEM",
+    "lead": "2026 sezonu, Formula 1’de yeni güç ünitesi ve şasi kurallarıyla başlayan teknik bir dönemi temsil ediyor.",
+    "sections": [
+      [
+        "Yeni teknik kurallar",
+        "2026 düzenlemeleri, elektrik gücünün payını artıran güç ünitesi yaklaşımı ve aktif aerodinamik gibi yenilikleri öne çıkarıyor."
+      ],
+      [
+        "Yeni rekabet dengesi",
+        "Yeni kurallar, takımların önceki teknik dönemde kurduğu avantajları yeniden değerlendirmesine neden oluyor. Pilotların yeni otomobillere uyumu ve geliştirme hızı önemli."
+      ],
+      [
+        "Sezon içi tabloya not",
+        "F1ROOM’un 16 Kasım 2026 tarihli sezon verisinde Kimi Antonelli pilotlar klasmanının lideri olarak yer alıyor. Bu sezon içi bir durumdur; sezon sonu şampiyonluğu anlamına gelmez."
+      ]
+    ],
+    "images": [
+      {}
+    ]
+  }
+]
