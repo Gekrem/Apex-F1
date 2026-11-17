@@ -79,7 +79,11 @@
       ]
     ],
     "images": [
-      {}
+      {
+        "file": "Von Trips and P. Hill at 1961 Dutch Grand Prix.jpg",
+        "caption": "Phil Hill ve Wolfgang von Trips, 1961 sezonunda Ferrari 156 ile",
+        "source": "https://commons.wikimedia.org/wiki/File:Von_Trips_and_P._Hill_at_1961_Dutch_Grand_Prix.jpg"
+      }
     ]
   },
   {
@@ -133,7 +137,11 @@
       ]
     ],
     "images": [
-      {}
+      {
+        "file": "Jim Clark Hockenheimring tribute.jpg",
+        "caption": "Jim Clark için Hockenheimring yakınındaki anıt",
+        "source": "https://commons.wikimedia.org/wiki/File:Jim_Clark_Hockenheimring_tribute.jpg"
+      }
     ]
   },
   {
@@ -192,7 +200,11 @@
       ]
     ],
     "images": [
-      {}
+      {
+        "file": "Keke Rosberg 1982 British GP.jpg",
+        "caption": "Keke Rosberg, 1982 sezonunda Williams ile",
+        "source": "https://commons.wikimedia.org/wiki/Category:Keke_Rosberg_in_1982"
+      }
     ]
   },
   {
@@ -217,7 +229,11 @@
       ]
     ],
     "images": [
-      {}
+      {
+        "file": "McLaren MP4-2C right Porsche Museum.jpg",
+        "caption": "Alain Prost’un 1986 şampiyonluk sezonunda kullandığı McLaren MP4/2C",
+        "source": "https://commons.wikimedia.org/wiki/File:McLaren_MP4-2C_right_Porsche_Museum.jpg"
+      }
     ]
   },
   {
@@ -305,7 +321,11 @@
       ]
     ],
     "images": [
-      {}
+      {
+        "file": "Ayrton Senna 1991 USA.jpg",
+        "caption": "Ayrton Senna, 1991 sezonunda McLaren ile",
+        "source": "https://commons.wikimedia.org/wiki/File:Ayrton_Senna_1991_USA.jpg"
+      }
     ]
   },
   {
@@ -480,7 +500,11 @@
       ]
     ],
     "images": [
-      {}
+      {
+        "file": "Start 2012 brazil GP.jpg",
+        "caption": "2012 Brezilya Grand Prix’sinin start anı",
+        "source": "https://commons.wikimedia.org/wiki/File:Start_2012_brazil_GP.jpg"
+      }
     ]
   },
   {
@@ -505,7 +529,11 @@
       ]
     ],
     "images": [
-      {}
+      {
+        "file": "Nico Rosberg 2016 British GP.jpg",
+        "caption": "Nico Rosberg, 2016 Britanya Grand Prix’sinde Mercedes ile",
+        "source": "https://commons.wikimedia.org/wiki/File:Nico_Rosberg_2016_British_GP.jpg"
+      }
     ]
   },
   {
@@ -530,7 +558,11 @@
       ]
     ],
     "images": [
-      {}
+      {
+        "file": "Max Verstappen (Austin 2021).jpg",
+        "caption": "Max Verstappen, 2021 şampiyonluk sezonunda Red Bull ile",
+        "source": "https://commons.wikimedia.org/wiki/File:Max_Verstappen_(Austin_2021).jpg"
+      }
     ]
   },
   {
@@ -555,7 +587,11 @@
       ]
     ],
     "images": [
-      {}
+      {
+        "file": "2023 Red Bull RB19.jpg",
+        "caption": "Red Bull RB19, 2023 sezonunun rekor kıran otomobili",
+        "source": "https://commons.wikimedia.org/wiki/File:2023_Red_Bull_RB19.jpg"
+      }
     ]
   },
   {
@@ -580,7 +616,11 @@
       ]
     ],
     "images": [
-      {}
+      {
+        "file": "2026 f1 regulation.jpg",
+        "caption": "2026 teknik kuralları için tasarlanan yeni nesil Formula 1 otomobili",
+        "source": "https://commons.wikimedia.org/wiki/File:2026_f1_regulation.jpg"
+      }
     ]
   }
 ]
